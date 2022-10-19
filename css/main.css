@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif!important;
+}
+
+body {
+  background-color: #fff;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+/* Navbar CSS */
+nav {
+  width: 100%!important;
+  height: auto!important;
+  font-weight: 600!important;
+  padding: 1rem!important;
+}
+
+nav a {
+  margin: 0 1rem 0 1rem!important;
+}
+
+.flex-nav {
+  display: flex!important;
+  flex-direction: row!important;
+  justify-content: space-around!important;
+  align-items: center!important;
+  text-align: center !important;
+  backdrop-filter: blur(5px) !important; /* Blur Navbar*/
+}
+
+.flex-nav img {
+  width: 100%!important;
+  height: 6rem!important;
+}
+
+.sticky {
+  position: fixed!important;
+  top: 0!important;
+  width: 100vw!important;
+  padding: 1rem!important;
+  z-index: 1!important;
+}
+nav {
+  width: 100%!important;
+  height: auto!important;
+  font-weight: 600!important;
+  background-color: #fff!important;
+}
+
+.solid-bg {
+  background-color: #fff !important;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)!important;
+  height: 25%!important;
+  padding: 2.5rem!important;
+  width: 62vw!important;
+  margin: auto!important;
+}
+
+.half-container {
+  margin: auto!important;
+  margin-top: 5rem!important;
+  width: 90%!important;
+  height: auto!important;
+}
+
+/* Flex Box CSS*/
+.flex {
+  margin: 5rem auto 2rem auto!important;
+  display: flex!important;
+  flex-wrap: wrap!important;
+  justify-content: space-evenly!important;
+  align-items: center!important;
+  text-align: justify!important;
+}
+
+.flex-child {
+  width: 40%!important;
+  margin: 5rem 2rem 0 2rem!important;
+}
+
+.flex img {
+  margin-bottom: 2rem!important;
+}
+
+.row {
+  flex-direction: row!important;
+}
+
+.column {
+  flex-direction: column!important;
+}
+
+/* Cards CSS */
+
+.featured {
+  width: 265px!important;
+  height: 335px!important;
+  border-radius: 40px!important;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)!important;
+}
+
+.product {
+  width: 265px!important;
+  height: 335px!important;
+  border-radius: 40px!important;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)!important;
+  margin: 0 1rem 2rem 1rem!important;
+}
+
+.roles {
+  text-align: center!important;
+  margin: 2rem!important;
+  background-color: #fff!important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15)!important;
+  width: 540px!important;
+  height: auto!important;
+  border-radius: 40px!important;
+}
+
+/* TYPOGRAPHY CSS */
+h1 {
+  font-size: 48px!important;
+  margin-bottom: 1rem!important;
+}
+
+.center {
+  text-align: center!important;
+  margin: auto!important;
+}
+
+.sub-text {
+  color: #404040!important;
+  font-size: 12px!important;
+}
+
+.sub-link {
+  color: #31ad5d!important;
+}
+
+/* Buttons CSS */
+
+button {
+  border-style: none!important;
+}
+
+.btn-center {
+  display: block!important;
+  margin: auto!important;
+}
+
+.btn-circle {
+  text-align: center!important;
+  width: 180px!important;
+  padding: 10px 0!important;
+  background-color: #31ad5d!important;
+  color: #fff!important;
+  border-radius: 25px!important;
+  text-transform: uppercase!important;
+}
+
+.btn-box {
+  text-align: center!important;
+  width: 180px!important;
+  padding: 10px 0!important;
+  background-color: #31ad5d!important;
+  color: #fff!important;
+  box-shadow: inset 0px 1px 3px 0px rgb(0 0 0 / 10%)!important;
+  text-transform: uppercase!important;
+  margin: 2rem 0 2rem 0!important;
+}
+
+/* Image Tags CSS */
+.profile-icon {
+  width: 150px!important;
+  height: auto!important;
+  border-radius: 100%!important;
+  margin: auto!important;
+  display: block!important;
+  transform: translate(0%, 25%)!important;
+  filter: drop-shadow(1px 1px 5px #5a5a5a)!important;
+}
+
+/* Form CSS */
+fieldset {
+  border-style: none!important;
+}
+
+label {
+  font-weight: 600!important;
+  font-size: 15px !important;
+  display: flex!important;
+}
+
+input {
+  line-height: 50px!important;
+  background-color: #f2f2f2;
+  box-shadow: inset 0px 1px 3px 0px rgb(0 0 0 / 8%);
+  border-radius: 5px;
+  padding: 5px 2rem;
+  width: 25rem;
+  border: none;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 900px) {
+  .product {
+    width: 165px;
+    height: 235px;
+    border-radius: 40px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+}

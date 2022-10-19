@@ -1,0 +1,68 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../WebResources/Sailec/Sailec\ Medium.otf);
+}
+
+* {
+  padding: 0;
+  margin: auto;
+  font-family: myFirstFont;
+}
+
+body {
+    background-color:#121212;
+    color:white;
+}
+
+.spotify-head {
+    font-weight: 700;
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #1DB954;
+}
+
+.spotify-title {
+  font-weight: 700;
+  text-align: center;
+  color: #1DB954;
+  margin: 1rem;
+}
+
+.card {
+  background-color: #181818;
+  border-color: #121212;
+  color: white;
+}
+
+.card-hover:hover {
+  background-color: #282828;
+}
+
+  .margin-style {
+    margin: 1.5rem;
+  }
+
+  mark {
+    font-family: 'Space Mono', monospace;
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    background-color: #3b3b3b !important;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .clock {
+	  width: 150px;
+	  height: 150px;
+	  border-radius: 50%;
+	  background-color: rgb(0, 0, 0);
+    padding-top:5%!important;
+	  margin: auto;
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+  }
