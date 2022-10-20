@@ -115,7 +115,7 @@
             </form>
             <!--Picture on Right-->
             <div class="right-container">
-                <img src="farm-bg.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="picture">
+                <img src="img/farm.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="picture">
             </div>
         </div>
     </section>
