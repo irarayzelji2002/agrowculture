@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if (isset($_SESSION['isLogin'])) {
+    if ($_SESSION['isLogin'] == false) {
+      header('Location: ../login.php?security=false');
+    }
+  } else {
+    header('Location: ../login.php?security=false');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,13 +35,24 @@
     <main class="full-container"style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="buyerIcon" class="profile-icon">
         <div class="solid-bg">
-            <h1 id="buyerName" class="center">NAME</h1>
+            <h1 id="buyerName" class="center">
+                <!-- NAME -->
+                <?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?>
+            </h1>
             <div class="flex row">
-                <p id="buyerPhone">Number:</p>
-                <p id="buyerAddr">Address:</p>
+                <p id="buyerPhone">Number:
+                <?php echo $_SESSION["sPhoneNumber"]?> 
+                </p>
+                <p id="buyerAddr">Address:  
+                    <?php echo $_SESSION["sAddress"]?> 
+                    <?php echo $_SESSION["sCity"]?> 
+                    <?php echo $_SESSION["sRegion"] ?> 
+                    <?php echo $_SESSION["sZip"]?> 
+            </p>
+
             </div>
             
-            <button class="btn-circle btn-center" > <a href="acc-profile.php" style="color: white" >
+            <button class="btn-circle btn-center" > <a href="acc-profile-buyer.php" style="color: white" >
                 Edit Profile </a></button>
         </div>
         

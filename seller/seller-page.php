@@ -42,7 +42,9 @@
                 <p id="sellerPhone">Number:</p>
                 <p id="sellerAddr">Address:</p>
             </div>
-            <button class="btn-circle btn-center">Edit Profile</button>
+            <button class="btn-circle btn-center" > 
+                <a href="acc-profile-seller.php" style="color: white;text-decoration: none;" >
+                Edit Profile </a></button>
         </div>
         
         

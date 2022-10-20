@@ -31,7 +31,7 @@
 
         </div>
     </nav> -->
-    <?php require_once '../templates/navbar_buyer.php' ?>
+    <?php require_once '../templates/navbar_seller.php' ?>
     <!-- MAIN CONTENT -->
     <main class="full-container"style="margin-top:5%;">
         <h1 class="sub-link center" >My Profile</h1>
@@ -75,7 +75,7 @@
         <div class="flex row">
             <button class="btn-circle btn-center">Save Profile</button>
             <button class="btn-circle btn-center"> 
-            <a href="logout.php" style="color: white" >Logout
+            <a href="../logout.php" style="color: white; text-decoration:none" >Logout
             </a>
             </button>
         </div>

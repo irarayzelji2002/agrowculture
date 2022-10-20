@@ -24,7 +24,6 @@
 <body class="bg-dark text-white">
 <?php require_once 'templates/navbar_index.php' ?>
   <section class="firstForm">
-
     <form action="db/registerDATA.php" method="post"
     class="row g-3" style="margin-right: 10%;margin-left: 10%;margin-top: 2%; margin-bottom: 5%;">
       <p class="display-6">Sign Up</p>

@@ -42,13 +42,19 @@ if ($count > 0) {
   $_SESSION["sFirstName"] = $row["first_name"];
   $_SESSION["sLastName"] = $row["last_name"];
   $_SESSION["usertype"] = $row["user_type"];
+  $_SESSION["sPhoneNumber"] = $row["phone_number"];
   $_SESSION["email"] = $row["email"];
 
+  $_SESSION["sAddress"] = $row["address"];
+  $_SESSION["sRegion"] = $row["region"];
+  $_SESSION["sCity"] = $row["city"];
+  $_SESSION["sZip"] = $row["zip"];
+
   if ($_SESSION["usertype"] == "Seller") {
-    header('Location: seller/dashboard.php');
+    header('Location: seller/seller-page.php');
   }
   if ($_SESSION["usertype"] == "Buyer") {
-    header('Location:buyer/buyer_dashboard.php');
+    header('Location:buyer/buyer-page.php');
   }
 } else {
 
