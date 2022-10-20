@@ -28,7 +28,7 @@
 
 <body class="bg-image"> 
 <?php require_once 'templates/navbar_index.php' ?>
-
+  
   <form action="authenticate.php" method="post" style="margin:5%" class="align-content-center">
   
   <div class="card d-flex align-content-center align-items-center mx-auto customCard" >
