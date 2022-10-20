@@ -37,7 +37,7 @@
 
         <div class="search">
             <div class="container">
-                <button type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
                 <input type="text" placeholder="  Search">
             </div>
             </div>
