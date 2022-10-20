@@ -39,7 +39,8 @@
 
         <div class="flex row half-container">
             <div>
-                <img src="images/s1.jpg" alt="" class="profile-icon">
+                
+                <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg">
                 <button class="btn-box">Upload Image</button>
             </div>
 
