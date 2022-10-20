@@ -20,6 +20,7 @@
 
 </head>
 <body>
+    
     <!-- Navbar -->
     <nav class="sticky">
         <div class="flex-nav">

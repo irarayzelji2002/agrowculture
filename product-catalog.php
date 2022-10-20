@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    
+    <script src="https://kit.fontawesome.com/96362859e2.js" crossorigin="anonymous"></script>
     <title>aGROWculture</title>
 
 </head>
@@ -37,7 +37,8 @@
 
         <div class="search">
             <div class="container">
-                <button type="submit"> <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+                <button type="submit"> 
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true" ></i></button>
                 <input type="text" placeholder="  Search">
             </div>
             </div>

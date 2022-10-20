@@ -19,35 +19,23 @@
 </head>
 <body>
     <!-- Navbar -->
-    <!-- <nav class="sticky">
-        <div class="flex-nav">
-        <div>aGROWculture</div>
-        <div>
-            <a href="">SELL</a>
-            <a href="">LOGIN</a>
-            <a href="">SIGN UP</a>
-            <a href="">ICON LOGO</a>
-        </div>
-
-        </div>
-    </nav> -->
     <?php require_once '../templates/navbar_buyer.php' ?>
     <!-- MAIN CONTENT -->
-    <main class="full-container"style="margin-top:5%;">
+    <main class="full-container"style="margin: 5rem auto 2rem auto!important;">
         <h1 class="sub-link center" >My Profile</h1>
         <hr>
 
         <div class="flex row half-container">
             <div>
                 
-                <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg">
-                <button class="btn-box">Upload Image</button>
+            <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg" >
+            <input type="file" name="myfile" class="custom-file-input"style="margin-top: 10%;"></input>
+
+
+            
             </div>
-
-            <div>
-                <form action="">
-                    <fieldset class="">
-
+            
+            <fieldset class="">
                         <label for="emailAddress">Email Address:</label>
                         <input type="text" id="emailAddress" name="emailAddress">
                         
