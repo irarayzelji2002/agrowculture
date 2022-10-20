@@ -22,13 +22,13 @@
   $servername = "localhost";
   $db_username = "root"; //xampp default
   $db_password = "";  //xampp default
-  $database = "agrowculture";
+  $database = "agrowculture"; //name of database
 
   $conn = mysqli_connect($servername, $db_username, $db_password, $database);
 
   //2. Insert SQL
   $sql = 
-  "INSERT INTO `users`(
+  " INSERT INTO `users`(
     `first_name`, 
     `last_name`, 
     `email`, 
