@@ -8,11 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" type="text/css" href="css/design.css">
   <!-- Fontawesome -->
@@ -22,10 +19,9 @@
 </head>
 
 <body class="bg-dark text-white">
-<?php require_once 'templates/navbar_index.php' ?>
+  <?php require_once 'templates/navbar_index.php' ?>
   <section class="firstForm">
-    <form action="db/registerDATA.php" method="post"
-    class="row g-3" style="margin-right: 10%;margin-left: 10%;margin-top: 2%; margin-bottom: 5%;">
+    <form action="db/registerDATA.php" method="post" class="row g-3" style="margin-right: 10%;margin-left: 10%;margin-top: 2%; margin-bottom: 5%;">
       <p class="display-6">Sign Up</p>
 
 
@@ -36,7 +32,7 @@
 
       <div class="col-md-6">
         <label for="last_name" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="last_name" name="last_name"required>
+        <input type="text" class="form-control" id="last_name" name="last_name" required>
       </div>
       <div class="col-md-6">
         <label for="email" class="form-label">Email</label>
@@ -47,13 +43,18 @@
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" name="password" required>
       </div>
+
+      <div class="col-md-6">
+        <label for="business_name" class="form-label">Business/Company Name</label>
+        <input type="business_name" class="form-control" name="business_name" required>
+      </div>
       <div class="col-md-6">
         <label for="phone_number" class="form-label">Phone number</label>
-        <input type="text" class="form-control" id="phone_number"  name="phone_number" placeholder="">
+        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="">
       </div>
-      
-<!-- BIRTHDAY  -->
-<div class="form-group col-md-2 ">
+
+      <!-- BIRTHDAY  -->
+      <div class="form-group col-md-2 ">
         <label for="inputBirthday" class="form-label">Birthday</label>
         <select class="form-control " name="birth_month" required">
           <option value="01">January</option>
@@ -159,34 +160,21 @@
           <option value="Seller">Seller</option>
         </select>
       </div>
-          <!-- END OF USERTYPE  -->
+      <!-- END OF USERTYPE  -->
       <hr class="my-4">
 
       <div class="col-12">
         <label for="address" class="form-label">Address</label>
-        <input type="text" class="form-control" id="address"  name="address" placeholder="">
+        <input type="text" class="form-control" id="address" name="address" placeholder="">
       </div>
-      <div class="col-md-6">
-        <label for="city" class="form-label">City</label>
-        <input type="text" class="form-control" id="city" name="city" placeholder="">
-      </div>
-      <div class="col-md-4">
-        <label for="region" class="form-label">Region</label>
-        <input type="text" class="form-control" id="region" name="region"placeholder="" >
-      </div>
-      <div class="col-md-2">
-        <label for="zip" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="zip" name="zip">
-      </div>
-
 
       <div class="d-flex align-content-center align-items-center mt-5 w-75 mx-auto">
         <button type="submit" class="btn btn-warning d-flex justify-content-center align-items-center flex-fill ">
-        Register</button>
+          Register</button>
       </div>
+
       <div class="d-flex align-content-center align-items-center mt-5 w-25 mx-auto ">
-        <button type="button" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill "> <a
-            class="nav-link text-white" href=index.php>Cancel</a></button>
+        <button type="button" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill "> <a class="nav-link text-white" href=index.php>Cancel</a></button>
       </div>
 
 
@@ -194,9 +182,8 @@
     </form>
   </section>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
 </html>

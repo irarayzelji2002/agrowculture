@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    require_once '../templates/navbar_seller.php';
+if (isset($_SESSION['isLogin'])) {
+    if ($_SESSION['isLogin'] == false) {
+        header('Location: ../login.php?security=false');
+    }
+} else {
+    header('Location: ../login.php?security=false');
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,20 +32,7 @@
 
 </head>
 <body>
-    <!-- Navbar -->
-    <!-- <nav class="sticky">
-        <div class="flex-nav">
-        <div>aGROWculture</div>
-        <div>
-            <a href="">SELL</a>
-            <a href="">LOGIN</a>
-            <a href="">SIGN UP</a>
-            <a href="">ICON LOGO</a>
-        </div>
 
-        </div>
-    </nav> -->
-    <?php require_once '../templates/navbar_seller.php' ?>
     <!-- MAIN CONTENT -->
     <main class="full-container"style="margin-top:5%;">
         <h1 class="sub-link center" >My Profile</h1>
@@ -44,28 +45,36 @@
             </div>
 
             <div>
-                <form action="">
+                <form action="../db/update.php" method="post">
                     <fieldset class="">
 
-                        <label for="emailAddress">Email Address:</label>
-                        <input type="text" id="emailAddress" name="emailAddress">
-                        
-                        <label for="password">Password:</label>
-                        <input type="text" id="password" name="password">
-            
-                        <label for="fullName">Name:</label>
-                        <input type="text" id="fullName" name="fullName">
+                    <input type="hidden" name="id" value="<?php
+                                                            $currentID = $_SESSION["user_ID"];
+                                                            echo $currentID; ?>">
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>">
 
-                        <label for="businessName">Company/Business Name:</label>
-                        <input type="text" id="businessName" name="businessName">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Change your password" onfocus="this.value=''">
 
-                        <label for="phoneNum">Phone Number:</label>
-                        <input type="text" id="phoneNum" name="phoneNum">
- 
-                        <label for="profileAddr">Address:</label>
-                        <input type="text" id="profileAddr" name="profileAddr">
+                    <label for="fullName">First Name:</label>
+                    <input type="text" id="sFirstName" name="sFirstName" value="<?php echo $_SESSION["sFirstName"] ?>">
+
+                    <label for="fullName">Last Name:</label>
+                    <input type="text" id="sLastName" name="sLastName" value="<?php echo $_SESSION["sLastName"] ?>">
+
+
+                    <label for="businessName">Company/Business Name:</label>
+                    <input type="text" id="business_name" name="business_name" value="<?php echo $_SESSION["business_name"] ?>">
+
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="text" id="phone_number" name="phone_number" value="<?php echo $_SESSION["phone_number"] ?>">
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
                         
                     </fieldset>
+                    <button class="btn-circle btn-center">Save Profile</button>
                 </form>
             </div>
 
@@ -73,7 +82,7 @@
         </div>
 
         <div class="flex row">
-            <button class="btn-circle btn-center">Save Profile</button>
+            
             <button class="btn-circle btn-center"> 
             <a href="../logout.php" style="color: white; text-decoration:none" >Logout
             </a>

@@ -41,13 +41,10 @@ if (isset($_SESSION['isLogin'])) {
             </h1>
             <div class="flex row">
                 <p id="buyerPhone">Number:
-                <?php echo $_SESSION["sPhoneNumber"]?> 
+                <?php echo $_SESSION["phone_number"]?> 
                 </p>
                 <p id="buyerAddr">Address:  
-                    <?php echo $_SESSION["sAddress"]?> 
-                    <?php echo $_SESSION["sCity"]?> 
-                    <?php echo $_SESSION["sRegion"] ?> 
-                    <?php echo $_SESSION["sZip"]?> 
+                    <?php echo $_SESSION["address"]?> 
             </p>
 
             </div>

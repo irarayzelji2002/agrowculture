@@ -1,18 +1,12 @@
 <?php
+require_once 'config.php';
+
 session_start();
 
 $email = $_POST['email'];
 $password = md5($_POST['password']); //MD5 encrytion
 
-//1. Setup Database connection
-$servername = "localhost";
-$db_username = "root"; //xampp default
-$db_password = "";  //xampp default
-$database = "agrowculture";
-
-$conn = mysqli_connect($servername, $db_username, $db_password, $database);
-
-//2. SELECT SQL
+//SELECT SQL
 $sql = "
     SELECT 
       * 
@@ -30,7 +24,7 @@ $_SESSION["sLastName"] = "";
 $_SESSION["user_ID"] = "";
 
 
-//3. Execute SQL
+//Execute SQL
 $result = mysqli_query($conn, $sql);
 $count = mysqli_num_rows($result);
 $row = mysqli_fetch_assoc($result);
@@ -42,13 +36,10 @@ if ($count > 0) {
   $_SESSION["sFirstName"] = $row["first_name"];
   $_SESSION["sLastName"] = $row["last_name"];
   $_SESSION["usertype"] = $row["user_type"];
-  $_SESSION["sPhoneNumber"] = $row["phone_number"];
+  $_SESSION["phone_number"] = $row["phone_number"];
   $_SESSION["email"] = $row["email"];
-
-  $_SESSION["sAddress"] = $row["address"];
-  $_SESSION["sRegion"] = $row["region"];
-  $_SESSION["sCity"] = $row["city"];
-  $_SESSION["sZip"] = $row["zip"];
+  $_SESSION["business_name"] = $row["business_name"];
+  $_SESSION["address"] = $row["address"];
 
   if ($_SESSION["usertype"] == "Seller") {
     header('Location: seller/seller-page.php');
@@ -68,5 +59,5 @@ if ($count > 0) {
   header('Location: login?authenticate=false');
 }
 
-//.4 Closing Database Connection
+//CLOSE DATABASE CONNECTION
 mysqli_close($conn);
