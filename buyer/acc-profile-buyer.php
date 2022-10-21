@@ -27,12 +27,8 @@
 
         <div class="flex row half-container">
             <div>
-                
             <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg" >
             <input type="file" name="myfile" class="custom-file-input"style="margin-top: 10%;"></input>
-
-
-            
             </div>
             
             <fieldset class="">
