@@ -18,16 +18,15 @@ $sql = "
       `password`='" . $password . "'
   ";
 
-
 $_SESSION["sFirstName"] = "";
 $_SESSION["sLastName"] = "";
 $_SESSION["user_ID"] = "";
-
 
 //Execute SQL
 $result = mysqli_query($conn, $sql);
 $count = mysqli_num_rows($result);
 $row = mysqli_fetch_assoc($result);
+
 if ($count > 0) {
   //user found
   $_SESSION['isLogin'] = true;
@@ -47,7 +46,8 @@ if ($count > 0) {
   if ($_SESSION["usertype"] == "Buyer") {
     header('Location:buyer/buyer-page.php');
   }
-} else {
+}
+else {
 
 
   $_SESSION["sFirstName"] = "";

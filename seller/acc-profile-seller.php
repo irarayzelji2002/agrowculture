@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    require_once '../templates/navbar_seller.php';
+if (isset($_SESSION['isLogin'])) {
+    if ($_SESSION['isLogin'] == false) {
+        header('Location: ../login.php?security=false');
+    }
+} else {
+    header('Location: ../login.php?security=false');
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
