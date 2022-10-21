@@ -12,8 +12,8 @@
         <div>aGROWculture</div>
         <div>
             <!-- <a href="">SELL</a> -->
-            <a href="product-catalog.php">HOME</a>
-            <a href="buyer-page.php">PROFILE</a>
+            <a href="login.php">LOGIN</a>
+            <a href="signup.php">SIGN UP</a>
             <a href="">ICON LOGO</a>
         </div>
 

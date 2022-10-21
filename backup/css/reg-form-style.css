@@ -1,0 +1,133 @@
+/* Navbar CSS */
+.sticky {
+    z-index: 2;
+}
+
+nav {
+    height: 60px;
+    backdrop-filter: blur(5px) !important;
+    background-color: transparent;
+    mask-image: linear-gradient(to bottom,black 10%,transparent 98%);
+}
+
+.nav-link {
+    color: black;
+}
+
+/* Background CSS */
+section {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    width: 100%; object-fit: contain;
+}
+
+.bg-image {
+    background-image: linear-gradient(rgba(60,133,44,0.3),rgba(60,133,44,0.6)),url(farm-bg.jpg);
+    filter: blur(3px);
+    transform: scale(1.01);
+    height: 1500px;
+}
+
+/* Card CSS */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+}
+
+/* Float left and right of Card CSS */
+.regform {
+    width: 50%;
+    height: auto;
+    float: left;
+    padding: 4rem;
+}
+
+.right-container {
+    float: right; 
+    width: 50%;
+}
+
+/* Texts CSS */
+h1 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+.formGreenText {
+    color: #31ad5d;
+}
+
+/* Input fields with left and right CSS */
+.left-input {
+    float: left; 
+    width: 50%;
+}
+
+.right-input {
+    float: right; 
+    width: 50%;
+}
+
+/* Adjusted input properties */
+input[type='text'] {
+    line-height: 40px;
+    width: 1rem;
+    flex: 1;
+    margin-bottom: 0.5rem;
+}
+
+input[type='radio'] {
+    line-height: 20px;
+    width: 1rem;
+    margin-left: 10px;
+}
+
+/* To flex elements */
+.wrapper {
+    display: flex;
+}
+
+.btn-box {
+    flex:1;
+}
+
+/* Upload button */
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn {
+    background-color: #31ad5d;;
+    color: white;
+    margin-top: 1rem; ;
+    padding: 10px 30px;
+    font-family: Poppins;
+
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }

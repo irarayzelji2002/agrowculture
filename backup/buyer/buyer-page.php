@@ -1,25 +1,20 @@
-<?php
-
-require_once '../templates/navbar_seller.php';
-require_once '../config.php';
+<?php 
 session_start();
 if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['isLogin'] == false) {
-        header('Location: ../login.php?security=false');
+      header('Location: ../login.php?security=false');
     }
-} else {
+  } else {
     header('Location: ../login.php?security=false');
-}
+  }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- MAIN CSS Sheet-->
     <link rel="stylesheet" href="../css/main.css">
 
@@ -28,15 +23,13 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
     <title>aGROWculture</title>
 
 </head>
-
 <body>
-
-     <!-- Navbar -->
-    <?php require_once '../templates/navbar_seller.php' ?>
+    <!-- Navbar -->
+    <?php require_once '../templates/navbar_buyer.php' ?>
 
     <!-- MAIN CONTENT -->
     <main class="full-container"style="margin-top:5%;">
@@ -48,10 +41,10 @@ if (isset($_SESSION['isLogin'])) {
             </h1>
             <div class="flex row">
                 <p id="buyerPhone">Number:
-                <?php echo $_SESSION["sPhoneNumber"]?> 
+                <?php echo $_SESSION["phone_number"]?> 
                 </p>
                 <p id="buyerAddr">Address:  
-                    <?php echo $_SESSION["sAddress"]?> 
+                    <?php echo $_SESSION["address"]?> 
             </p>
 
             </div>
@@ -66,7 +59,6 @@ if (isset($_SESSION['isLogin'])) {
     <footer>
         
     </footer>
-
+    
 </body>
-
 </html>
