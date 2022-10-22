@@ -41,20 +41,20 @@
         <section class="bg-image"></section>
         <!--Form-->
         <div class="container">
-            <form id="regForm" class="regform">
+            <form id="regForm" class="regform" action="db/registerDATA.php" method="post">
                 <h1>Join our community.</h1>
                 <!--Role-->
                 <h3 class="formGreenText">I am a...</h3>
                 <div class="left-input">
                     <label style>
                     <p class="formGreenText">Buyer</p>
-                    <input type="radio" id="homeoption" name="address" value="home" checked="checked"/>
+                    <input type="radio" id="Buyer" name="user_type" value="Buyer" checked="checked"/>
                     </label>
                 </div>
                 <div class="right-input">
                     <label>
                     <p class="formGreenText">Seller</p>
-                    <input type="radio" id="busoption" name="address" value="home"/>
+                    <input type="radio" id="Seller" name="user_type" value="Seller"/>
                     </label>
                 </div>
                 <!--Account Details-->
@@ -63,41 +63,29 @@
                     <div style="position: relative; margin-right: 8px;">
                         <div class="left-input">
                             <p class="formGreenText">First Name</p>
-                            <div class="wrapper"><input type="text" id="firstName" required/></div>
+                            <div class="wrapper"><input type="text" id="first_name" name="first_name" required/></div>
                         </div>
                     </div>
                     <div style="position: relative; margin-left: 8px;">
                         <div class="right-input">
                             <p class="formGreenText">Last Name</p>
-                            <div class="wrapper"><input type="text" id="lastName" required/></div>
+                            <div class="wrapper"><input type="text" id="last_name" name="last_name" required/></div>
                         </div>
                     </div>
                     <p class="formGreenText">Email Address</p>
-                    <div class="wrapper"><input type="text" id="emailAddress" required/></div>
+                    <div class="wrapper"><input type="text" id="email" name="email" required/></div>
                     <p class="formGreenText">Password</p>
-                    <div class="wrapper"><input type="text" id="password" required/></div>
+                    <div class="wrapper"><input type="text" id="password" name="password" required/></div>
                 </fieldset></br>
                 <!--Business Details-->
                 <fieldset id="businessDetails">
                     <legend><h2>Business Details</h2></legend>
                     <p class="formGreenText">Company/Business Name</p>
-                    <div class="wrapper"><input type="text" id="studentID" name="studentID" required/></div>
+                    <div class="wrapper"><input type="text" id="business_name" name="business_name" required/></div>
                     <p class="formGreenText">Phone Number</p>
-                    <div class="wrapper"><input type="text" id="program" name="program" required/></div>
+                    <div class="wrapper"><input type="text" id="phone_number" name="phone_number" required/></div>
                     <p class="formGreenText">Address</p>
-                    <div class="wrapper"><input type="text" id="program" name="program" required/></div>
-                    <div style="position: relative; margin-right: 8px;">
-                        <div class="left-input">
-                            <p class="formGreenText">Region</p>
-                            <div class="wrapper"><input type="text" id="program" name="program" required/></div>
-                        </div>
-                    </div>
-                    <div style="position: relative; margin-left: 8px;">
-                        <div class="right-input">
-                            <p class="formGreenText">ZIP</p>
-                            <div class="wrapper"><input type="text" id="program" name="program" required/></div>
-                        </div>
-                    </div>
+                    <div class="wrapper"><input type="text" id="address" name="address" required/></div>
                 </fieldset></br>
                 <!--Upload Documents-->
                 <fieldset id="uploadDocuments">

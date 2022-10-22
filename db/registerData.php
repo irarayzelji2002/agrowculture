@@ -5,9 +5,6 @@
   $last_name = $_POST['last_name'];
   $email = $_POST['email'];
   $password = md5($_POST['password']); //MD5 encryption
-  $birth_month = $_POST['birth_month'];
-  $birth_day = $_POST['birth_day'];
-  $birth_year = $_POST['birth_year'];
   $user_type = $_POST['user_type'];
   $phone_number = $_POST['phone_number'];
   $address = $_POST['address'];
@@ -26,9 +23,6 @@
     `email`,
     `password`,
     `business_name`,
-    `birth_month`,
-    `birth_day`,
-    `birth_year`,
     `user_type`,
     `phone_number`,
     `address`
@@ -38,10 +32,7 @@
           '".$last_name."', 
           '".$email."',
           '".$password."' ,
-          '".$business_name."' ,
-          '".$birth_month."', 
-          '".$birth_day."', 
-          '".$birth_year."', 
+          '".$business_name."' , 
           '".$user_type."', 
           '".$phone_number."', 
           '".$address."' 
