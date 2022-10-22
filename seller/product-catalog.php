@@ -37,13 +37,13 @@ if (isset($_SESSION['isLogin'])) {
         <div class="flex-nav">
         <div>aGROWculture</div>
         <div>
-        <a href="product-listing.php" style="color:gray">SELL</a>
-        <a href="product-catalog.php" style="color:gray">HOME</a>
-            <a href="seller-page.php" style="color:gray">PROFILE</a>
-            <a href="" style="color:gray">ICON LOGO</a>
+        <a href="product-listing.php" style="color:black">SELL</a>
+        <a href="product-catalog.php" style="color:black">HOME</a>
+            <a href="seller-page.php" style="color:black">PROFILE</a>
+            <a href="" style="color:black">ICON LOGO</a>
         </div>
     </nav>
-
+  
     <!-- MAIN CONTENT -->
     <main class="full-container flex row">
 

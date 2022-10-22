@@ -1,5 +1,7 @@
 <?php
+// require_once '../templates/navbar_seller.php'
     session_start();
+    
 if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['isLogin'] == false) {
         header('Location: ../login.php?security=false');
@@ -31,7 +33,9 @@ if (isset($_SESSION['isLogin'])) {
 
 </head>
 <body>
-    <?php require_once '../templates/navbar_seller.php' ?>
+    <?php 
+    require_once '../templates/navbar_seller.php'
+     ?>
     <!-- MAIN CONTENT -->
     <main class="full-container"style="margin-top:5%;">
         <h1 class="sub-link center" >My Profile</h1>

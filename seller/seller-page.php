@@ -33,7 +33,9 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
-<?php  require_once '../templates/navbar_seller.php'; ?>
+<?php  
+require_once '../templates/navbar_sellerpage.php';
+ ?>
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
@@ -66,7 +68,8 @@ if (isset($_SESSION['isLogin'])) {
             <i class="fas fa-trash fa-2x"></i>
             </div>
 
-            <div class="product"><img src="../img/grapes.png" alt="" id="productIcon2" class="picon2">
+            <div class="product">
+            <img src="../img/grapes.png" alt="" id="productIcon2" class="picon2">
             <h5 id="productname2" class="pname">Product Name:</h5>
             <h5 id="productprice2" class="pprice">Product Price:</h5>
             <h5 id="productdesc2" class="pdesc">Product Description:</h5>
