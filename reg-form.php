@@ -22,7 +22,7 @@
 <body>
     
     <!-- Navbar -->
-    <nav class="sticky">
+    <!-- <nav class="sticky">
         <div class="flex-nav">
         <div>aGROWculture</div>
         <div>
@@ -33,8 +33,8 @@
         </div>
 
         </div>
-    </nav>
-
+    </nav> -->
+    <?php require_once 'templates/navbar.php' ?>
     <!--REGFORM-->
     <section>
         <!--Background Image-->
