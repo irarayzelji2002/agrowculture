@@ -36,27 +36,27 @@
     <!-- MAIN CONTENT -->
     <main class="full-container flex row">
         <div class="flex-child">
-            <h1>HEADING TITLE</h1>
-            <p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Maecenas scelerisque rhoncus libero,
-            et tristique massa hendrerit at.
-            Sed urna elit, facilisis ut lectus sed,
-            vestibulum suscipit lorem.</p>
-            <button class="btn-circle">Edit Profile</button>
-            <p class="sub-text">Join our community</p>
+            <h1>Live Fresh, Grow Fresh</h1>
+            <p>
+            This is the known tagline for the aGROWculture website. 
+            This tagline meant that keeping the body in good health 
+            will have a flourishing future ahead.
+
+        </p>
+            <button class="btn-circle"style="margin-top:5%">
+            <a href="reg-form.php" style="color: white;font-weight:600;"> GET STARTED</a>
+           </button>
+            <p class="sub-text" style="margin-left:2%"> Join our community</p>
         </div>
 
         <div class="flex-child">
-            <h1>HEADING TITLE</h1>
-            <p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Maecenas scelerisque rhoncus libero,
-            et tristique massa hendrerit at.
-            Sed urna elit, facilisis ut lectus sed,
-            vestibulum suscipit lorem.</p>
-            <p>GET STARTED</p>
-            <p>Join our community</p>
+            <h1>Value of Production in Philippine Agriculture</h1>
+            <p>
+            According to Philippine Statistics Authority (2022), there is a -1.6 decrease in 
+            the value of crop production in the first half of 2022. It has 
+            went down showing a decline due to various agricultural problems.
+
+        </p>
         </div>
     </main>
 
