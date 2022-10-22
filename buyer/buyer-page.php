@@ -1,5 +1,7 @@
 <?php 
 session_start();
+
+require_once '../config.php';
 if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['isLogin'] == false) {
       header('Location: ../login.php?security=false');
@@ -29,7 +31,7 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 <body>
     <!-- Navbar -->
-    <?php require_once '../templates/navbar_buyer.php' ?>
+    <?php require_once '../templates/navbar_buyer.php'; ?>
 
     <!-- MAIN CONTENT -->
     <main class="full-container"style="margin-top:5%;">
@@ -41,10 +43,10 @@ if (isset($_SESSION['isLogin'])) {
             </h1>
             <div class="flex row">
                 <p id="buyerPhone">Number:
-                <?php echo $_SESSION["sPhoneNumber"]?> 
+                <?php echo $_SESSION["phone_number"]?> 
                 </p>
                 <p id="buyerAddr">Address:  
-                    <?php echo $_SESSION["sAddress"]?> 
+                    <?php echo $_SESSION["address"]?> 
             </p>
 
             </div>
