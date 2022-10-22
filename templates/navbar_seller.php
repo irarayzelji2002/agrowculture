@@ -1,3 +1,12 @@
+<!-- MAIN CSS Sheet-->
+<link rel="stylesheet" href="../css/main.css">
+ <link rel="stylesheet" href="../css/login">
+ <!-- Google Font: Poppins-->
+ <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
   <!-- logo head -->
   <a class="navbar-brand" href="index">
@@ -6,26 +15,32 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<a class="nav-link btn " href="../index.php"  role="button"  style="color:black">
-aGROWculture</a>
+<div class="collapse navbar-collapse bold-text" id="navbarSupportedContent"
+style="margin-left:10%;margin-right: 10%;">
+<a class="nav-link btn bold-text" href="index.php" role="button" 
+    style="font-weight:600;">
+       aGROWculture</a>
 <!-- <div>aGROWculture</div> -->
   <ul class="navbar-nav ml-auto">
-    <li class="nav-item mr-4">
-      <a class="nav-link btn " href="Index.php" role="button" >
+    <li class="nav-item mr2">
+      <a class="nav-link btn bold-text" href="#" role="button" 
+      style="font-weight:600;">
       SELL</a>
     </li>
-    <li class="nav-item mr-4">
-      <a class="nav-link btn " href="../login.php" role="button"  >
-      LOGIN</a>
+    <li class="nav-item mr-2">
+      <a class="nav-link btn bold-text" href="product-catalog.php" role="button"  
+      style="font-weight:600;">
+      HOME</a>
     </li>
 
     <li class="nav-item mr-2">
-      <a class="nav-link btn" href="../signup.php" role="button">
-      SIGN UP</a>
+      <a class="nav-link btn" href="seller-page.php" role="button"
+      style="font-weight:600;">
+      PROFILE</a>
     </li>
     <li class="nav-item mr-2">
-      <a class="nav-link btn" href="" role="button" >
+      <a class="nav-link btn" href="" role="button" 
+      style="font-weight:600;">
       ICON LOGO</a>
     </li>
     </ul>
