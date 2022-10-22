@@ -55,8 +55,6 @@
             According to Philippine Statistics Authority (2022), there is a -1.6 decrease in 
             the value of crop production in the first half of 2022. It has 
             went down showing a decline due to various agricultural problems.
-            Hi elli test only
-            Hi elli testing 2 only
         </p>
         </div>
     </main>
