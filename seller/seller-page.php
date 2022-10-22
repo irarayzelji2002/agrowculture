@@ -39,7 +39,7 @@ if (isset($_SESSION['isLogin'])) {
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
         <div class="solid-bg">
             <h1 id="sellerName" class="center"><?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?></h1>
-            <p id="productNum" class="center">Products: </p>
+            <!-- <p id="productNum" class="center">Products: </p> -->
             <div class="flex row">
                 <p id="sellerPhone">Number:
                 <?php echo $_SESSION["phone_number"]?> 
