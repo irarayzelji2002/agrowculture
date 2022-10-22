@@ -9,14 +9,12 @@
     $fName = $_POST['sFirstName'];
     $lName = $_POST['sLastName'];
     $currentID = $_SESSION["user_ID"];
-    $password = md5($_POST['password']);
 
     $sql = "UPDATE users
     SET
         `first_name` = '$fName',
         `last_name` = '$lName',
         `email` = '$email',
-        `password` = '$password',
         `business_name` = '$business_name',
         `phone_number` = '$phone_number',
         `address` = '$address'
@@ -28,7 +26,6 @@
         $_SESSION["sFirstName"]= $fName;
         $_SESSION["sLastName"]= $lName;
         $_SESSION["email"]= $email;
-        $_SESSION['password'] = $password;
         $_SESSION["business_name"] = $business_name;
         $_SESSION["phone_number"] = $phone_number;
         $_SESSION["address"] = $address;
