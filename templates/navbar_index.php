@@ -29,7 +29,7 @@
        </li>
 
        <li class="nav-item mr-2">
-         <a class="nav-link btn bold-text" href="signup.php" role="button" style="color: #d9d9d9;font-weight:600;">
+         <a class="nav-link btn bold-text" href="reg-form.php" role="button" style="color: #d9d9d9;font-weight:600;">
            SIGN UP</a>
        </li>
        <li class="nav-item mr-2 ">

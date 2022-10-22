@@ -1,17 +1,14 @@
 <?php
-//   <!-- To be change -->
-//   //security check
-// session_start();
-// if (isset($_SESSION['isLogin'])) {
-//   if ($_SESSION['isLogin'] == true) {
-//     if ($_SESSION['usertype'] == "Artist") {
-//       header('Location: artist/dashboard.php');
-//     }
-//     if ($_SESSION['usertype'] == "Client") {
-//       header('Location: client/client_dashboard.php');
-//     }
-//   }
-// }
+require_once '../config.php';
+session_start();
+if (isset($_SESSION['isLogin'])) {
+    if ($_SESSION['isLogin'] == false) {
+        header('Location: ../login.php?security=false');
+    }
+} else {
+    header('Location: ../login.php?security=false');
+}
+?>
 ?>
 <!DOCTYPE html>
 <html>

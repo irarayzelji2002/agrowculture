@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require_once '../templates/navbar_seller.php';
 if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['isLogin'] == false) {
         header('Location: ../login.php?security=false');
@@ -32,19 +31,6 @@ if (isset($_SESSION['isLogin'])) {
 
 </head>
 <body>
-    <!-- Navbar -->
-    <!-- <nav class="sticky">
-        <div class="flex-nav">
-        <div>aGROWculture</div>
-        <div>
-            <a href="">SELL</a>
-            <a href="">LOGIN</a>
-            <a href="">SIGN UP</a>
-            <a href="">ICON LOGO</a>
-        </div>
-
-        </div>
-    </nav> -->
     <?php require_once '../templates/navbar_seller.php' ?>
     <!-- MAIN CONTENT -->
     <main class="full-container"style="margin-top:5%;">

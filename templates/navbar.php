@@ -9,12 +9,14 @@
  <!-- Navbar -->
   <nav class="sticky">
         <div class="flex-nav">
-        <div>aGROWculture</div>
+        <a class="btn bold-text" href="index.php" role="button" 
+    style="color: black;font-weight:600;">
+       aGROWculture</a>
         <div>
             <!-- <a href="">SELL</a> -->
-            <a href="login.php">LOGIN</a>
-            <a href="signup.php">SIGN UP</a>
-            <a href="">ICON LOGO</a>
+            <a href="login.php" style="color: black;font-weight:600;">LOGIN</a>
+            <a href="reg-form.php" style="color: black;font-weight:600;">SIGN UP</a>
+            <a href="" style="color:black;font-weight:600;">ICON LOGO</a>
         </div>
 
         </div>

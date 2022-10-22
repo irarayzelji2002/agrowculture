@@ -72,7 +72,8 @@ if (isset($_SESSION['isLogin'])) {
                     <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
 
                 </fieldset>
-                <button type=submit class="btn-circle btn-center" name="update" onClick="window.location.reload();">Save Profile</button>
+                <button type=submit class="btn-circle btn-center" name="update" style="margin-top:5%"
+                onClick="window.location.reload();">Save Profile</button>
             </form>
         </div>
 
