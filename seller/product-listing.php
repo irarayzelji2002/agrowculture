@@ -66,17 +66,25 @@ if (isset($_SESSION['isLogin'])) {
                         <input type="text" id="productPrice" name="productPrice">
 
                         <label for="">Category</label>
-                        <input class="category-listing" type="radio" name="dairyoreggs" id="dairyoreggs" value="Option1:Dairy/Eggs">
-                        <label for="dairyoreggs">Dairy or Eggs</label>
-            
-                        <input class="category-listing"  type="radio" name="fruits" id="fruits" value="Option2:Fruits">
-                        <label for="fruits">Fruits</label>
 
-                        <input class="category-listing" type="radio" name="vegetables" id="vegetables" value="Option3:Vegetables">
-                        <label for="vegetables">Vegetables</label>
+                        <label>
+                            <input type="radio" id="dairyoreggs" name="category_type" value="DairyorEggs" checked="checked"/>
+                            <p>Dairy or Eggs</p>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="Seller" name="category_type" value="Fruits"/>
+                            <p>Fruits</p>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="Seller" name="category_type" value="Vegetables"/>
+                            <p>Vegetables</p>
+                        </label>
 
                         <label for="productdescription">Product Description</label>
-                        <input class="prod-desc" type="text" id="productDescription" name="productDescription">
+                        <textarea id="productDescription" name="productDescription">
+                        </textarea>
                      
                     </fieldset>
                     
