@@ -1,6 +1,6 @@
 <?php
 
-
+require_once '../templates/navbar_seller.php';
 require_once '../config.php';
 session_start();
 if (isset($_SESSION['isLogin'])) {
@@ -37,16 +37,26 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
-<?php require_once '../templates/navbar_seller.php'; ?>
+
+     <!-- Navbar -->
+    <?php require_once '../templates/navbar_seller.php' ?>
+
     <!-- MAIN CONTENT -->
-    <main class="full-container" style="margin-top:5%;">
-        <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
+    <main class="full-container"style="margin-top:5%;">
+        <img src="../img/s1.jpg" alt="" id="buyerIcon" class="profile-icon">
         <div class="solid-bg">
-            <h1 id="sellerName" class="center"><?php echo $_SESSION["sFirstName"] ?> <?php echo $_SESSION["sLastName"] ?></h1>
-            <p id="productNum" class="center">Products: </p>
+            <h1 id="buyerName" class="center">
+                <!-- NAME -->
+                <?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?>
+            </h1>
             <div class="flex row">
-                <p id="sellerPhone">Number: <?php echo $_SESSION["sPhoneNumber"] ?> </p>
-                <p id="sellerAddr">Address: <?php echo $_SESSION["sAddress"] ?> </p>
+                <p id="buyerPhone">Number:
+                <?php echo $_SESSION["sPhoneNumber"]?> 
+                </p>
+                <p id="buyerAddr">Address:  
+                    <?php echo $_SESSION["sAddress"]?> 
+            </p>
+
             </div>
             <button class="btn-circle btn-center">
                 <a href="acc-profile-seller.php" style="color: white;text-decoration: none;">
@@ -102,7 +112,7 @@ if (isset($_SESSION['isLogin'])) {
 
 
     <footer>
-
+        
     </footer>
 
 </body>
