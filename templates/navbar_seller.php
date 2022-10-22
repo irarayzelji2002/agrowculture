@@ -23,7 +23,7 @@ style="margin-left:10%;margin-right: 10%;">
 <!-- <div>aGROWculture</div> -->
   <ul class="navbar-nav ml-auto">
     <li class="nav-item mr2">
-      <a class="nav-link btn bold-text" href="#" role="button" 
+      <a class="nav-link btn bold-text" href="product-listing.php" role="button" 
       style="font-weight:600;">
       SELL</a>
     </li>
