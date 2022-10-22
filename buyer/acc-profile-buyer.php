@@ -55,9 +55,6 @@ if (isset($_SESSION['isLogin'])) {
                     <label for="emailAddress">Email Address:</label>
                     <input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>">
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Change your password" onfocus="this.value=''">
-
                     <label for="fullName">First Name:</label>
                     <input type="text" id="sFirstName" name="sFirstName" value="<?php echo $_SESSION["sFirstName"] ?>">
 
