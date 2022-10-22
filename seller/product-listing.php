@@ -18,7 +18,6 @@ if (isset($_SESSION['isLogin'])) {
     
     <!-- MAIN CSS Sheet-->
     <link rel="stylesheet" href="../css/plist.css">
-    <link rel="stylesheet" href="../css/seller_list.css">
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,18 +43,21 @@ if (isset($_SESSION['isLogin'])) {
     </nav> -->
     <?php require_once '../templates/navbar_seller.php' ?>
     <!-- MAIN CONTENT -->
-    <main class="full-container"style="margin-top:5%;">
-    <h1 class="sub-link left" >Add a Product</h1>
+    <main class="full-container"style="margin-top:8rem;">
+    <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
 
-        <div class="flex row half-container">
-            <div>
-                <img src="../img/s1.jpg" alt="" class="product-icon">
+        <div class="flex row half-container" >
+            <div class="column" style="align-items:flex-start!important;">
+                <img src="../img/s1.jpg" alt="" class="product-icon" >
                 <button class="btn-box">Upload Thumbnail</button>
+            <br>
+                <button class="btn-box">Add Product</button>
+        
             </div>
 
-            <div>
-                <form action="">
-                    <fieldset class="">
+            <div >
+                <form action="" >
+                    <fieldset class="" >
 
                         <label for="productname">Product Name</label>
                         <input type="text" id="productName" name="productName" aria-describedby="productHelp">
@@ -75,19 +77,20 @@ if (isset($_SESSION['isLogin'])) {
 
                         <label for="productdescription">Product Description</label>
                         <input class="prod-desc" type="text" id="productDescription" name="productDescription">
-                        
+                     
                     </fieldset>
+                    
                 </form>
             </div>
 
             
         </div>
 
-        <div class="flex row half-container">
+        <!-- <div class="flex row half-container">
             <div>
                 <button class="btn-box1">Add Product</button>
             </div>
-        </div>
+        </div> -->
         
     </main>
 
