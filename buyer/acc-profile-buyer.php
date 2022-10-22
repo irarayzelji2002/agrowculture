@@ -40,10 +40,12 @@ if (isset($_SESSION['isLogin'])) {
 
         <div class="flex row half-container">
             <div>
+                
+            <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg" >
+            <input type="file" name="myfile" class="custom-file-input"style="margin-top: 10%;"></input>
 
-                <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg">
-                <input type="file" name="myfile" class="custom-file-input" style="margin-top: 10%;"></input>
 
+            
             </div>
             <form action="../db/update.php" method="post">
                 <fieldset class="">
@@ -56,20 +58,24 @@ if (isset($_SESSION['isLogin'])) {
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Change your password" onfocus="this.value=''">
 
-                    <label for="fullName">Name:</label>
-                    <input type="text" id="fullName" name="fullName" value="<?php echo $_SESSION["sFirstName"] ?>">
+                    <label for="fullName">First Name:</label>
+                    <input type="text" id="sFirstName" name="sFirstName" value="<?php echo $_SESSION["sFirstName"] ?>">
+
+                    <label for="fullName">Last Name:</label>
+                    <input type="text" id="sLastName" name="sLastName" value="<?php echo $_SESSION["sLastName"] ?>">
+
 
                     <label for="businessName">Company/Business Name:</label>
                     <input type="text" id="business_name" name="business_name" value="<?php echo $_SESSION["business_name"] ?>">
 
                     <label for="phone_number">Phone Number:</label>
-                    <input type="text" id="phone_number" name="phone_number" value="<?php echo $_SESSION["sPhoneNumber"] ?>">
+                    <input type="text" id="phone_number" name="phone_number" value="<?php echo $_SESSION["phone_number"] ?>">
 
                     <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" value="<?php echo $_SESSION["sAddress"] ?>">
+                    <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
 
                 </fieldset>
-                <button type=submit class="btn-circle btn-center" name="update">Save Profile</button>
+                <button type=submit class="btn-circle btn-center" name="update" onClick="window.location.reload();">Save Profile</button>
             </form>
         </div>
 

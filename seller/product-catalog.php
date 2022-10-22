@@ -25,9 +25,10 @@
         <div class="flex-nav">
         <div>aGROWculture</div>
         <div>
-            <a href="product-catalog.php">HOME</a>
-            <a href="seller-page.php">PROFILE</a>
-            <a href="">ICON LOGO</a>
+        <a href="product-listing.php" style="color:gray">SELL</a>
+        <a href="product-catalog.php" style="color:gray">HOME</a>
+            <a href="seller-page.php" style="color:gray">PROFILE</a>
+            <a href="" style="color:gray">ICON LOGO</a>
         </div>
     </nav>
 
@@ -51,7 +52,7 @@
                 <li style="margin-left:10%; font-size: small;"><input type="checkbox"> Vegetables</a></li><br>
             </ul>
 
-    <section class="half-container">
+    <section class="half-container" style="margin-top:2%">
         <div class="flex row">
             <div><img src="../img/s1.jpg" alt="" class="featured"></div>
             <div><img src="../img/s2.jpg" alt="" class="featured"></div>

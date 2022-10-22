@@ -53,7 +53,7 @@ if (isset($_SESSION['isLogin'])) {
 
         <div class="flex row half-container">
             <div>
-                <img src="images/s1.jpg" alt="" class="profile-icon">
+                <img src="../img/s1.jpg" alt="" class="profile-icon">
                 <button class="btn-box">Upload Image</button>
             </div>
 
