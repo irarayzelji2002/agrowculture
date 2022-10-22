@@ -35,10 +35,10 @@ if ($count > 0) {
   $_SESSION["sFirstName"] = $row["first_name"];
   $_SESSION["sLastName"] = $row["last_name"];
   $_SESSION["usertype"] = $row["user_type"];
-  $_SESSION["sPhoneNumber"] = $row["phone_number"];
+  $_SESSION["phone_number"] = $row["phone_number"];
   $_SESSION["email"] = $row["email"];
   $_SESSION["business_name"] = $row["business_name"];
-  $_SESSION["sAddress"] = $row["address"];
+  $_SESSION["address"] = $row["address"];
 
   if ($_SESSION["usertype"] == "Seller") {
     header('Location: seller/seller-page.php');

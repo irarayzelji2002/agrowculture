@@ -1,6 +1,4 @@
 <?php
-
-require_once '../templates/navbar_seller.php';
 require_once '../config.php';
 session_start();
 if (isset($_SESSION['isLogin'])) {
