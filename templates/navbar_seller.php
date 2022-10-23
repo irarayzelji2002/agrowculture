@@ -6,19 +6,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
- <!-- Navbar -->
-  <nav class="sticky">
+    <!-- Navbar -->
+    <nav class="sticky">
         <div class="flex-nav">
-        <a class="btn bold-text" href="index.php" role="button" 
-    style="color: black;font-weight:600;">
-       aGROWculture</a>
-        <div>
-            <!-- <a href="">SELL</a> -->
-            <a href="product-listing.php" style="color: black;font-weight:600;">SELL</a>
-            <a href="product-catalog.php" style="color: black;font-weight:600;">HOME</a>
-            <a href="seller-page.php" style="color: black;font-weight:600;">PROFILE</a>
-            <a href="" style="color:black;font-weight:600;">ICON LOGO</a>
-        </div>
+            <div>
+                <a class="bold-text" href="index.php" role="button" style="color: black; font-weight: 600;">
+                aGROWculture</a>
+            </div>
+            
+            <div>
+                <a href="product-listing.php" style="color: black;font-weight:600;">SELL</a>
+                <a href="product-catalog.php" style="color: black;font-weight:600;">HOME</a>
+                <a href="seller-page.php" style="color: black;font-weight:600;">PROFILE</a>
+            </div>
 
         </div>
     </nav>

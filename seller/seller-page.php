@@ -28,7 +28,7 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- FONTAWESOME -->
+    <!-- FONTAWESOME -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <title>aGROWculture</title>
 
@@ -36,7 +36,7 @@ if (isset($_SESSION['isLogin'])) {
 
 <body>
 <?php  
-require_once '../templates/navbar_sellerpage.php';
+require_once '../templates/navbar_seller.php';
  ?>
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">

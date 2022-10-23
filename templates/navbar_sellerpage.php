@@ -15,8 +15,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-<div class="collapse navbar-collapse bold-text" id="navbarSupportedContent"
-style="margin-left:10%;margin-right: 10%;">
+<div class="collapse navbar-collapse bold-text " id="navbarSupportedContent"
+style="margin-left:10%;margin-right: 10%; justify-content: space-evenly !important;">
 <a class="nav-link btn bold-text" href="index.php" role="button" 
 style="color: black;font-weight:600;">
        aGROWculture</a>
@@ -38,11 +38,7 @@ style="color: black;font-weight:600;">
       style="color: black;font-weight:600;">
       PROFILE</a>
     </li>
-    <li class="nav-item mr-2">
-      <a class="nav-link btn" href="" role="button" 
-      style="color: black;font-weight:600;">
-      ICON LOGO</a>
-    </li>
+
     </ul>
   </div>
 </nav>

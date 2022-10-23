@@ -18,6 +18,7 @@ if (isset($_SESSION['isLogin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- MAIN CSS Sheet-->
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/plist.css">
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
@@ -30,31 +31,15 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
-    <!-- Navbar -->
-    <!-- <nav class="sticky">
-        <div class="flex-nav">
-        <div>aGROWculture</div>
-        <div>
-            <a href="">SELL</a>
-            <a href="">LOGIN</a>
-            <a href="">SIGN UP</a>
-            <a href="">ICON LOGO</a>
-        </div>
-
-        </div>
-    </nav> -->
     <?php require_once '../templates/navbar_seller.php' ?>
+
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:8rem;">
         <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
 
         <div class="flex row half-container">
-            <div class="column" style="align-items:flex-start!important;">
+            <div style="align-items:flex-start!important;">
                 <img src="../img/s1.jpg" alt="" class="product-icon">
-                <button class="btn-box">Upload Thumbnail</button>
-                <br>
-               
-
             </div>
 
             <div>
@@ -88,7 +73,7 @@ if (isset($_SESSION['isLogin'])) {
                         <label for="productdescription">Product Description</label>
                         <input class="prod-desc" type="text" id="productDescription" name="productDescription">
                         <div class="form-group">
-                            <label for="image">Choose Image</label>
+                            <label for="image">Choose Image for Thumbnail</label>
                             <input type="file" class="form-control" name="product_image" value="" style="width: 376px;" required>
                         </div>
                     </fieldset>
@@ -98,12 +83,6 @@ if (isset($_SESSION['isLogin'])) {
 
 
         </div>
-
-        <!-- <div class="flex row half-container">
-            <div>
-                <button class="btn-box1">Add Product</button>
-            </div>
-        </div> -->
 
     </main>
 
