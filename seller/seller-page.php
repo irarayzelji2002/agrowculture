@@ -13,7 +13,15 @@ if (isset($_SESSION['isLogin'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ <script src="js/scriptwo.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +31,7 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/seller_list.css">
     <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/plist.css">
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,67 +129,12 @@ require_once '../templates/navbar_seller.php';
 
         </tbody>
     </table>
-    
-        
-    </section>
 
+</section>
 
+<footer style="margin-bottom:5%">
 
-
-
-
-
-
-
-    <!--PRODUCT LIST UNDER SELLER PAGE-->
-    <section class="half-container">
-
-    <!--4 Box Blank Container Row-->
-        <div class="flex row">
-            <div class="product"><img src="../img/carrots.png" alt="" id="productIcon1" class="picon1">
-            <h5 id="productname1" class="pname">Product Name:</h5>
-            <h5 id="productprice1" class="pprice">Product Price:</h5>
-            <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
-            </div>
-
-            <div class="product">
-            <img src="../img/grapes.png" alt="" id="productIcon2" class="picon2">
-            <h5 id="productname2" class="pname">Product Name:</h5>
-            <h5 id="productprice2" class="pprice">Product Price:</h5>
-            <h5 id="productdesc2" class="pdesc">Product Description:</h5>
-
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
-            </div>
-
-            <div class="product"><img src="../img/tomato.png" alt="" id="productIcon3" class="picon3">
-            <h5 id="productname3" class="pname">Product Name:</h5>
-            <h5 id="productprice3" class="pprice">Product Price:</h5>
-            <h5 id="productdesc3" class="pdesc">Product Description:</h5>
-
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
-            </div>
-
-            <div class="product"><img src="../img/pineapple.png" alt="" id="productIcon4" class="picon4">
-            <h5 id="productname4" class="pname">Product Name:</h5>
-            <h5 id="productprice4" class="pprice">Product Price:</h5>
-            <h5 id="productdesc4" class="pdesc">Product Description:</h5>
-
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
-            </div>
-
-        </div>
-
-    </section>
-
-    <footer>
-
-    </footer>
+</footer>
 
 </body>
 
