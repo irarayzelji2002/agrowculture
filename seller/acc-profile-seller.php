@@ -12,7 +12,6 @@ if (isset($_SESSION['isLogin'])) {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,15 +40,6 @@ if (isset($_SESSION['isLogin'])) {
         <h1 class="sub-link center" >My Profile</h1>
         <hr>
 
-            <!--Upload Documents-->
-            <fieldset id="uploadDocuments">
-                            <legend>
-                                <h2 class="sub-link">Upload Documents</h2>
-                            </legend>
-                            <input type="file" name="image" class="upload-btn-wrapper"></input>
-                        </fieldset>
-                    </div>
-
             <div>
                  <form action="../db/update.php" method="post" enctype="multipart/form-data">
                     <fieldset class="">
@@ -75,7 +65,15 @@ if (isset($_SESSION['isLogin'])) {
 
                     <label for="address">Address:</label>
                     <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
-                        
+                    
+                      <!--Upload Documents-->
+            
+                            <legend>
+                                <h2 class="sub-link">Upload Documents</h2>
+                            </legend>
+                            <input type="file" name="image" class="upload-btn-wrapper"></input>
+          
+                    </div>
                     </fieldset>
 
                     <div class="flex row">
