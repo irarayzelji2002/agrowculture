@@ -27,7 +27,7 @@
     <div class="bg-image"></div>
     <main class="absolute-container">
         <div class="form-container solid-bg">
-            <form class="form-flex column" id="regForm" action="db/registerDATA.php" method="post">
+            <form class="form-flex column" id="regForm" action="db/registerDATA.php" method="post" enctype="multipart/form-data">
                 <div>
                     <div>
                         <h1>Join our community.</h1>
@@ -100,13 +100,13 @@
                             <legend>
                                 <h2 class="sub-link">Upload Documents</h2>
                             </legend>
-                            <input type="file" name="myfile" class="upload-btn-wrapper"></input>
+                            <input type="file" name="image" class="upload-btn-wrapper"></input>
                         </fieldset>
                     </div>
 
                     <!--Submit Button-->
                     <div class="contentButton wrapper">
-                        <button type="submit" class="btn-box">SUBMIT</button>
+                        <button type="submit" name="Submit"class="btn-box">SUBMIT</button>
                     </div>
             </form>
         </div>
