@@ -68,14 +68,12 @@
         $_SESSION["phone_number"] = $phone_number;
         $_SESSION["address"] = $address;
         $_SESSION["v_image"] = $userPic;
-
         if ($_SESSION["usertype"] == "Seller") {
-          header('Location: seller/seller-page.php');
+          header('Location: ../seller/seller-page.php');
         }
         if ($_SESSION["usertype"] == "Buyer") {
-          header('Location:buyer/buyer-page.php');
+          header('Location:../buyer/buyer-page.php');
         }
-    
     } else {
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
     }
