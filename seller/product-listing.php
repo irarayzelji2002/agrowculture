@@ -38,10 +38,6 @@ if (isset($_SESSION['isLogin'])) {
         <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
 
         <div class="flex row half-container">
-            <div style="align-items:flex-start!important;">
-                <img src="../img/s1.jpg" alt="" class="product-icon">
-            </div>
-
             <div>
                 <!-- ito -->
                 <form action="../db/plbackend.php" method="post" enctype="multipart/form-data" >

@@ -1,7 +1,7 @@
 <?php
 // require_once '../templates/navbar_seller.php'
-    session_start();
-    
+session_start();
+
 if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['isLogin'] == false) {
         header('Location: ../login.php?security=false');
@@ -14,11 +14,12 @@ if (isset($_SESSION['isLogin'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- MAIN CSS Sheet-->
     <link rel="stylesheet" href="../css/main.css">
 
@@ -27,22 +28,23 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <title>aGROWculture: My Profile</title>
 
 </head>
+
 <body>
-    <?php 
+    <?php
     require_once '../templates/navbar_seller.php'
-     ?>
+    ?>
     <!-- MAIN CONTENT -->
-    <main class="full-container"style="margin-top:5%;">
-        <h1 class="sub-link center" >My Profile</h1>
+    <main class="full-container" style="margin-top:5%;">
+        <h1 class="sub-link center">My Profile</h1>
         <hr>
 
-            <div>
-                 <form action="../db/update.php" method="post" enctype="multipart/form-data">
-                    <fieldset class="">
+        <div class="flex row half-container">
+            <form action="../db/update.php" method="post" enctype="multipart/form-data">
+                <fieldset class="">
 
                     <input type="hidden" name="id" value="<?php
                                                             $currentID = $_SESSION["user_ID"];
@@ -65,38 +67,30 @@ if (isset($_SESSION['isLogin'])) {
 
                     <label for="address">Address:</label>
                     <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
-                    
-                      <!--Upload Documents-->
-            
-                            <legend>
-                                <h2 class="sub-link">Upload Documents</h2>
-                            </legend>
-                            <input type="file" name="image" class="upload-btn-wrapper"></input>
-          
-                    </div>
-                    </fieldset>
 
-                    <div class="flex row">
-                        <button class="btn-circle btn-center">Save Profile</button>
-                        <button class="btn-circle btn-center"> 
-                        <a href="../logout.php" style="color: white; text-decoration:none" >Logout
-                        </a>
-                        </button>
-                    </div>
+                    <!--Upload Documents-->
 
-                </form>
-            </div>
-
-            
+                    <h2 class="sub-link">Upload Documents</h2>
+                    <input type="file" name="image" class="upload-btn-wrapper"></input>
+                </fieldset>
         </div>
 
-        
-        
+        <div class="flex row">
+            <button class="btn-circle btn-center">Save Profile</button>
+            <button class="btn-circle btn-center">
+                <a href="../logout.php" style="color: white; text-decoration:none">Logout
+                </a>
+            </button>
+        </div>
+
+        </form>
+
     </main>
 
     <footer>
-        
+
     </footer>
-    
+
 </body>
+
 </html>

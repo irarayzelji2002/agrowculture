@@ -1,159 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif!important;
-  }
-  
-  body {
-    background-color: #fff;
-  }
-  
-  ul,
-  li,
-  a {
-    text-decoration: none;
-    list-style-type: none;
-    margin-bottom: 2rem;
-  }
-  
-  .solid-bg {
-    background-color: #fff !important;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)!important;
-    height: 25%!important;
-    padding: 2.5rem!important;
-    width: 62vw!important;
-    margin: auto!important;
-  }
-  
-  .half-container {
-    margin: auto!important;
-    margin-top: 5rem!important;
-    width: 90%!important;
-    height: auto!important;
-  }
-  
-  /* TYPOGRAPHY CSS */
-  h1 {
-    font-size: 48px!important;
-    margin-bottom: 1rem!important;
-  }
-  
-  .center {
-    text-align: center!important;
-    margin: auto!important;
-  }
-  
-  .sub-text {
-    color: #404040!important;
-    font-size: 12px!important;
-  }
-  
-  .sub-link {
-    color: #31ad5d!important;
-  }
-  
-  /* Buttons CSS */
-  button {
-    border-style: none!important;
-  }
-  
-  .btn-box {
-    text-align: center!important;
-    width: 180px!important;
-    padding: 10px 0!important;
-    background-color: #31ad5d!important;
-    color: #fff!important;
-    box-shadow: inset 0px 1px 3px 0px rgb(0 0 0 / 10%)!important;
-    text-transform: uppercase!important;
-    margin: 4rem 0 2rem 0!important;
-  }
-  
-
-  /* Image Tags CSS */
-  .profile-icon {
-    width: 150px!important;
-    height: auto!important;
-    border-radius: 100%!important;
-    margin: auto!important;
-    display: block!important;
-    transform: translate(0%, 25%)!important;
-    filter: drop-shadow(1px 1px 5px #5a5a5a)!important;
-  }
-  
-  /* Form CSS */
-  fieldset {
-    border-style: none!important;
-  }
-  
-  label {
-    font-weight: 600!important;
-    font-size: 15px !important;
-    display: flex!important;
-  }
-  
-  input {
-    line-height: 50px!important;
-    background-color: #f2f2f2;
-    box-shadow: inset 0px 1px 3px 0px rgb(0 0 0 / 8%);
-    border-radius: 5px;
-    padding: 5px 2rem;
-    width: 1125rem;
-    border: none;
-  }
-
-  input[type="radio"]{
-    float: left;
-    width: 1rem;
-    margin-right: 10px;
-  }
-  
-  textarea{
-    line-height: 20px!important;
-    background-color: #f2f2f2;
-    box-shadow: inset 0px 1px 0px 0px rgb(0 0 0 / 8%);
-    border-radius: 5px;
-    padding: 5px 2rem;
-    height: 10rem;
-    width: 25rem;
-    border: none;
-    resize: none;
-  }
-
-  textarea::-webkit-scrollbar{
-    width: 0px;
-  }
-  
- /* Image Tag for Product Listing Upload Thumbnail CSS*/
- .product-icon {
-  width: 190px!important;
-  height: auto!important;
-  border-radius: 10%!important;
-  margin: auto!important;
-  display: block!important;
-  transform: translate(0%, 25%)!important;
-  filter: drop-shadow(1px 1px 5px #5a5a5a)!important;
+textarea {
+  line-height: 20px !important;
+  background-color: #f2f2f2;
+  box-shadow: inset 0px 1px 0px 0px rgb(0 0 0 / 8%);
+  border-radius: 5px;
+  padding: 5px 2rem;
+  height: 10rem;
+  width: 25rem;
+  border: none;
+  resize: none;
 }
-  
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 900px) {
-    .product {
-      width: 165px;
-      height: 235px;
-      border-radius: 40px;
-      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    }
 
-  input{
-    width: 10rem!important;
+textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Image Tag for Product Listing Upload Thumbnail CSS*/
+.product-icon {
+  width: 190px !important;
+  height: auto !important;
+  border-radius: 10% !important;
+  margin: auto auto auto 1rem !important;
+  display: block !important;
+  filter: drop-shadow(1px 1px 5px #5a5a5a) !important;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 900px) {
+  .product {
+    width: 165px;
+    height: 235px;
+    border-radius: 40px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
 
-  input[type="radio"]{
-    width: 2rem!important;
+  input {
+    width: 10rem !important;
   }
 
-  textarea{
-    width: 10rem!important;
+  input[type="radio"] {
+    width: 2rem !important;
   }
 
+  textarea {
+    width: 10rem !important;
   }
-  
+}

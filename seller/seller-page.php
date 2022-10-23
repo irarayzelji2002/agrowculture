@@ -132,10 +132,55 @@ require_once '../templates/navbar_seller.php';
 
 </section>
 
-<footer style="margin-bottom:5%">
+    <!--PRODUCT LIST UNDER SELLER PAGE-->
+    <section class="half-container">
 
-</footer>
+    <!--4 Box Blank Container Row-->
+        <div class="flex row">
+            <div class="product"><img src="../img/carrots.png" alt="" id="productIcon1" class="picon1">
+            <h5 id="productname1" class="pname">Product Name:</h5>
+            <h5 id="productprice1" class="pprice">Product Price:</h5>
+            <h5 id="productdesc1" class="pdesc">Product Description:</h5>
+
+            <i class="fas fa-marker fa-2x"></i>
+            <i class="fas fa-trash fa-2x"></i>
+            </div>
+
+            <div class="product">
+            <img src="../img/grapes.png" alt="" id="productIcon2" class="picon2">
+            <h5 id="productname2" class="pname">Product Name:</h5>
+            <h5 id="productprice2" class="pprice">Product Price:</h5>
+            <h5 id="productdesc2" class="pdesc">Product Description:</h5>
+
+            <i class="fas fa-marker fa-2x"></i>
+            <i class="fas fa-trash fa-2x"></i>
+            </div>
+
+            <div class="product"><img src="../img/tomato.png" alt="" id="productIcon3" class="picon3">
+            <h5 id="productname3" class="pname">NAME HERE</h5>
+            <h5 id="productprice3" class="pprice">Price</h5>
+            <h5 id="productdesc3" class="pdesc">Description</h5>
+
+            <i class="fas fa-marker fa-2x"></i>
+            <i class="fas fa-trash fa-2x"></i>
+            </div>
+
+            <div class="product"><img src="../img/pineapple.png" alt="" id="productIcon4" class="picon4">
+            <h5 id="productname4" class="pname">Product Name:</h5>
+            <h5 id="productprice4" class="pprice">Product Price:</h5>
+            <h5 id="productdesc4" class="pdesc">Product Description:</h5>
+
+            <i class="fas fa-marker fa-2x"></i>
+            <i class="fas fa-trash fa-2x"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
 
 </body>
-
 </html>
