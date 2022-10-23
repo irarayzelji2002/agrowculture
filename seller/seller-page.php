@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php';
+
 session_start();
 if (isset($_SESSION['isLogin'])) {
     if ($_SESSION['isLogin'] == false) {
@@ -21,6 +22,7 @@ if (isset($_SESSION['isLogin'])) {
     <!-- MAIN CSS Sheet-->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/seller_list.css">
+    <link rel="stylesheet" href="../css/table.css">
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +42,7 @@ require_once '../templates/navbar_sellerpage.php';
     <main class="full-container" style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
         <div class="solid-bg">
-            <h1 id="sellerName" class="center"><?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?></h1>
+            <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?></h1>
             <!-- <p id="productNum" class="center">Products: </p> -->
             <div class="flex row">
                 <p id="sellerPhone">Number:
@@ -53,6 +55,82 @@ require_once '../templates/navbar_sellerpage.php';
                     Edit Profile </a></button>
         </div>
     </main>
+    
+    <!-- TABLE-->
+    <section class="half-container">
+    <h1 class="sub-link center" >Listed Products</h1>
+    <table>
+        <!-- TABLE HEAD -->
+        <thead>
+            <tr>
+                <th scope="col" class="sub-link center">Product ID</th>
+                <th scope="col">Product NAME</th>
+                <th scope="col">Product PRICE</th>
+                <th scope="col">IMAGE</th>
+                <th scope="col">DESC</th>
+                <th scope="col">STATUS</th>
+                <th scope="col">ACTION</th>
+            </tr>
+        </thead>
+    <!-- TABLE BODY -->
+        <tbody>
+            <tr>
+            <?php
+
+                $currentID = $_SESSION["user_ID"];
+                $upload_dir = '../upload/';
+                $sql = "SELECT `product_id`, `product_name`, `product_price`, `product_image`, `product_desc`, `product_status`
+                        FROM `product`
+                        WHERE user_ID = $currentID";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+
+
+                if($resultCheck > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {   ?>   
+                      <tr>
+                        <td>
+                            <?php echo  $row['product_id'] ?>
+                        </td>
+                        <td>    
+                            <?php echo   $row['product_name'] ?>
+                        </td>
+                        <td>    
+                            <?php echo   $row['product_price']?>
+                        </td>
+                        <td>
+                            <img class="product-img" src=<?php echo $upload_dir . $row['product_image'] ?> alt="..." >
+                        </td>
+                          
+                        <td>  
+                            <?php echo $row['product_desc']?>
+                        </td>
+                        <td> 
+                                <?php $row['product_status']?>
+                        </td>        
+                        </tr>
+                   <?php
+                    }
+                }
+            ?>
+
+                        
+            </tr>
+            
+
+        </tbody>
+    </table>
+    
+        
+    </section>
+
+
+
+
+
+
+
+
 
     <!--PRODUCT LIST UNDER SELLER PAGE-->
     <section class="half-container">
