@@ -39,12 +39,10 @@ if (isset($_SESSION['isLogin'])) {
         <hr>
 
         <div class="flex row half-container">
-            <div>
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
             <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg" >
-            
-            
-            </div>
+            <label>Change Profile:</label>
+            <input type="file" name="image" class="custom-file-input"style="margin-top: 10%;"></input>
                 <fieldset class="">
                     <input type="hidden" name="id" value="<?php
                                                             $currentID = $_SESSION["user_ID"];
@@ -67,18 +65,14 @@ if (isset($_SESSION['isLogin'])) {
 
                     <label for="address">Address:</label>
                     <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
-                    <label for="val">Address:</label>
-                    <input type="file" name="image" class="custom-file-input"style="margin-top: 10%;"></input>
+                
+                   
                 </fieldset>
                 <button type=submit class="btn-circle btn-center" name="update" style="margin-top:5%"
                 onClick="window.location.reload();">Save Profile</button>
             </form>
-        </div>
-
 
         </div>
-
-
 
         <div class="flex row">
 
