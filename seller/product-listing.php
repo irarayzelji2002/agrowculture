@@ -53,12 +53,13 @@ if (isset($_SESSION['isLogin'])) {
                 <img src="../img/s1.jpg" alt="" class="product-icon">
                 <button class="btn-box">Upload Thumbnail</button>
                 <br>
-                <button class="btn-box">Add Product</button>
+               
 
             </div>
 
             <div>
-                <form action="">
+                <!-- ito -->
+                <form action="../db/plbackend.php" method="post" enctype="multipart/form-data" >
                     <fieldset class="">
 
                         <label for="productname">Product Name</label>
@@ -88,10 +89,10 @@ if (isset($_SESSION['isLogin'])) {
                         <input class="prod-desc" type="text" id="productDescription" name="productDescription">
                         <div class="form-group">
                             <label for="image">Choose Image</label>
-                            <input type="file" class="form-control" name="image" value="" style="width: 376px;" required>
+                            <input type="file" class="form-control" name="product_image" value="" style="width: 376px;" required>
                         </div>
                     </fieldset>
-
+                    <button class="btn-box" name="Submit" type="submit">Add Product</button>
                 </form>
             </div>
 
