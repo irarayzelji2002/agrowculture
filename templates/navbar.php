@@ -13,10 +13,8 @@
     style="color: black;font-weight:600;">
        aGROWculture</a>
         <div>
-            <!-- <a href="">SELL</a> -->
             <a href="login.php" style="color: black;font-weight:600;">LOGIN</a>
             <a href="reg-form.php" style="color: black;font-weight:600;">SIGN UP</a>
-            <a href="" style="color:black;font-weight:600;">ICON LOGO</a>
         </div>
 
         </div>

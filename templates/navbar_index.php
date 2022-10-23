@@ -1,12 +1,14 @@
  <!-- MAIN CSS Sheet-->
  <link rel="stylesheet" href="../css/main.css">
- <link rel="stylesheet" href="../css/login">
+ <link rel="stylesheet" href="../css/login.css
+ ">
  <!-- Google Font: Poppins-->
  <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
- <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-white ">
    <!-- logo head -->
    <a class="navbar-brand" href="index">
    </a>
@@ -14,28 +16,23 @@
      <span class="navbar-toggler-icon"></span>
    </button>
 
-   <div class="collapse navbar-collapse" id="navbarSupportedContent" 
-    style="margin-left:10%;margin-right: 10%;">
-     <a class="nav-link btn bold-text" href="index.php" role="button" 
-    style="color: #d9d9d9;font-weight:600;">
+   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:10%;margin-right: 10%;">
+     <a class="nav-link btn bold-text" href="index.php" role="button" style="color: black;font-weight:600;">
        aGROWculture</a>
 
      <ul class="navbar-nav ml-auto">
 
        <li class="nav-item mr-4">
        <li class="nav-item mr-4">
-         <a class="nav-link btn bold-text" href="login.php" role="button" style="color: #d9d9d9;font-weight:600;">
+         <a class="nav-link btn bold-text" href="login.php" role="button" style="color: black;font-weight:600;">
            LOGIN</a>
        </li>
 
        <li class="nav-item mr-2">
-         <a class="nav-link btn bold-text" href="reg-form.php" role="button" style="color: #d9d9d9;font-weight:600;">
+         <a class="nav-link btn bold-text" href="reg-form.php" role="button" style="color: black;font-weight:600;">
            SIGN UP</a>
        </li>
-       <li class="nav-item mr-2 ">
-         <a class="nav-link btn" href="" role="button" style="color: #d9d9d9;font-weight:600;">
-           ICON LOGO</a>
-       </li>
+
      </ul>
    </div>
  </nav>

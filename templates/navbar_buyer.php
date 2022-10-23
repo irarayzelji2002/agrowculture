@@ -9,12 +9,10 @@
  <!-- Navbar -->
   <nav class="sticky">
         <div class="flex-nav">
-        <div>aGROWculture</div>
+        <div><a href="../index.php">aGROWculture</a></div>
         <div>
-            <!-- <a href="">SELL</a> -->
             <a href="product-catalog.php">HOME</a>
             <a href="buyer-page.php">PROFILE</a>
-            <a href="">ICON LOGO</a>
         </div>
 
         </div>
