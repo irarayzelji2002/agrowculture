@@ -55,7 +55,7 @@
         `business_name` = '$business_name',
         `phone_number` = '$phone_number',
         `address` = '$address',
-        `v_image` = '$userPic'
+        `profile`= '$userPic'
 
     WHERE user_ID = $currentID
         ";
@@ -67,7 +67,7 @@
         $_SESSION["business_name"] = $business_name;
         $_SESSION["phone_number"] = $phone_number;
         $_SESSION["address"] = $address;
-        $_SESSION["v_image"] = $userPic;
+        $_SESSION["profile"] = $userPic;
         if ($_SESSION["usertype"] == "Seller") {
           header('Location: ../seller/seller-page.php');
         }
