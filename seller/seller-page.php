@@ -125,13 +125,6 @@ require_once '../templates/navbar_seller.php';
     </section>
 
 
-
-
-
-
-
-
-
     <!--PRODUCT LIST UNDER SELLER PAGE-->
     <section class="half-container">
 
@@ -157,9 +150,9 @@ require_once '../templates/navbar_seller.php';
             </div>
 
             <div class="product"><img src="../img/tomato.png" alt="" id="productIcon3" class="picon3">
-            <h5 id="productname3" class="pname">Product Name:</h5>
-            <h5 id="productprice3" class="pprice">Product Price:</h5>
-            <h5 id="productdesc3" class="pdesc">Product Description:</h5>
+            <h5 id="productname3" class="pname">NAME HERE</h5>
+            <h5 id="productprice3" class="pprice">Price</h5>
+            <h5 id="productdesc3" class="pdesc">Description</h5>
 
             <i class="fas fa-marker fa-2x"></i>
             <i class="fas fa-trash fa-2x"></i>
@@ -183,5 +176,4 @@ require_once '../templates/navbar_seller.php';
     </footer>
 
 </body>
-
 </html>

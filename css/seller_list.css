@@ -322,19 +322,21 @@ h5 {
 }
 
 /*Icons Tags CSS*/
-.fas{
+:root .fas {
   position: relative;
 }
 
-.fa-marker{
+:root .fa-marker { 
   padding-left: 10px;
-  transform: translate(580%, 255%)!important;
+  width: 20px;
+  transform: translate(0,0)!important;
   color:#3C4048!important;
 }
 
-.fa-trash{
+:root .fa-trash{
+  width: 20px;
   padding-left: 10px;
-  transform: translate(640%, 255%)!important;
+  transform: translate(0,0)!important;
   color: #D2001A!important;
 }
 
