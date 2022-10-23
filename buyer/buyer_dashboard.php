@@ -39,7 +39,7 @@ if (isset($_SESSION['isLogin'])) {
 } */
 </style>
 <body class="bg-dark">
-<?php require_once '../templates/navbar_seller.php' ?>
+<?php require_once '../templates/navbar_buyer.php' ?>
 <?php 
 // require_once 'templates/navbar_index.php' 
 ?>
