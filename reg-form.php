@@ -93,19 +93,18 @@
                         </fieldset></br>
                     </div>
 
-
                     <div>
                         <!--Upload Documents-->
                         <fieldset id="uploadDocuments">
                             <legend>
                                 <h2 class="sub-link">Upload Documents</h2>
                             </legend>
-                            <input type="file" name="image" class="upload-btn-wrapper"></input>
+                            <input type="file" name="image"></input>
                         </fieldset>
                     </div>
 
                     <!--Submit Button-->
-                    <div class="contentButton wrapper">
+                    <div>
                         <button type="submit" name="Submit"class="btn-box">SUBMIT</button>
                     </div>
             </form>
