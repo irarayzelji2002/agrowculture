@@ -11,11 +11,12 @@ if (isset($_SESSION['isLogin'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- MAIN CSS Sheet-->
     <link rel="stylesheet" href="../css/plist.css">
     <!-- Google Font: Poppins-->
@@ -23,10 +24,11 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <title>aGROWculture: Product Listing</title>
 
 </head>
+
 <body>
     <!-- Navbar -->
     <!-- <nav class="sticky">
@@ -43,21 +45,21 @@ if (isset($_SESSION['isLogin'])) {
     </nav> -->
     <?php require_once '../templates/navbar_seller.php' ?>
     <!-- MAIN CONTENT -->
-    <main class="full-container"style="margin-top:8rem;">
-    <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
+    <main class="full-container" style="margin-top:8rem;">
+        <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
 
-        <div class="flex row half-container" >
+        <div class="flex row half-container">
             <div class="column" style="align-items:flex-start!important;">
-                <img src="../img/s1.jpg" alt="" class="product-icon" >
+                <img src="../img/s1.jpg" alt="" class="product-icon">
                 <button class="btn-box">Upload Thumbnail</button>
-            <br>
+                <br>
                 <button class="btn-box">Add Product</button>
-        
+
             </div>
 
-            <div >
-                <form action="" >
-                    <fieldset class="" >
+            <div>
+                <form action="">
+                    <fieldset class="">
 
                         <label for="productname">Product Name</label>
                         <input type="text" id="productName" name="productName" aria-describedby="productHelp">
@@ -68,8 +70,8 @@ if (isset($_SESSION['isLogin'])) {
                         <label for="">Category</label>
                         <input class="category-listing" type="radio" name="dairyoreggs" id="dairyoreggs" value="Option1:Dairy/Eggs">
                         <label for="dairyoreggs">Dairy or Eggs</label>
-            
-                        <input class="category-listing"  type="radio" name="fruits" id="fruits" value="Option2:Fruits">
+
+                        <input class="category-listing" type="radio" name="fruits" id="fruits" value="Option2:Fruits">
                         <label for="fruits">Fruits</label>
 
                         <input class="category-listing" type="radio" name="vegetables" id="vegetables" value="Option3:Vegetables">
@@ -77,13 +79,16 @@ if (isset($_SESSION['isLogin'])) {
 
                         <label for="productdescription">Product Description</label>
                         <input class="prod-desc" type="text" id="productDescription" name="productDescription">
-                     
+                        <div class="form-group">
+                            <label for="image">Choose Image</label>
+                            <input type="file" class="form-control" name="image" value="" style="width: 376px;" required>
+                        </div>
                     </fieldset>
-                    
+
                 </form>
             </div>
 
-            
+
         </div>
 
         <!-- <div class="flex row half-container">
@@ -91,12 +96,13 @@ if (isset($_SESSION['isLogin'])) {
                 <button class="btn-box1">Add Product</button>
             </div>
         </div> -->
-        
+
     </main>
 
     <footer>
-        
+
     </footer>
-    
+
 </body>
+
 </html>
