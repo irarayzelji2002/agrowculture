@@ -171,13 +171,7 @@ button {
   text-transform: uppercase;
 }
 
-.uploadpf-btn-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-  
-  .btn-box {
+.btn-box {
     background-color: #31ad5d;;
     color: white;
     margin-top: 1rem; ;
@@ -186,14 +180,6 @@ button {
 
   }
   
-.uploadpf-btn-wrapper input[type=file] {
-    font-size: 8px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
-
 /* Image Tags CSS */
 .profile-icon {
   width: 150px;
