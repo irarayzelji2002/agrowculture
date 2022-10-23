@@ -41,14 +41,17 @@ if (isset($_SESSION['isLogin'])) {
         <h1 class="sub-link center" >My Profile</h1>
         <hr>
 
-        <div class="flex row half-container">
-            <div>
-                <img src="../img/s1.jpg" alt="" class="profile-icon">
-                <button class="btn-box">Upload Image</button>
-            </div>
+            <!--Upload Documents-->
+            <fieldset id="uploadDocuments">
+                            <legend>
+                                <h2 class="sub-link">Upload Documents</h2>
+                            </legend>
+                            <input type="file" name="image" class="upload-btn-wrapper"></input>
+                        </fieldset>
+                    </div>
 
             <div>
-                <form action="">
+                 <form action="../db/update.php" method="post" enctype="multipart/form-data">
                     <fieldset class="">
 
                     <input type="hidden" name="id" value="<?php
