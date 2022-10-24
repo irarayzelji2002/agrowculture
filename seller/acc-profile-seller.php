@@ -70,8 +70,10 @@ if (isset($_SESSION['isLogin'])) {
 
                     <!--Upload Documents-->
 
-                    <h2 class="sub-link">Upload Documents</h2>
-                    <input type="file" name="image" class="upload-btn-wrapper"></input>
+                    <div class="form-group">
+                    <label for class="uploaddocs">Upload Documents:</label>
+                    <input type="file" name="image" class="upload-btn"></input>
+                    </div>
                 </fieldset>
         </div>
 

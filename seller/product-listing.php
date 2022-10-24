@@ -36,6 +36,7 @@ if (isset($_SESSION['isLogin'])) {
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:8rem;">
         <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
+        <hr>
 
         <div class="flex row half-container">
             <div>
@@ -53,24 +54,25 @@ if (isset($_SESSION['isLogin'])) {
 
                         <label>
                             <input type="radio" id="dairyoreggs" name="category_type" value="DairyorEggs" checked="checked"/>
-                            <p>Dairy or Eggs</p>
+                            <p style="text-indent: 1em;">Dairy or Eggs</p>
                         </label>
 
                         <label>
                             <input type="radio" id="Seller" name="category_type" value="Fruits"/>
-                            <p>Fruits</p>
+                            <p style="text-indent: 1em;">Fruits</p>
                         </label>
 
                         <label>
                             <input type="radio" id="Seller" name="category_type" value="Vegetables"/>
-                            <p>Vegetables</p>
+                            <p style="text-indent: 1em;">Vegetables</p>
                         </label>
 
                         <label for="productdescription">Product Description</label>
                         <input class="prod-desc" type="text" id="productDescription" name="productDescription">
+                        
                         <div class="form-group">
                             <label for="image">Choose Image for Thumbnail</label>
-                            <input type="file" class="form-control" name="product_image" value="" style="width: 376px;" required>
+                            <input type="file" class="upload-btn" name="product_image" value="" style="width: 376px;" required>
                         </div>
                     </fieldset>
                     <button class="btn-box" name="Submit" type="submit">Add Product</button>
