@@ -67,18 +67,18 @@ if (isset($_SESSION['isLogin'])) {
 
                     <label for="address">Address:</label>
                     <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
+                
+                   
                 </fieldset>
-            </form>
-
-        </div>
-
-        <div class="flex row">
-            <button type=submit class="btn-circle btn-center" name="update"
+                <div class="flex row">
+                <button type=submit class="btn-circle btn-center" name="update"
                 onClick="window.location.reload();">Save Profile</button>
-            <button class="btn-circle btn-center">
+                <button class="btn-circle btn-center">
                 <a href="../logout.php" style="color: white;text-decoration:none">Logout
                 </a>
             </button>
+                </div>
+            </form>
         </div>
 
     </main>
