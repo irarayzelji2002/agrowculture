@@ -74,15 +74,15 @@ if (isset($_SESSION['isLogin'])) {
                     <label for class="uploaddocs">Upload Documents:</label>
                     <input type="file" name="image" class="upload-btn"></input>
                     </div>
-                </fieldset>
-        </div>
 
-        <div class="flex row">
-            <button class="btn-circle btn-center">Save Profile</button>
-            <button class="btn-circle btn-center">
-                <a href="../logout.php" style="color: white; text-decoration:none">Logout
-                </a>
-            </button>
+                    <div class="flex row">
+                        <button class="btn-circle btn-center">Save Profile</button>
+                         <button class="btn-circle btn-center">
+                         <a href="../logout.php" style="color: white; text-decoration:none">Logout
+                        </a>
+                        </button>
+                     </div>
+                </fieldset>
         </div>
 
         </form>
