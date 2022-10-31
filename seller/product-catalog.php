@@ -38,10 +38,10 @@ if (isset($_SESSION['isLogin'])) {
     <?php require_once '../templates/navbar_seller.php' ?>
  <!-- SEARCH -->
     <section class="search-container flex column">
-            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true" style="margin: 0 1rem 0 1rem;"></i>
+           
             <div class="search-bar">
             <form action="product-catalog.php" method="get" class="form-inline my-2 my-lg-0" style="width: 500px">
-
+            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true" style="margin-right:2%!important;"></i>
                 <!-- <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="margin: 0 1rem 0 1rem;"></i> -->
                 <input type="text" placeholder="Search for products"  aria-label="Search" name="query" >
             </form>
