@@ -35,108 +35,121 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
-    <?php require_once '../templates/navbar_seller.php'?>
-
-    <!-- SEARCH -->
+    <?php require_once '../templates/navbar_seller.php' ?>
+ <!-- SEARCH -->
     <section class="search-container flex column">
             <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true" style="margin: 0 1rem 0 1rem;"></i>
             <div class="search-bar">
-                    <!-- <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="margin: 0 1rem 0 1rem;"></i> -->
-                    <input  type="text" placeholder="Search for products">
-            </div> 
-    </section>
+            <form action="product-catalog.php" method="get" class="form-inline my-2 my-lg-0" style="width: 500px">
 
-    <!-- CATEGORY FILTER -->
-    <h3 class="center">Category</h3>
-    <section class="category-container flex row">
-        <input type="checkbox" id="category1" name="dairy-egg" value="dairy-egg">
-        <label for="category1">Dairy or Eggs</label>
-
-        <input type="checkbox" id="category2" name="fruits" value="fruits">
-        <label for="category1">Fruits</label>
-
-        <input type="checkbox" id="category3" name="vegetables" value="vegetables">
-        <label for="category1">Vegetables</label>
-    </section>
-
-    <!-- MAIN CONTENT -->
-    <main class="full-container flex column">
-
-
-
-        <div class="full-container flex row">
-            <div class="product">
-                <img src="../img/avocado.png" alt="" id="productIcon1" class="product-icon">
-                <h5 id="productname1" class="product-text sub-link">Name Here</h5>
-                <h5 id="productprice1" class="product-text">Price</h5>
-                <h5 id="productdesc1" class="product-text">Status</h5>
+                <!-- <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="margin: 0 1rem 0 1rem;"></i> -->
+                <input type="text" placeholder="Search for products"  aria-label="Search" name="query" >
+            </form>
             </div>
+        </section>
+   
+    <?php
+    $sSearch = "";
+    if (isset($_REQUEST['query'])) {
+        $sSearch = $_REQUEST['query'];
+    }
+    $sql = "select * from product";
+    if ($sSearch <> "") { ?>
+    <!-- SEARCH PAGE -->
+             <?php
+              $sql = "SELECT * FROM `product` WHERE `product_name` LIKE  '%".$sSearch."%' or `category` LIKE  '%".$sSearch."%'";
+        ?>
+                 <!-- CATEGORY FILTER -->
+        <h3 class="center">Category</h3>
+        <section class="category-container flex row">
+            <input type="checkbox" id="category1" name="dairy-egg" value="dairy-egg">
+            <label for="category1">Dairy or Eggs</label>
 
-            <div class="product">
-                <img src="../img/banana.png" alt="" id="productIcon1" class="product-icon">
-                <h5 id="productname1" class="product-text sub-link">Name Here</h5>
-                <h5 id="productprice1" class="product-text">Price</h5>
-                <h5 id="productdesc1" class="product-text">Status</h5>
-            </div>
+            <input type="checkbox" id="category2" name="fruits" value="fruits">
+            <label for="category1">Fruits</label>
 
-            <div class="product">
-                <img src="../img/potato.png" alt="" id="productIcon1" class="product-icon">
-                <h5 id="productname1" class="product-text sub-link">Name Here</h5>
-                <h5 id="productprice1" class="product-text">Price</h5>
-                <h5 id="productdesc1" class="product-text">Status</h5>
-            </div>
+            <input type="checkbox" id="category3" name="vegetables" value="vegetables">
+            <label for="category1">Vegetables</label>
+        </section>
 
-            <div class="product">
-                <img src="../img/bellpepper.png" alt="" id="productIcon1" class="product-icon">
-                <h5 id="productname1" class="product-text sub-link">Name Here</h5>
-                <h5 id="productprice1" class="product-text">Price</h5>
-                <h5 id="productdesc1" class="product-text">Status</h5>
-            </div>
+        <!-- MAIN CONTENT -->
+        <main class="full-container flex column">
+            <!-- TABLE-->
+            <section class="half-container">
+                <h1 class="sub-link center"><?php echo " " . $sSearch; ?></h1>
 
-            <!-- 
+                <div class="full-container flex row">
+                    <?php
 
-            <div class="product"><img src="../img/bellpepper.png" alt="" id="productIcon1" class="picon4">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div>
+                    // $currentID = $_SESSION["user_ID"];
+                    $upload_dir = '../upload/';
+                    // $sql = "SELECT*FROM `product`";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
 
-            <div class="product"><img src="../img/asparagus.png" alt="" id="productIcon1" class="picon5">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div>
+                    if ($resultCheck > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {   ?>
 
-            <div class="product"><img src="../img/cabbage.png" alt="" id="productIcon1" class="picon6">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div>
+                            <div class="product">
+                                <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
 
-            <div class="product"><img src="../img/corn.png" alt="" id="productIcon1" class="picon7">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div>
+                                <h5 id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></h5>
+                                <h5 id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></h5>
 
-            <div class="product"><img src="../img/milk.png" alt="" id="productIcon1" class="picon8">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div>
+                            </div>
+                <?php
+                        }
+                    } 
+                } else { ?>
+     
+        <!-- CATEGORY FILTER -->
+        <h3 class="center">Category</h3>
+        <section class="category-container flex row">
+            <input type="checkbox" id="category1" name="dairy-egg" value="dairy-egg">
+            <label for="category1">Dairy or Eggs</label>
 
-            <div class="product"><img src="../img/milk.png" alt="" id="productIcon1" class="picon8">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div>
+            <input type="checkbox" id="category2" name="fruits" value="fruits">
+            <label for="category1">Fruits</label>
 
-            <div class="product"><img src="../img/milk.png" alt="" id="productIcon1" class="picon8">
-                <h5 id="productname1" class="pname">Product Name:</h5>
-                <h5 id="productprice1" class="pprice">Product Price:</h5>
-                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
-            </div> -->
-    </main>
+            <input type="checkbox" id="category3" name="vegetables" value="vegetables">
+            <label for="category1">Vegetables</label>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <main class="full-container flex column">
+            <!-- TABLE-->
+            <section class="half-container">
+                <h1 class="sub-link center">Listed Products</h1>
+
+                <div class="full-container flex row">
+                    <?php
+
+                    // $currentID = $_SESSION["user_ID"];
+                    $upload_dir = '../upload/';
+                    // $sql = "SELECT*FROM `product`";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+
+                    if ($resultCheck > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {   ?>
+
+                            <div class="product">
+                                <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
+
+                                <h5 id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></h5>
+                                <h5 id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></h5>
+
+                            </div>
+                <?php
+                        }
+                    }
+                }
+                ?>
+
+
+
+
+        </main>
 </body>
 
 </html>
