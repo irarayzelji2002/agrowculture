@@ -9,7 +9,7 @@ if (isset($_SESSION['isLogin'])) {
     header('Location: ../login.php?security=false');
 }
 ?>
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@ if (isset($_SESSION['isLogin'])) {
 
   <!-- To be change -->
   <!-- FAVICON -->
-  <!-- <link rel="icon" href="img/easethetiksIcon.png" type="image/gif" sizes="16x16"> -->
+  <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
 
@@ -39,7 +39,8 @@ if (isset($_SESSION['isLogin'])) {
 } */
 </style>
 <body class="bg-dark">
-<?php require_once '../templates/navbar_buyer.php' ?>
+<?php require_once '../templates/navbar_buyer.php'?>
+<div style="height:5rem;"></div>
 <?php 
 // require_once 'templates/navbar_index.php' 
 ?>

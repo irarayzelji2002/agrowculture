@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <!-- FAVICON -->
+    <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
     
     <title>aGROWculture</title>
 
@@ -32,11 +34,11 @@
 
         </div>
     </nav> -->
-    <?php require_once 'templates/navbar.php' ?>
+    <?php require_once 'templates/navbar_index.php' ?>
     <!-- MAIN CONTENT -->
     <main class="full-container flex row">
         <div class="flex-child">
-            <h1>Live Fresh, Grow Fresh</h1>
+            <h1 style="font-size:48px; font-weight:900;">Live Fresh, Grow Fresh</h1>
             <p>
             This is the known tagline for the aGROWculture website. 
             This tagline meant that keeping the body in good health 
@@ -50,7 +52,7 @@
         </div>
 
         <div class="flex-child">
-            <h1>Value of Production in Philippine Agriculture</h1>
+            <h1 style="font-size:48px; font-weight:900;">Value of Production in Philippine Agriculture</h1>
             <p>
             According to Philippine Statistics Authority (2022), there is a -1.6 decrease in 
             the value of crop production in the first half of 2022. It has 
@@ -61,7 +63,7 @@
 
 
     <section class="half-container">
-        <div><h1 class="center">Featured Products</h1></div>
+        <div><h1 class="center" style="font-size:48px; font-weight:900;">Featured Products</h1></div>
         <div class="flex row">
             <div><img src="img/s1.jpg" alt="" class="featured"></div>
             <div><img src="img/s2.jpg" alt="" class="featured"></div>
@@ -73,7 +75,7 @@
 
     <section class="half-container">
         <div class="center">
-            <h1>Grow with Us!</h1>
+            <h1 style="font-size:48px; font-weight:900;">Grow with Us!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Maecenas scelerisque rhoncus libero, et tristique massa hendrerit at.
                 Sed urna elit, facilisis ut lectus sed, vestibulum suscipit lorem.</p>
@@ -81,7 +83,7 @@
 
         <div class="flex row">
             <div class="roles">
-                <h1>as a Buyer</h1>
+                <h1 style="font-size:48px; font-weight:900;">as a Buyer</h1>
                 <ul>
                     <li>Example Role</li>
                     <li>Example Role</li>
@@ -92,7 +94,7 @@
             </div>
 
             <div class="roles">
-                <h1>as a Seller</h1>
+                <h1 style="font-size:48px; font-weight:900;">as a Seller</h1>
                 <ul>
                     <li>Example Role</li>
                     <li>Example Role</li>

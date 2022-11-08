@@ -26,53 +26,74 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <title>aGROWculture: Product Listing</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
 
+    <title>aGROWculture: Product Listing</title>
+    <style>
+    input[type="file"]::file-selector-button {
+        color: white;
+    }
+    input[type="text"] {
+        flex:1;
+        min-width:0;
+    }
+    input[type="radio"] {
+        height:1rem;
+        margin-top:0.2rem;
+    }
+    .wrapper {
+        display: flex;
+    }
+    label {
+        margin-top:1rem;
+    }
+    </style>
 </head>
 
 <body>
     <?php require_once '../templates/navbar_seller.php' ?>
-
+    <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
-    <main class="full-container" style="margin-top:8rem;">
-        <h1 class="sub-link center" style="margin-top:8rem;">Add a Product</h1>
+    <main class="full-container">
+        <h1 class="sub-link center" style="font-size:48px; font-weight:900;">Add a Product</h1>
         <hr>
 
-        <div class="flex row half-container">
+        <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
             <div>
                 <!-- ito -->
                 <form action="../db/plbackend.php" method="post" enctype="multipart/form-data" >
                     <fieldset class="">
 
                         <label for="productname">Product Name</label>
-                        <input type="text" id="productName" name="productName" aria-describedby="productHelp">
+                        <div class="wrapper"><input type="text" id="productName" name="productName" aria-describedby="productHelp"></div>
 
                         <label for="productprice">Product Price</label>
-                        <input type="text" id="productPrice" name="productPrice">
+                        <div class="wrapper"><input type="text" id="productPrice" name="productPrice"></div>
 
                         <label for="">Category</label>
 
-                        <label>
+                        <label style="display:flex; height:1rem; margin-top:0; margin-bottom:0.5rem;">
                             <input type="radio" id="dairyoreggs" name="category_type" value="DairyorEggs" checked="checked"/>
                             <p style="text-indent: 1em;">Dairy or Eggs</p>
                         </label>
 
-                        <label>
+                        <label style="display:flex; height:1rem; margin-top:0; margin-bottom:0.5rem;">
                             <input type="radio" id="Seller" name="category_type" value="Fruits"/>
                             <p style="text-indent: 1em;">Fruits</p>
                         </label>
 
-                        <label>
+                        <label style="display:flex; height:1rem; margin-top:0; margin-bottom:0.5rem;">
                             <input type="radio" id="Seller" name="category_type" value="Vegetables"/>
                             <p style="text-indent: 1em;">Vegetables</p>
                         </label>
 
                         <label for="productdescription">Product Description</label>
-                        <input class="prod-desc" type="text" id="productDescription" name="productDescription">
+                        <div class="wrapper"><input class="prod-desc" type="text" id="productDescription" name="productDescription"></div>
                         
                         <div class="form-group">
                             <label for="image">Choose Image for Thumbnail</label>
-                            <input type="file" class="upload-btn" name="product_image" value="" style="width: 376px;" required>
+                            <div class="wrapper"><input type="file" class="upload-btn" name="product_image" value="" style="width: 376px;" required></div>
                         </div>
                     </fieldset>
                     <button class="btn-box" name="Submit" type="submit">Add Product</button>

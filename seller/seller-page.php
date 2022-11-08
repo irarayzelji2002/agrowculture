@@ -39,6 +39,8 @@ if (isset($_SESSION['isLogin'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <!-- FAVICON -->
+    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
     <title>aGROWculture</title>
 
 </head>
@@ -47,6 +49,7 @@ if (isset($_SESSION['isLogin'])) {
 <?php  
 require_once '../templates/navbar_seller.php';
  ?>
+<div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">

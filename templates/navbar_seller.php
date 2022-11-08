@@ -1,24 +1,64 @@
-    <!-- MAIN CSS Sheet-->
-    <link rel="stylesheet" href="../css/main.css">
+<!-- MAIN CSS Sheet-->
+<link rel="stylesheet" href="../css/main.css">
+<!-- Google Font: Poppins-->
+<!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Font: Poppins-->
-    <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Navbar -->
-    <nav class="sticky">
-        <div class="flex-nav">
-            <div>
-                <a class="bold-text" href="index.php" role="button" style="color: black; font-weight: 600;">
-                aGROWculture</a>
-            </div>
-            
-            <div>
-                <a href="product-listing.php" style="color: black;font-weight:600;">SELL</a>
-                <a href="product-catalog.php" style="color: black;font-weight:600;">HOME</a>
-                <a href="seller-page.php" style="color: black;font-weight:600;">PROFILE</a>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white" style="z-index:9; position:fixed;">
+    <!-- logo head -->
+    <a class="navbar-brand" href="index">
+    <img src="../img/aGROWculture-Logo-Colored.png" style="margin-left:1rem; width: 2rem; height: 3rem; vertical-align: middle;" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        </div>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="nav-link btn bold-text" href="../index.php" role="button" style="color: black;font-weight:600; padding-left:0.5rem; margin:0;">
+        aGROWculture</a>
+
+        <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item mr-4">
+        <li class="nav-item mr-1">
+            <a class="nav-link btn bold-text" href="product-listing.php" role="button" style="color: black;font-weight:600;">
+            SELL</a>
+        </li>
+        
+        <li class="nav-item mr-1">
+            <a class="nav-link btn bold-text" href="product-catalog.php" role="button" style="color: black;font-weight:600;">
+            HOME</a>
+        </li>
+        
+        <li class="nav-item dropdown mr-4" style="color: black;font-weight:600;">
+            <a class="nav-link dropdown-toggle btn bold-text fa-solid fa-circle-user" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem;"></a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+            <li><a class="dropdown-item" href="seller-page.php">PROFILE</a></li>
+            <li><a class="dropdown-item" href="../logout.php">LOGOUT</a></li>
+            </ul>
+        </li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- TO BE CHANGE -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS, then Font Awesome -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="js/scriptwo.js"></script>
+<script src="https://kit.fontawesome.com/f6f91e078c.js" crossorigin="anonymous"></script>
+
+
+<style>
+ul, li, a {
+    margin-bottom: 0;
+}
+</style>

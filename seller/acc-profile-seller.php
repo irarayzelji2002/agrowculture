@@ -28,21 +28,37 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FAVICON -->
+    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
 
     <title>aGROWculture: My Profile</title>
-
+    <style>
+    input[type="file"]::file-selector-button {
+        color: white;
+    }
+    input[type="text"] {
+        flex:1;
+        min-width:0;
+    }
+    .wrapper {
+        display: flex;
+    }
+    label {
+        margin-top:1rem;
+    }
+    </style>
 </head>
 
 <body>
-    <?php
-    require_once '../templates/navbar_seller.php'
-    ?>
+    <?php require_once '../templates/navbar_seller.php'?>
+    <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
-    <main class="full-container" style="margin-top:5%;">
-        <h1 class="sub-link center">My Profile</h1>
+    <main class="full-container">
+        <h1 class="sub-link center" style="font-size:48px; font-weight:900;">My Profile</h1>
         <hr>
 
-        <div class="flex row half-container">
+        <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
                 <fieldset class="">
 
@@ -50,29 +66,29 @@ if (isset($_SESSION['isLogin'])) {
                                                             $currentID = $_SESSION["user_ID"];
                                                             echo $currentID; ?>">
                     <label for="emailAddress">Email Address:</label>
-                    <input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>">
+                    <div class="wrapper"><input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>"></div>
 
                     <label for="fullName">First Name:</label>
-                    <input type="text" id="sFirstName" name="sFirstName" value="<?php echo $_SESSION["sFirstName"] ?>">
+                    <div class="wrapper"><input type="text" id="sFirstName" name="sFirstName" value="<?php echo $_SESSION["sFirstName"] ?>"></div>
 
                     <label for="fullName">Last Name:</label>
-                    <input type="text" id="sLastName" name="sLastName" value="<?php echo $_SESSION["sLastName"] ?>">
+                    <div class="wrapper"><input type="text" id="sLastName" name="sLastName" value="<?php echo $_SESSION["sLastName"] ?>"></div>
 
 
                     <label for="businessName">Company/Business Name:</label>
-                    <input type="text" id="business_name" name="business_name" value="<?php echo $_SESSION["business_name"] ?>">
+                    <div class="wrapper"><input type="text" id="business_name" name="business_name" value="<?php echo $_SESSION["business_name"] ?>"></div>
 
                     <label for="phone_number">Phone Number:</label>
-                    <input type="text" id="phone_number" name="phone_number" value="<?php echo $_SESSION["phone_number"] ?>">
+                    <div class="wrapper"><input type="text" id="phone_number" name="phone_number" value="<?php echo $_SESSION["phone_number"] ?>"></div>
 
                     <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>">
+                    <div class="wrapper"><input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>"></div>
 
                     <!--Upload Documents-->
 
                     <div class="form-group">
                     <label for class="uploaddocs">Upload Documents:</label>
-                    <input type="file" name="image" class="upload-btn"></input>
+                    <div class="wrapper"><input type="file" name="image" class="upload-btn"></input></div>
                     </div>
 
                     <div class="flex row">
@@ -81,12 +97,10 @@ if (isset($_SESSION['isLogin'])) {
                          <a href="../logout.php" style="color: white; text-decoration:none">Logout
                         </a>
                         </button>
-                     </div>
+                    </div>
                 </fieldset>
+            </form>
         </div>
-
-        </form>
-
     </main>
 
     <footer>

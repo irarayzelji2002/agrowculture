@@ -23,7 +23,7 @@ if (isset($_SESSION['isLogin'])) {
 
   <!-- To be change -->
   <!-- FAVICON -->
-  <!-- <link rel="icon" href="img/easethetiksIcon.png" type="image/gif" sizes="16x16"> -->
+  <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
 
@@ -39,13 +39,14 @@ if (isset($_SESSION['isLogin'])) {
 </style>
 <body class="bg-dark">
 <?php require_once '../templates/navbar_seller.php' ?>
+<div style="height:8rem;"></div>
 <?php 
 // require_once 'templates/navbar_index.php' 
 ?>
 <!-- end of navbar -->
 
 <!-- CONTAINER -->
-<div class="container mt-5" style="margin-top: 15%!important;padding-left: 20%; font-size-adjust: 0.58;">
+<div class="container" style="padding-left: 20%; font-size-adjust: 0.58;">
 <h1 style="font-size:5vw;font-size-adjust: 0.58;color:#6CCB9C;"> SELLER<h1>
 </div>
 <!----------------------------------------------------------------------------------------------------------------------------->

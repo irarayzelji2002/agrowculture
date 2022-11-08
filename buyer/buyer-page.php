@@ -26,18 +26,21 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <!-- FAVICON -->
+    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
+
     <title>aGROWculture</title>
 
 </head>
 <body>
     <!-- Navbar -->
     <?php require_once '../templates/navbar_buyer.php'; ?>
-
+    <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
-    <main class="full-container"style="margin-top:5%;">
+    <main class="full-container">
         <img src="../img/s1.jpg" alt="" id="buyerIcon" class="profile-icon">
         <div class="solid-bg">
-            <h1 id="buyerName" class="center">
+            <h1 id="buyerName" class="center" style="font-size:48px; font-weight:700;">
                 <!-- NAME -->
                 <?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?>
             </h1>

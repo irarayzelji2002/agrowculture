@@ -20,7 +20,7 @@
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
   <!-- FAVICON -->
-  <link rel="icon" href="img/ust.png" type="image/gif" sizes="16x16">
+  <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
 </head>
 
 <body class="bg-image">

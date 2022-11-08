@@ -29,19 +29,22 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <!-- FAVICON -->
+    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
+
     <script src="https://kit.fontawesome.com/96362859e2.js" crossorigin="anonymous"></script>
     <title>aGROWculture</title>
 
 </head>
 
 <body>
-    <?php require_once '../templates/navbar_seller.php' ?>
+    <?php require_once '../templates/navbar_seller.php'?>
+    <div style="height:5rem;"></div>
     <!-- SEARCH -->
     <section class="search-container flex column">
-
         <div class="search-bar">
             <form action="product-catalog.php" method="get" class="form-inline my-2 my-lg-0" style="width: 500px">
-                <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true" style="margin-right:2%!important;"></i>
+                <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true" style="margin-right:2%!important; margin-left:4%!important; padding-top:0.5rem; line-height:3rem;"></i>
                 <!-- <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="margin: 0 1rem 0 1rem;"></i> -->
                 <input type="text" placeholder="Search for products" aria-label="Search" name="query">
             </form>
@@ -96,7 +99,7 @@ if (isset($_SESSION['isLogin'])) {
             <main class="full-container flex column">
                 <!-- PRODUCTS-->
                 <section class="half-container">
-                    <h1 class="sub-link center">Listed Products</h1>
+                    <h1 class="sub-link center" style="font-size:48px; font-weight:900;">Listed Products</h1>
 
                     <div class="full-container flex row">
                         <?php
@@ -112,7 +115,7 @@ if (isset($_SESSION['isLogin'])) {
 
                                 <div class="product">
                                     <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
-                                    <h5> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></a></h5>
+                                    <h5 style="font-size:10px; font-weight:900;"> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></a></h5>
 
                                     <p id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></p>
                                     <p id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></p>

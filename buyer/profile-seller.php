@@ -42,11 +42,13 @@ if (isset($_SESSION['isLogin'])) {
     <!-- FONTAWESOME -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <title>aGROWculture</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
 
 </head>
 
 <body>
-
+<?php require_once '../templates/navbar_buyer.php' ?>
  <!-- EXPERIMENT -->
  <?php
           $finding_user = "";
@@ -71,7 +73,6 @@ if (isset($_SESSION['isLogin'])) {
   } ?>
   
    <!-- EXPERIMENT -->
-   <?php require_once '../templates/navbar_seller.php' ?>
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
