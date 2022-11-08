@@ -10,6 +10,8 @@
    $productDescription = $_POST['productDescription'];
    $product_image = $_POST['product_image'];
    $user_ID= $_SESSION['user_ID'];
+   $seller_name= $_SESSION["sFirstName"].$_SESSION["sLastName"];
+
 
         $imgName = $_FILES['product_image']['name'];
         $imgTmp = $_FILES['product_image']['tmp_name'];
@@ -42,8 +44,8 @@
           }
         }
         if(!isset($errorMsg)){
-              $sql = "insert into product(user_ID,category, product_name, product_price, product_image, product_desc)
-              values(".$user_ID.",'".$category_type."', '".$productName."', '".$productPrice."', '".$userPic."', '".$productDescription."')";
+              $sql = "insert into product(user_ID, seller_name,category, product_name, product_price, product_image, product_desc)
+              values(".$user_ID.",'".$seller_name."','".$category_type."', '".$productName."', '".$productPrice."', '".$userPic."', '".$productDescription."')";
     
           $result = mysqli_query($conn, $sql);
           if($result){
