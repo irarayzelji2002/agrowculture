@@ -10,7 +10,7 @@
    $productDescription = $_POST['productDescription'];
    $product_image = $_POST['product_image'];
    $user_ID= $_SESSION['user_ID'];
-   $seller_name= $_SESSION["sFirstName"].$_SESSION["sLastName"];
+   $seller_name= $_SESSION["sFirstName"]." ".$_SESSION["sLastName"];
 
 
         $imgName = $_FILES['product_image']['name'];
