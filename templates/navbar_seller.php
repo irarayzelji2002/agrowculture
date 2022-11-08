@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white" style="z-index:9; position:fixed;">
+<nav class="navbar navbar-expand-lg navbar-light bg-white" style="z-index:9; position:fixed;top:0px;">
     <!-- logo head -->
     <a class="navbar-brand" href="index">
     <img src="../img/aGROWculture-Logo-Colored.png" style="margin-left:1rem; width: 2rem; height: 3rem; vertical-align: middle;" alt="Logo">
@@ -28,15 +28,17 @@
         </li>
         
         <li class="nav-item mr-1">
-            <a class="nav-link btn bold-text" href="product-catalog.php" role="button" style="color: black;font-weight:600;">
+            <a class="nav-link btn bold-text" href="product-catalog.php" role="button" style="color: black;font-weight:600;font-size:medium">
             HOME</a>
         </li>
         
         <li class="nav-item dropdown mr-4" style="color: black;font-weight:600;">
-            <a class="nav-link dropdown-toggle btn bold-text fa-solid fa-circle-user" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem;"></a>
+        
+            <a class="nav-link dropdown-toggle btn bold-text" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem;">
+            <img style="width:30px !important;height: 30px !important;margin-right:5px" src="../img/user.png" alt="ICON"></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-            <li><a class="dropdown-item" href="seller-page.php">PROFILE</a></li>
-            <li><a class="dropdown-item" href="../logout.php">LOGOUT</a></li>
+            <li  class="dropdown-item"><a href="seller-page.php" style="text-decoration:none;color:black">PROFILE</a></li>
+            <li  class="dropdown-item"><a href="../logout.php"  style="text-decoration:none;color:black">LOGOUT</a></li>
             </ul>
         </li>
 

@@ -238,10 +238,11 @@ input[type=file] {
   font-size: 14px!important;
 }
 
+
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 900px) {
   .product {
-    width: 165px;
+    width: 55px;
     height: auto;
     border-radius: 40px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);

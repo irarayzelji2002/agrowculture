@@ -32,10 +32,10 @@
            SIGN UP</a>
        </li>
 
-       <li class="nav-item mr-2">
+       <!-- <li class="nav-item mr-2">
          <a class="nav-link btn bold-text fa-solid fa-circle-user" href="seller/acc-profile-seller.php" role="button" style="color:black; font-size:1.5rem; width:100%; padding-left:1.5rem; padding-right:1.5rem;">
          </a>
-       </li>
+       </li> -->
        
      </ul>
    </div>

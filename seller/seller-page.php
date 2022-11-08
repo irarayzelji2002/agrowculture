@@ -13,15 +13,9 @@ if (isset($_SESSION['isLogin'])) {
 
 <!DOCTYPE html>
 <html lang="en">
- <!-- Bootstrap CSS -->
- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
- <!-- Optional JavaScript -->
- <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
- <script src="js/scriptwo.js"></script>
+<script src="js/scriptwo.js"></script>
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,135 +40,135 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
-<?php  
-require_once '../templates/navbar_seller.php';
- ?>
-<div style="height:5rem;"></div>
+    <?php
+    require_once '../templates/navbar_seller.php';
+    ?>
+    <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
         <div class="solid-bg">
-            <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?></h1>
+            <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $_SESSION["sFirstName"] ?> <?php echo $_SESSION["sLastName"] ?></h1>
             <!-- <p id="productNum" class="center">Products: </p> -->
             <div class="flex row">
                 <p id="sellerPhone">Number:
-                <?php echo $_SESSION["phone_number"]?> 
+                    <?php echo $_SESSION["phone_number"] ?>
                 </p>
-                <p id="sellerAddr">Address: <?php echo $_SESSION["address"]?> </p>
+                <p id="sellerAddr">Address: <?php echo $_SESSION["address"] ?> </p>
             </div>
             <button class="btn-circle btn-center">
                 <a href="acc-profile-seller.php" style="color: white;text-decoration: none;">
                     Edit Profile </a></button>
         </div>
     </main>
-    
+
     <!-- TABLE-->
     <section class="half-container">
-    <h1 class="sub-link center" >Listed Products</h1>
-    <table>
-        <!-- TABLE HEAD -->
-        <thead>
-            <tr>
-                <th scope="col" class="sub-link center">Product ID</th>
-                <th scope="col">Product NAME</th>
-                <th scope="col">Product PRICE</th>
-                <th scope="col">IMAGE</th>
-                <th scope="col">DESC</th>
-                <th scope="col">STATUS</th>
-                <th scope="col">ACTION</th>
-            </tr>
-        </thead>
-    <!-- TABLE BODY -->
-        <tbody>
-            <tr>
-            <?php
+        <h1 class="sub-link center">Listed Products</h1>
+        <table>
+            <!-- TABLE HEAD -->
+            <thead>
+                <tr>
+                    <th scope="col" class="sub-link center">Product ID</th>
+                    <th scope="col">Product NAME</th>
+                    <th scope="col">Product PRICE</th>
+                    <th scope="col">IMAGE</th>
+                    <th scope="col">DESC</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">ACTION</th>
+                </tr>
+            </thead>
+            <!-- TABLE BODY -->
+            <tbody>
+                <tr>
+                    <?php
 
-                $currentID = $_SESSION["user_ID"];
-                $upload_dir = '../upload/';
-                $sql = "SELECT `product_id`, `product_name`, `product_price`, `product_image`, `product_desc`, `product_status`
+                    $currentID = $_SESSION["user_ID"];
+                    $upload_dir = '../upload/';
+                    $sql = "SELECT `product_id`, `product_name`, `product_price`, `product_image`, `product_desc`, `product_status`
                         FROM `product`
                         WHERE user_ID = $currentID";
-                $result = mysqli_query($conn, $sql);
-                $resultCheck = mysqli_num_rows($result);
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
 
 
-                if($resultCheck > 0) {
-                    while($row = mysqli_fetch_assoc($result)) {   ?>   
-                      <tr>
-                        <td>
-                            <?php echo  $row['product_id'] ?>
-                        </td>
-                        <td>    
-                            <?php echo   $row['product_name'] ?>
-                        </td>
-                        <td>    
-                            <?php echo   $row['product_price']?>
-                        </td>
-                        <td>
-                            <img class="product-img" src=<?php echo $upload_dir . $row['product_image'] ?> alt="..." >
-                        </td>
-                          
-                        <td>  
-                            <?php echo $row['product_desc']?>
-                        </td>
-                        <td> 
-                                <?php $row['product_status']?>
-                        </td>        
-                        </tr>
-                   <?php
+                    if ($resultCheck > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {   ?>
+                <tr>
+                    <td>
+                        <?php echo  $row['product_id'] ?>
+                    </td>
+                    <td>
+                        <?php echo   $row['product_name'] ?>
+                    </td>
+                    <td>
+                        <?php echo   $row['product_price'] ?>
+                    </td>
+                    <td>
+                        <img class="product-img" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
+                    </td>
+
+                    <td>
+                        <?php echo $row['product_desc'] ?>
+                    </td>
+                    <td>
+                        <?php $row['product_status'] ?>
+                    </td>
+                </tr>
+        <?php
+                        }
                     }
-                }
-            ?>
+        ?>
 
-                        
-            </tr>
-            
 
-        </tbody>
-    </table>
+        </tr>
 
-</section>
+
+            </tbody>
+        </table>
+
+    </section>
 
     <!--PRODUCT LIST UNDER SELLER PAGE-->
     <section class="half-container">
 
-    <!--4 Box Blank Container Row-->
+        <!--4 Box Blank Container Row-->
         <div class="flex row">
             <div class="product"><img src="../img/carrots.png" alt="" id="productIcon1" class="picon1">
-            <h5 id="productname1" class="pname">Product Name:</h5>
-            <h5 id="productprice1" class="pprice">Product Price:</h5>
-            <h5 id="productdesc1" class="pdesc">Product Description:</h5>
+                <h5 id="productname1" class="pname">Product Name:</h5>
+                <h5 id="productprice1" class="pprice">Product Price:</h5>
+                <h5 id="productdesc1" class="pdesc">Product Description:</h5>
 
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
+                <i class="fas fa-marker fa-2x"></i>
+                <i class="fas fa-trash fa-2x"></i>
             </div>
 
             <div class="product">
-            <img src="../img/grapes.png" alt="" id="productIcon2" class="picon2">
-            <h5 id="productname2" class="pname">Product Name:</h5>
-            <h5 id="productprice2" class="pprice">Product Price:</h5>
-            <h5 id="productdesc2" class="pdesc">Product Description:</h5>
+                <img src="../img/grapes.png" alt="" id="productIcon2" class="picon2">
+                <h5 id="productname2" class="pname">Product Name:</h5>
+                <h5 id="productprice2" class="pprice">Product Price:</h5>
+                <h5 id="productdesc2" class="pdesc">Product Description:</h5>
 
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
+                <i class="fas fa-marker fa-2x"></i>
+                <i class="fas fa-trash fa-2x"></i>
             </div>
 
             <div class="product"><img src="../img/tomato.png" alt="" id="productIcon3" class="picon3">
-            <h5 id="productname3" class="pname">NAME HERE</h5>
-            <h5 id="productprice3" class="pprice">Price</h5>
-            <h5 id="productdesc3" class="pdesc">Description</h5>
+                <h5 id="productname3" class="pname">NAME HERE</h5>
+                <h5 id="productprice3" class="pprice">Price</h5>
+                <h5 id="productdesc3" class="pdesc">Description</h5>
 
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
+                <i class="fas fa-marker fa-2x"></i>
+                <i class="fas fa-trash fa-2x"></i>
             </div>
 
             <div class="product"><img src="../img/pineapple.png" alt="" id="productIcon4" class="picon4">
-            <h5 id="productname4" class="pname">Product Name:</h5>
-            <h5 id="productprice4" class="pprice">Product Price:</h5>
-            <h5 id="productdesc4" class="pdesc">Product Description:</h5>
+                <h5 id="productname4" class="pname">Product Name:</h5>
+                <h5 id="productprice4" class="pprice">Product Price:</h5>
+                <h5 id="productdesc4" class="pdesc">Product Description:</h5>
 
-            <i class="fas fa-marker fa-2x"></i>
-            <i class="fas fa-trash fa-2x"></i>
+                <i class="fas fa-marker fa-2x"></i>
+                <i class="fas fa-trash fa-2x"></i>
             </div>
 
         </div>
@@ -186,4 +180,5 @@ require_once '../templates/navbar_seller.php';
     </footer>
 
 </body>
+
 </html>
