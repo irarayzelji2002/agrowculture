@@ -30,8 +30,8 @@
         <li class="nav-item dropdown mr-4" style="color: black;font-weight:600;">
             <a class="nav-link dropdown-toggle btn bold-text fa-solid fa-circle-user" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem;"></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-            <li><a class="dropdown-item" href="buyer-page.php">PROFILE</a></li>
-            <li><a class="dropdown-item" href="../logout.php">LOGOUT</a></li>
+            <li class="dropdown-item"><a href="buyer-page.php"style="text-decoration:none;color:black">PROFILE</a></li>
+            <li class="dropdown-item"><a href="../logout.php"style="text-decoration:none;color:black">LOGOUT</a></li>
             </ul>
         </li>
 
