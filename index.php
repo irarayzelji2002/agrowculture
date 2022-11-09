@@ -21,19 +21,6 @@
 
 </head>
 <body>
-    <!-- Navbar -->
-    <!-- <nav class="sticky">
-        <div class="flex-nav">
-        <div>aGROWculture</div>
-        <div>
-            <a href="">SELL</a>
-            <a href="">LOGIN</a>
-            <a href="">SIGN UP</a>
-            <a href="">ICON LOGO</a>
-        </div>
-
-        </div>
-    </nav> -->
     <?php require_once 'templates/navbar_index.php' ?>
     <!-- MAIN CONTENT -->
     <main class="full-container flex row">
@@ -65,42 +52,47 @@
     <section class="half-container">
         <div><h1 class="center" style="font-size:48px; font-weight:900;">Featured Products</h1></div>
         <div class="flex row">
-            <div><img src="img/s1.jpg" alt="" class="featured"></div>
-            <div><img src="img/s2.jpg" alt="" class="featured"></div>
-            <div><img src="img/s3.jpg" alt="" class="featured"></div>
-            <div><img src="img/s4.jpg" alt="" class="featured"></div>
+            <div><img src="img/FeaturedProducts1.jpg" alt="" class="featured" style="object-fit:cover;"></div>
+            <div><img src="img/FeaturedProducts2.jpg" alt="" class="featured" style="object-fit:cover;"></div>
+            <div><img src="img/FeaturedProducts3.jpg" alt="" class="featured" style="object-fit:cover;"></div>
+            <div><img src="img/FeaturedProducts4.jpg" alt="" class="featured" style="object-fit:cover;"></div>
         </div>
-        <div><p class="center sub-link">See all products</p></div>
+        <div><a href="buyer/product-catalog.php" style="color: white;"><p class="center sub-link">See all products</p></a></div>
     </section>
 
     <section class="half-container">
         <div class="center">
             <h1 style="font-size:48px; font-weight:900;">Grow with Us!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas scelerisque rhoncus libero, et tristique massa hendrerit at.
-                Sed urna elit, facilisis ut lectus sed, vestibulum suscipit lorem.</p>
+            <p>aGROWculture aims to provide farmers an e-commerce platform to sell their crops to retailers, 
+                distributors, and purchasing agents. Farmers will be the suppliers who will sell their goods 
+                in bulk orders to distributors. It will help farmers reach larger audiences and make transactions 
+                faster and more efficient. On the other hand, distributors can have more options in choosing 
+                their suppliers through the product catalog. This platform will allow easier negotiation between 
+                farmers and distributors.</p>
         </div>
 
-        <div class="flex row">
+        <div class="flex row" style="padding-bottom:5rem;">
             <div class="roles">
                 <h1 style="font-size:48px; font-weight:900;">as a Buyer</h1>
-                <ul>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
+                <ul style="line-height:2rem; padding-bottom:1rem;">
+                    <li>Act as retailers</li>
+                    <li>Act as distributor</li>
+                    <li>Act as purchasing agents</li>
+                    <li>Consider price, quality, and reliability when choosing suppliers</li>
+                    <li>Responsible for the receipt of goods from suppliers</li>
+                    <li>Negotiate with seller</li>
                 </ul>
             </div>
 
             <div class="roles">
                 <h1 style="font-size:48px; font-weight:900;">as a Seller</h1>
-                <ul>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
-                    <li>Example Role</li>
+                <ul style="line-height:2rem; padding-bottom:1rem;">
+                    <li>Act as suppliers</li>
+                    <li>Sell and provide products for retailers</li>
+                    <li>Ensure the quality and availability of products sold</li>
+                    <li>Provide clear description and titles for their products</li>
+                    <li>Price their products correctly</li>
+                    <li>Negotiate with buyer</li>
                 </ul>
             </div>
         </div>
