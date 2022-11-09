@@ -35,6 +35,8 @@ if (isset($_SESSION['isLogin'])) {
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <!-- FAVICON -->
     <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
+
+    
     <title>aGROWculture</title>
 
 </head>
@@ -94,34 +96,45 @@ if (isset($_SESSION['isLogin'])) {
 
                     if ($resultCheck > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {   ?>
-                <tr>
-                    <td>
-                        <?php echo  $row['product_id'] ?>
-                    </td>
-                    <td>
-                        <?php echo   $row['product_name'] ?>
-                    </td>
-                    <td>
-                        <?php echo   $row['product_price'] ?>
-                    </td>
-                    <td>
-                        <img class="product-img" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
-                    </td>
+                    <tr>
+                        <td>
+                            <?php echo  $row['product_id'] ?>
+                        </td>
+                        <td>
+                            <?php echo   $row['product_name'] ?>
+                        </td>
+                        <td>
+                            <?php echo   $row['product_price'] ?>
+                        </td>
+                        <td>
+                            <img class="product-img" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
+                        </td>
 
-                    <td>
-                        <?php echo $row['product_desc'] ?>
-                    </td>
-                    <td>
-                        <?php $row['product_status'] ?>
-                    </td>
-                </tr>
+                        <td>
+                            <?php echo $row['product_desc'] ?>
+                        </td>
+                        <td>
+                            <?php $row['product_status'] ?>
+                        </td>
+
+                        <!-- ACTION BUTTONS-->
+                        <td>
+                            <!-- EDIT/UPDATE -->
+                            <?php echo '<a href="../db/edit-form.php?product_id='.$row['product_id'].'" title="Edit Record" data-toggle="tooltip"><span class="fa fa-marker"></span></a>'; ?>
+                            
+                            <!-- DELETE -->
+                            <?php echo '<a href="../db/delete.php?product_id='.$row['product_id'].'" title="Delete Record" data-toggle="tooltip"
+                            ><span class="fa fa-trash remove"></span></a>'; ?>
+                        </td>
+
+                    </tr>
         <?php
                         }
                     }
         ?>
 
 
-        </tr>
+                </tr>
 
 
             </tbody>
@@ -180,5 +193,4 @@ if (isset($_SESSION['isLogin'])) {
     </footer>
 
 </body>
-
 </html>
