@@ -123,9 +123,8 @@ if (isset($_SESSION['isLogin'])) {
                             <?php echo '<a href="edit-form.php?product_id='.$row['product_id'].'" title="Edit Record" data-toggle="tooltip"><span class="fa fa-marker"></span></a>'; ?>
                             
                             <!-- DELETE -->
-                            <?php echo 
-                            <a href="../db/delete.php?product_id='.$row['product_id']." title="Delete Record" data-toggle="tooltip" onclick="return confirm('Are you sure to delete this record?')">
-                            <span class="fa fa-trash remove"></span></a>'; ?>
+                            <a href="../db/delete.php?product_id=<?php echo $row['product_id']?> title="Delete Record" data-toggle="tooltip"  onclick="return confirm('Are you sure to delete this record?')"
+                            ><span class="fa fa-trash remove"></span></a>
                         </td>
 
                     </tr>
