@@ -66,7 +66,6 @@ require_once '../config.php';
                     if(mysqli_num_rows($query_run) > 0)
                     {
                         $product = mysqli_fetch_array($query_run);
-                        print_r($product);
                         ?>
     
                         <form action="../db/edit.php" method="POST" enctype="multipart/form-data" >

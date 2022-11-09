@@ -67,7 +67,7 @@ if (isset($_SESSION['isLogin'])) {
     <!-- TABLE-->
     <section class="half-container">
         <h1 class="sub-link center">Listed Products</h1>
-        <table>
+        <table style="margin-bottom: 5%;">
             <!-- TABLE HEAD -->
             <thead>
                 <tr>
@@ -120,7 +120,7 @@ if (isset($_SESSION['isLogin'])) {
                         <!-- ACTION BUTTONS-->
                         <td>
                             <!-- EDIT/UPDATE -->
-                            <?php echo '<a href="../db/edit-form.php?product_id='.$row['product_id'].'" title="Edit Record" data-toggle="tooltip"><span class="fa fa-marker"></span></a>'; ?>
+                            <?php echo '<a href="edit-form.php?product_id='.$row['product_id'].'" title="Edit Record" data-toggle="tooltip"><span class="fa fa-marker"></span></a>'; ?>
                             
                             <!-- DELETE -->
                             <?php echo '<a href="../db/delete.php?product_id='.$row['product_id'].'" title="Delete Record" data-toggle="tooltip"
