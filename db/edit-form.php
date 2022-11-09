@@ -69,7 +69,7 @@ require_once '../config.php';
                         print_r($product);
                         ?>
     
-                        <form action="../db/edit.php?product_id='<?php echo $row['product_id']; ?>'" method="POST" enctype="multipart/form-data" >
+                        <form action="../db/edit.php" method="POST" enctype="multipart/form-data" >
                             <fieldset class="">
 
                                 <label for="product_id">Product ID</label>

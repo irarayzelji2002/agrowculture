@@ -3,30 +3,17 @@ session_start();
 require_once '../config.php';
 $upload_dir = '../upload/';
 
-// if(isset($_GET['product_id']))
-// {
-//     $prodID = mysqli_real_escape_string($conn, $_GET["product_id"]);
-//     $query = "SELECT * FROM product WHERE product_id = '$prodID'";
-//     $query_run = mysqli_query($conn, $query);
-
-//     if(mysqli_num_rows($query_run) > 0)
-//     {
-//         $product = mysqli_fetch_assoc($query_run);
-//     }
-//     else {
-//         $errorMsg = 'Error in finding product';
-//     }
-// }
     
 if (isset($_POST['edit'])) {
+    $prodCheck = $_POST['product_id'];
     $productName = $_POST['productName'];
     $productPrice = $_POST['productPrice'];
     $category_type = $_POST['category_type'];
     $productDescription = $_POST['productDescription'];
+    $product_image = $_POST['product_image'];
     $user_ID= $_SESSION['user_ID'];
     $seller_name= $_SESSION["sFirstName"]." ".$_SESSION["sLastName"];
     $status = "Example Status";
-    $checkID = $_GET["product_id"];
 
     $imgName = $_FILES['product_image']['name'];
     $imgTmp = $_FILES['product_image']['tmp_name'];
@@ -43,6 +30,7 @@ if (isset($_POST['edit'])) {
      
         $imgExt = strtolower(pathinfo($imgName, PATHINFO_EXTENSION));
         $allowExt  = array('jpeg', 'jpg', 'png', 'gif');
+        $userPic = time().'_'.rand(1000,9999).'.'.$imgExt;
         
         if(in_array($imgExt, $allowExt)){
             if($imgSize < 5000000){
@@ -58,16 +46,15 @@ if (isset($_POST['edit'])) {
         if(!isset($errorMsg)){
             $sql = "UPDATE product
             SET
-            `product_id` = '$checkID',
             `user_ID` = '$user_ID',
             `seller_name` = '$seller_name',
             `category` = '$category_type',
             `product_name` = '$productName',
             `product_price` = '$productPrice',
-            `product_image`= '$product_image',
+            `product_image`= '$userPic',
             `product_desc`= '$productDescription',
             `product_status`= '$status'
-            WHERE `product_id`= $checkID
+            WHERE `product_id`= $prodCheck
             ";
      
            $result = mysqli_query($conn, $sql);
