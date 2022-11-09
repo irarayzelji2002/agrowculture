@@ -99,7 +99,7 @@ if (isset($_SESSION['isLogin'])) {
             <main class="full-container flex column">
                 <!-- PRODUCTS-->
                 <section class="half-container">
-                    <h1 class="sub-link center" style="font-size:48px; font-weight:900;">Listed Products</h1>
+                    <h1 class="sub-link center listedproduct" style="font-size:48px; font-weight:900;">Listed Products</h1>
 
                     <div class="full-container flex row">
                         <?php
@@ -116,7 +116,6 @@ if (isset($_SESSION['isLogin'])) {
                                 <div class="product">
                                     <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
                                     <h5 style="font-size:10px; font-weight:900;"> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></a></h5>
-
                                     <p id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></p>
                                     <p id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></p>
                                 </div>
