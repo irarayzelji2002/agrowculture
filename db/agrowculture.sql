@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2022 at 03:54 PM
+-- Generation Time: Nov 09, 2022 at 09:24 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -44,7 +44,6 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `user_ID`, `seller_name`, `category`, `product_name`, `product_price`, `product_image`, `product_desc`, `product_status`) VALUES
-(3, 16, 'Julia Pascua', 'Vegetables', 'potato', '60', '1666515673_2468.png', 'hehehehhe', ''),
 (4, 16, 'Julia Pascua', 'Vegetables', 'Carrots', '30', '1667197366_9905.png', 'Carrots', ''),
 (6, 12, 'Myoui Myoui', 'DairyorEggs', 'Milk', '40', '1667485592_4618.png', 'milk ', '');
 
@@ -121,7 +120,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `product_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
