@@ -224,6 +224,16 @@ input[type=text] {
   border: none;
 }
 
+input[type=password] {
+  line-height: 50px;
+  background-color: #f2f2f2!important;
+  box-shadow: inset 0px 1px 3px 0px rgb(0 0 0 / 8%);
+  border-radius: 5px;
+  padding: 5px 2rem;
+  width: 15rem;
+  border: none;
+}
+
 input[type=email] {
   line-height: 50px;
   background-color: #f2f2f2!important;
@@ -247,5 +257,9 @@ input[type=file] {
     border-radius: 40px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     padding: 15px;
+  }
+
+  input[type=password] {
+    width: 11rem;
   }
 }

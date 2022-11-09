@@ -74,7 +74,7 @@
                             <p class="sub-link">Email Address</p>
                             <div><input type="text" id="email" name="email" required /></div>
                             <p class="sub-link">Password</p>
-                            <div><input type="text" id="password" name="password" required /></div>
+                            <div><input type="password" id="password" name="password" required /></div>
                         </fieldset></br>
                     </div>
 
