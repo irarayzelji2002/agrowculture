@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <!-- FAVICON -->
+  <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
 
     <title>aGROWculture</title>
 
@@ -30,6 +32,7 @@
             <form class="form-flex column" id="regForm" action="db/registerDATA.php" method="post" enctype="multipart/form-data">
                 <div>
                     <div>
+                        <br>
                         <h1>Join our community.</h1>
                         <!--Role-->
                         <h3 class="sub-link">I am a...</h3>

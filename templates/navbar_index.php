@@ -1,7 +1,7 @@
 <!-- MAIN CSS Sheet-->
 <link rel="stylesheet" href="../css/main.css">
- <link rel="stylesheet" href="../css/login.css
- ">
+ <link rel="stylesheet" href="../css/login.css">
+ 
  <!-- Google Font: Poppins-->
  <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
