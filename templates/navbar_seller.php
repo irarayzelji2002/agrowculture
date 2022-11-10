@@ -8,7 +8,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white" style="z-index:9; position:fixed;top:0px;">
     <!-- logo head -->
-    <a class="navbar-brand" href="index">
+    <a class="navbar-brand">
     <img src="../img/aGROWculture-Logo-Colored.png" style="margin-left:1rem; width: 2rem; height: 3rem; vertical-align: middle;" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
