@@ -177,14 +177,15 @@ button {
     margin-top: 1rem; ;
     padding: 10px 30px;
     font-family: Poppins;
-  }
+}
 
-  /* Design for Choose File Button CSS*/
+/* Design for Choose File Button CSS*/
 .upload-btn{
   font-size: 20px;
 }
 
 .upload-btn::-webkit-file-upload-button{
+  color: white;
   background: #31ad5d;
   padding: 5px 5px;
   border: none;

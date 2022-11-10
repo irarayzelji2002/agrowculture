@@ -62,19 +62,30 @@
                             <div class="form-flex">
                                 <div>
                                     <p class="sub-link">First Name</p>
-                                    <div><input type="text" id="first_name" name="first_name" required /></div>
+                                    <div><input type="text" id="first_name" name="first_name" required/></div>
                                 </div>
 
                                 <div>
                                     <p class="sub-link">Last Name</p>
-                                    <div><input type="text" id="last_name" name="last_name" required /></div>
+                                    <div><input type="text" id="last_name" name="last_name" required/></div>
                                 </div>
                             </div>
 
                             <p class="sub-link">Email Address</p>
-                            <div><input type="text" id="email" name="email" required /></div>
+                            <div><input type="text" id="email" name="email" required/></div>
+
                             <p class="sub-link">Password</p>
-                            <div><input type="password" id="password" name="password" required /></div>
+                            <div><input type="password" id="password" name="password" required/></div>
+
+                            <!--Upload Profile Picture-->
+                            <br>
+                            <fieldset id="uploadDocuments">
+                            <legend>
+                                <h2 class="sub-link" style="color: black;">Upload Profile Picture</h2>
+                            </legend>
+                            <input type="file" name="image" class="upload-btn" required></input>
+                        </fieldset>
+                        
                         </fieldset></br>
                     </div>
 
@@ -85,27 +96,28 @@
                                 <h2>Business Details</h2>
                             </legend>
                             <p class="sub-link">Company/Business Name</p>
-                            <div><input type="text" id="business_name" name="business_name" required /></div>
+                            <div><input type="text" id="business_name" name="business_name" required/></div>
                             <p class="sub-link">Phone Number</p>
-                            <div><input type="text" id="phone_number" name="phone_number" required /></div>
+                            <div><input type="text" id="phone_number" name="phone_number" required/></div>
                             <p class="sub-link">Address</p>
-                            <div><input type="text" id="address" name="address" required /></div>
+                            <div><input type="text" id="address" name="address" required/></div>
                         </fieldset></br>
                     </div>
 
                     <div>
-                        <!--Upload Documents-->
+                        <!--Upload ID Documents-->
                         <fieldset id="uploadDocuments">
                             <legend>
-                                <h2 class="sub-link">Upload Documents</h2>
+                                <h2 class="sub-link" style="color: black;">Upload Any Valid ID</h2>
                             </legend>
-                            <input type="file" name="image"></input>
+                            <input type="file" name="image" class="upload-btn" required></input>
                         </fieldset>
                     </div>
+                    <br>
 
                     <!--Submit Button-->
                     <div>
-                        <button type="submit" name="Submit"class="btn-box">SUBMIT</button>
+                        <button type="submit" name="Submit" class="btn-box">SUBMIT</button>
                     </div>
             </form>
         </div>

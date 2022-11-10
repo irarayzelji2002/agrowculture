@@ -62,6 +62,13 @@ if (isset($_SESSION['isLogin'])) {
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
                 <fieldset class="">
 
+                <!--Upload Documents-->
+
+                <div class="form-group">
+                    <label for class="uploaddocs">Change Profile Picture:</label>
+                    <div class="wrapper"><input type="file" name="image" class="upload-btn"></input></div>
+                </div>
+
                     <input type="hidden" name="id" value="<?php
                                                             $currentID = $_SESSION["user_ID"];
                                                             echo $currentID; ?>">
@@ -83,13 +90,6 @@ if (isset($_SESSION['isLogin'])) {
 
                     <label for="address">Address:</label>
                     <div class="wrapper"><input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>"></div>
-
-                    <!--Upload Documents-->
-
-                    <div class="form-group">
-                    <label for class="uploaddocs">Upload Documents:</label>
-                    <div class="wrapper"><input type="file" name="image" class="upload-btn"></input></div>
-                    </div>
 
                     <div class="flex row">
                         <button class="btn-circle btn-center">Save Profile</button>

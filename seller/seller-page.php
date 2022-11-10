@@ -67,6 +67,7 @@ if (isset($_SESSION['isLogin'])) {
     <!-- TABLE-->
     <section class="half-container">
         <h1 class="sub-link center">Listed Products</h1>
+        <br>
         <table style="margin-bottom: 5%;">
             <!-- TABLE HEAD -->
             <thead>

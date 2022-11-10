@@ -60,7 +60,7 @@ if (isset($_SESSION['isLogin'])) {
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
             <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg">
 
-            <label for="changeProfile">Change Profile:</label>
+            <label for="changeProfile">Change Profile Picture:</label>
             <div class="wrapper"><input type="file" name="image" class="upload-btn"></input></div>
 
                 <fieldset class="">
