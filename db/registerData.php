@@ -67,7 +67,8 @@
     `user_type`,
     `phone_number`,
     `address`,
-    `v_image`
+    `v_image`,
+    `v2_image`
 
 ) 
   VALUES (
@@ -79,6 +80,7 @@
           '".$user_type."', 
           '".$phone_number."', 
           '".$address."',
+          '".$userPic."',
           '".$userPic."'
 
         )";
