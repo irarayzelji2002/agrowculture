@@ -117,7 +117,7 @@ if (isset($_SESSION['isLogin'])) {
                                     <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
                                     <h5 style="font-size:10px; font-weight:900;"> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></a></h5>
                                     <p id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></p>
-                                    <p id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></p>
+                                    <p id="productprice1" class="product-text">Price: ₱<?php echo   $row['product_price'] ?></p>
                                 </div>
                     <?php
                             }

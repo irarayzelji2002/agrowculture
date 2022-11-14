@@ -16,7 +16,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="nav-link btn bold-text" href="../index.php" role="button" style="color: black;font-weight:600; padding-left:0.5rem; margin:0;">
+        <a class="nav-link btn bold-text" role="button" style="color: black;font-weight:600; padding-left:0.5rem; margin:0;">
         aGROWculture</a>
 
         <ul class="navbar-nav ml-auto">
