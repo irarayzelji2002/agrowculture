@@ -10,7 +10,7 @@
 
 /* Card CSS */
 .form-container {
-  margin: 35rem auto 10% auto;
+  margin: 45rem auto 10% auto;
   padding: 5%;
   width: 35rem;
   word-wrap: break-word;
@@ -63,6 +63,11 @@ input[type="file"] {
 }
 
 @media screen and (max-width: 900px) {
+
+  .test1 {
+    margin: 45rem auto 10% auto;
+  }
+
   h1 {
     font-size: 38px;
     text-align: left;
