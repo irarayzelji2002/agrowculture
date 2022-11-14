@@ -37,8 +37,8 @@ if (isset($_SESSION['isLogin'])) {
     <?php require_once '../templates/navbar_buyer.php'; ?>
     <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
-    <main class="full-container">
-        <img src="../img/s1.jpg" alt="" id="buyerIcon" class="profile-icon">
+    <main class="full-container" style="margin-top:5%;">
+        <img src="../img/s1.jpg" alt="" id="buyerIcon" class="profile-icon" style="transform: translate(0%, 25%);">
         <div class="solid-bg">
             <h1 id="buyerName" class="center" style="font-size:48px; font-weight:700;">
                 <!-- NAME -->
@@ -61,10 +61,12 @@ if (isset($_SESSION['isLogin'])) {
                 <a href="acc-profile-buyer.php" style="color: white;text-decoration: none;">
                 Edit Profile </a></button>
             </div>
-        </div>
-        
-        
+        </div>   
     </main>
+
+    <section class="half-container">
+
+    </section>
 
     <footer>
         
