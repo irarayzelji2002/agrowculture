@@ -37,8 +37,8 @@
             <a class="nav-link dropdown-toggle btn bold-text" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem;">
             <img style="width:30px !important;height: 30px !important;margin-right:5px" src="../img/user.png" alt="ICON"></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-            <li  class="dropdown-item"><a href="seller-page.php" style="text-decoration:none;color:black">PROFILE</a></li>
-            <li  class="dropdown-item"><a href="../logout.php"  style="text-decoration:none;color:black">LOGOUT</a></li>
+            <li  class="dropdown-item"><a href="seller-page.php" style="text-decoration:none;color:black"><center>PROFILE</a></li>
+            <li  class="dropdown-item"><a href="../logout.php"  style="text-decoration:none;color:black"><center>LOGOUT</a></li>
             </ul>
         </li>
 
