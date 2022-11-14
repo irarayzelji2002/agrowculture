@@ -9,43 +9,42 @@
     <!-- MAIN CSS Sheet-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reg-form-style.css">
+    
 
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- FAVICON -->
-  <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
-
+    <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
+    
     <title>aGROWculture</title>
 
 </head>
 
-<body>
+<body class="bg-image">
     <!--NAVBAR-->
     <?php require_once 'templates/navbar.php' ?>
-    <div class="bg-image"></div>
-    <main class="absolute-container">
+      <main class="absolute-container" style="padding-top: 20%;">
         <div class="form-container solid-bg">
             <form class="form-flex column" id="regForm" action="db/registerDATA.php" method="post" enctype="multipart/form-data">
                 <div>
                     <div>
-                        <br>
-                        <h1>Join our community.</h1>
+                        <h1 style="font-weight:900; font-size:30px;">Join our community.</h1>
                         <!--Role-->
-                        <h3 class="sub-link">I am a...</h3>
+                        <h3 class="sub-link" style="font-weight:900; font-size:19px; margin-top:1rem;">I am a...</h3>
                     </div>
 
                     <div class="form-flex">
-                        <label>
-                            <p class="sub-link">Buyer</p>
+                        <label style="display: inline-block">
+                            <span class="sub-link">Buyer</span>
                             <input type="radio" id="Buyer" name="user_type" value="Buyer" checked="checked" style="margin-right: 2rem;" />
                         </label>
 
                         <label>
-                            <p class="sub-link">Seller</p>
+                            <span class="sub-link">Seller</span>
                             <input type="radio" id="Seller" name="user_type" value="Seller" />
                         </label>
                     </div>
@@ -59,75 +58,74 @@
                         <!--Account Details-->
                         <fieldset id="acctDetails">
                             <legend>
-                                <h2 style="margin-top: 2rem;">Account Details</h2>
+                                <h2 style="margin-top:1rem; font-weight:900; font-size:24px;">Account Details</h2>
                             </legend>
 
                             <div class="form-flex">
                                 <div>
                                     <p class="sub-link">First Name</p>
-                                    <div><input type="text" id="first_name" name="first_name" required/></div>
+                                    <div><input type="text" id="first_name" name="first_name" required /></div>
                                 </div>
 
                                 <div>
                                     <p class="sub-link">Last Name</p>
-                                    <div><input type="text" id="last_name" name="last_name" required/></div>
+                                    <div><input type="text" id="last_name" name="last_name" required /></div>
                                 </div>
                             </div>
 
                             <p class="sub-link">Email Address</p>
-                            <div><input type="text" id="email" name="email" required/></div>
-
+                            <div><input type="text" id="email" name="email" required /></div>
                             <p class="sub-link">Password</p>
-                            <div><input type="password" id="password" name="password" required/></div>
-
-                            <!--Upload Profile Picture-->
-                            <br>
-                            <fieldset id="uploadDocuments">
-                            <legend>
-                                <h2 class="sub-link" style="color: black;">Upload Profile Picture</h2>
-                            </legend>
-                            <input type="file" name="image" class="upload-btn" required></input>
-                        </fieldset>
-                        
+                            <div><input type="text" id="password" name="password" required /></div>
                         </fieldset></br>
+                    </div>
+
+                    <div>
+                        <!--Upload Documents-->
+                        <fieldset id="uploadDocuments">
+                            <legend>
+                                <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Profile Photo</h2>
+                            </legend>
+                            <input type="file" name="image" class="upload-btn" style="color:black;" required></input>
+                        </fieldset>
                     </div>
 
                     <div>
                         <!--Business Details-->
+                        <br>
                         <fieldset id="businessDetails">
                             <legend>
-                                <h2>Business Details</h2>
+                                <h2 style="font-weight:900; font-size:24px;">Business Details</h2>
                             </legend>
                             <p class="sub-link">Company/Business Name</p>
-                            <div><input type="text" id="business_name" name="business_name" required/></div>
+                            <div><input type="text" id="business_name" name="business_name" required /></div>
                             <p class="sub-link">Phone Number</p>
-                            <div><input type="text" id="phone_number" name="phone_number" required/></div>
+                            <div><input type="text" id="phone_number" name="phone_number" required /></div>
                             <p class="sub-link">Address</p>
-                            <div><input type="text" id="address" name="address" required/></div>
+                            <div><input type="text" id="address" name="address" required /></div>
                         </fieldset></br>
                     </div>
 
                     <div>
-                        <!--Upload ID Documents-->
+                        <!--Upload Documents-->
                         <fieldset id="uploadDocuments">
                             <legend>
-                                <h2 class="sub-link" style="color: black;">Upload Any Valid ID</h2>
+                                <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Any Valid ID</h2>
                             </legend>
-                            <input type="file" name="image" class="upload-btn" required></input>
+                            <input type="file" name="image" class="upload-btn" style="color:black;" required></input>
                         </fieldset>
                     </div>
-                    <br>
 
                     <!--Submit Button-->
                     <div>
-                        <button type="submit" name="Submit" class="btn-box">SUBMIT</button>
+                        <button type="submit" name="Submit"class="btn-box">SUBMIT</button>
                     </div>
             </form>
         </div>
 
         </section>
-    </main>
-
+      </main>
+    </div>
     <!--FOOTER-->
     <footer>
     </footer>
