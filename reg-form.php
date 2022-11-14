@@ -116,6 +116,7 @@
                     </div>
 
                     <!--Submit Button-->
+                    <br>
                     <div>
                         <button type="submit" name="Submit"class="btn-box">SUBMIT</button>
                     </div>
