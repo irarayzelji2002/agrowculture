@@ -33,9 +33,8 @@ if (isset($_SESSION['isLogin'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-    <!-- FAVICON -->
-    <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
-
+     <!-- FAVICON -->
+     <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
     
     <title>aGROWculture</title>
 
@@ -50,17 +49,21 @@ if (isset($_SESSION['isLogin'])) {
     <main class="full-container" style="margin-top:5%;">
         <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
         <div class="solid-bg">
+            <div class="flex row">
             <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $_SESSION["sFirstName"] ?> <?php echo $_SESSION["sLastName"] ?></h1>
             <!-- <p id="productNum" class="center">Products: </p> -->
+            </div>
             <div class="flex row">
                 <p id="sellerPhone">Number:
                     <?php echo $_SESSION["phone_number"] ?>
                 </p>
                 <p id="sellerAddr">Address: <?php echo $_SESSION["address"] ?> </p>
             </div>
+            <div class="flex row">
             <button class="btn-circle btn-center">
                 <a href="acc-profile-seller.php" style="color: white;text-decoration: none;">
                     Edit Profile </a></button>
+            </div>
         </div>
     </main>
 

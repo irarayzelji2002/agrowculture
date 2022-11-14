@@ -42,7 +42,9 @@ if (isset($_SESSION['isLogin'])) {
         <div class="solid-bg">
             <h1 id="buyerName" class="center" style="font-size:48px; font-weight:700;">
                 <!-- NAME -->
+                <div class="flex row">
                 <?php echo $_SESSION["sFirstName"]?> <?php echo $_SESSION["sLastName"] ?>
+                </div>    
             </h1>
             <div class="flex row">
                 <p id="buyerPhone">Number:
@@ -54,8 +56,11 @@ if (isset($_SESSION['isLogin'])) {
 
             </div>
             
-            <button class="btn-circle btn-center" > <a href="acc-profile-buyer.php" style="color: white" >
+            <div class="flex row">
+            <button class="btn-circle btn-center">
+                <a href="acc-profile-buyer.php" style="color: white;text-decoration: none;">
                 Edit Profile </a></button>
+            </div>
         </div>
         
         
