@@ -34,7 +34,7 @@ if (isset($_SESSION['isLogin'])) {
     <!-- FONTAWESOME -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
      <!-- FAVICON -->
-     <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
+     <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
     
     <title>aGROWculture</title>
 
