@@ -80,8 +80,8 @@ if (isset($_SESSION['isLogin'])) {
                     <th scope="col">Product PRICE</th>
                     <th scope="col">IMAGE</th>
                     <th scope="col">DESC</th>
-                    <th scope="col">STATUS</th>
-                    <th scope="col">ACTION</th>
+                    <th scope="col">EDIT</th>
+                    <th scope="col">DELETE</th>
                 </tr>
             </thead>
             <!-- TABLE BODY -->
@@ -118,17 +118,17 @@ if (isset($_SESSION['isLogin'])) {
                             <?php echo $row['product_desc'] ?>
                         </td>
                         <td>
-                            <?php $row['product_status'] ?>
+                        <?php echo '<a href="edit-form.php?product_id='.$row['product_id'].'" title="Edit Record" data-toggle="tooltip"><span class="fa fa-marker"  style="width: 40px;height: 40px;"></span></a>'; ?>
                         </td>
 
                         <!-- ACTION BUTTONS-->
                         <td>
                             <!-- EDIT/UPDATE -->
-                            <?php echo '<a href="edit-form.php?product_id='.$row['product_id'].'" title="Edit Record" data-toggle="tooltip"><span class="fa fa-marker"></span></a>'; ?>
+                           
                             
                             <!-- DELETE -->
                             <a href="../db/delete.php?product_id=<?php echo $row['product_id']?> title="Delete Record" data-toggle="tooltip"  onclick="return confirm('Are you sure to delete this record?')"
-                            ><span class="fa fa-trash remove"></span></a>
+                            ><span class="fa fa-trash remove" style="width: 40px;height: 40px;"></span></a>
                         </td>
 
                     </tr>
