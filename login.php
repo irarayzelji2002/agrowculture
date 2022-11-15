@@ -5,17 +5,19 @@
   <title>Log in</title>
 
   <!-- BOOTSTRAP -->
-  <link rel="stylesheet" type="text/css" href="css/login.css">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reg-form.css">
+  <link rel="stylesheet" href="css/login.css">
+  
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- bootstrap -->
+  <!-- bootstrap
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
+ -->
 
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
@@ -24,7 +26,7 @@
 </head>
 
 <body class="bg-image">
-  <?php require_once 'templates/navbar_index.php' ?>
+<?php require_once 'templates/navbar_index.php' ?>
   <form action="authenticate.php" method="post" style="margin:5%" class="align-content-center">
 
     <div class="card d-flex align-content-center align-items-center mx-auto customCard">
