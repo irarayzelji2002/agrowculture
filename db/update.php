@@ -10,23 +10,47 @@
     $fName = $_POST['sFirstName'];
     $lName = $_POST['sLastName'];
     $currentID = $_SESSION["user_ID"];
-
+    $phoneVal = strlen($phone_number);
          $imgName = $_FILES['image']['name'];
          $imgTmp = $_FILES['image']['tmp_name'];
          $imgSize = $_FILES['image'] ['size'];
 
         if(empty($email)){
           $errorMsg ='Please input your email';
-        }else if(empty($phone_number)){
-          $errorMsg ='Please input your phone number';
+          header('Location: ../seller/seller-page.php?authenticate=false');
+        }else if(empty($email)){
+          $errorMsg ='Please input your email';
+          header('Location:../buyer/buyer-page.php?authenticate=false');
+        }else if(empty($phone_number) || ($phoneVal<11) || ($phoneVal>11)){
+          $errorMsg ='Your Phone Number must be 11 digits';
+          header('Location: ../seller/seller-page.php?authenticate=false');
+        }else if(empty($phone_number) || ($phoneVal<11) || ($phoneVal>11)){
+          $errorMsg ='Your Phone Number must be 11 digits';
+          header('Location:../buyer/buyer-page.php?authenticate=false');
         }else if(empty($address)){
           $errorMsg ='Please input your address';
+          header('Location: ../seller/seller-page.php?authenticate=false');
+        }else if(empty($address)){
+          $errorMsg ='Please input your address';
+          header('Location:../buyer/buyer-page.php?authenticate=false');
         }else if(empty($fName)){
           $errorMsg ='Please input your first name';
+          header('Location: ../seller/seller-page.php?authenticate=false');
+        }else if(empty($fName)){
+          $errorMsg ='Please input your first name';
+          header('Location:../buyer/buyer-page.php?authenticate=false');
         }else if(empty($lName)){
           $errorMsg ='Please input your last name';
+          header('Location: ../seller/seller-page.php?authenticate=false');
+        }else if(empty($lName)){
+          $errorMsg ='Please input your last name';
+          header('Location:../buyer/buyer-page.php?authenticate=false');
         }else if(empty($currentID)){
           $errorMsg ='Please input your user ID';
+          header('Location: ../seller/seller-page.php?authenticate=false');
+        }else if(empty($currentID)){
+          $errorMsg ='Please input your user ID';
+          header('Location:../buyer/buyer-page.php?authenticate=false');
         }
         else{
 
@@ -46,19 +70,21 @@
          }else{
            $errorMsg = 'Please select a valid image';
          }
+        
+         $sql = "UPDATE users
+         SET
+             `first_name` = '$fName',
+             `last_name` = '$lName',
+             `email` = '$email',
+             `business_name` = '$business_name',
+             `phone_number` = '$phone_number',
+             `address` = '$address',
+             `profile`= '$userPic'
+     
+         WHERE user_ID = $currentID
+             ";
+         
         }
-    $sql = "UPDATE users
-    SET
-        `first_name` = '$fName',
-        `last_name` = '$lName',
-        `email` = '$email',
-        `business_name` = '$business_name',
-        `phone_number` = '$phone_number',
-        `address` = '$address',
-        `profile`= '$userPic'
-
-    WHERE user_ID = $currentID
-        ";
 
     if(mysqli_query($conn, $sql)){
         $_SESSION["sFirstName"]= $fName;
