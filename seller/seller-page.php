@@ -91,7 +91,7 @@ if (isset($_SESSION['isLogin'])) {
 
                     $currentID = $_SESSION["user_ID"];
                     $upload_dir = '../upload/';
-                    $sql = "SELECT `product_id`, `product_name`, `product_price`, `product_image`, `product_desc`, `product_status`
+                    $sql = "SELECT `product_id`, `product_name`, `product_price`, `product_image`, `product_desc`
                         FROM `product`
                         WHERE user_ID = $currentID";
                     $result = mysqli_query($conn, $sql);
