@@ -22,9 +22,9 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="stylesheet" href="../css/main.css">
     <!-- MIGHT DELETE THIS PLS -->
     <!-- <link rel="stylesheet" href="../css/seller_list.css"> -->
+    <link rel="stylesheet" href="../css/pcatalog.css">
     <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="../css/plist.css">
-    <link rel="stylesheet" href="../css/pcatalog.css">
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,8 +105,9 @@ if (isset($_SESSION['isLogin'])) {
 
                             <div class="product">
                                 <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
-                                <h5 id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></h5>
+                                <h5 id="productname1"  class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></h5>
 
+                                                   
                                 <h5 id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></h5>
                                 <h5 id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></h5>
                             </div>
