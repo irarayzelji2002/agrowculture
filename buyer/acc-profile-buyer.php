@@ -68,8 +68,8 @@ if (isset($_SESSION['isLogin'])) {
                                                             $currentID = $_SESSION["user_ID"];
                                                             echo $currentID; ?>">
                     <label for="emailAddress">Email Address:</label>
-                    <div class="wrapper"><input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>"></div>
-
+                    <div class="wrapper"><input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>" style="width: 514px;"></div>
+                    
                     <label for="fullName">First Name:</label>
                     <div class="wrapper"><input type="text" id="sFirstName" name="sFirstName" value="<?php echo $_SESSION["sFirstName"] ?>"></div>
 
