@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
       <!-- FAVICON -->
   <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
     <title>aGROWculture</title>
@@ -25,10 +25,11 @@
 <body>
     <!--NAVBAR-->
     <?php require_once 'templates/navbar_index.php' ?>
+    <script type="text/javascript" src="db/validate.js"></script>
     <div class="bg-image"></div>
     <main class="absolute-container test1" style="margin-top: 10%;">
         <div class="form-container test1 solid-bg">
-            <form class="form-flex column" id="regForm" action="db/registerDATA.php" method="post" enctype="multipart/form-data">
+            <form class="form-flex column" id="regForm" action="db/registerData.php" method="post" enctype="multipart/form-data">
                 <div>
                     <div>
                         <h1 style="color: black; font-weight:900; font-size:24px;">Join our community.</h1>
@@ -63,19 +64,19 @@
                             <div class="form-flex">
                                 <div>
                                     <p class="sub-link">First Name</p>
-                                    <div><input type="text" id="first_name" name="first_name" required /></div>
+                                    <div><input type="text" id="first_name" name="first_name"   /></div>
                                 </div>
 
                                 <div>
                                     <p class="sub-link">Last Name</p>
-                                    <div><input type="text" id="last_name" name="last_name" required /></div>
+                                    <div><input type="text" id="last_name" name="last_name"   /></div>
                                 </div>
                             </div>
 
                             <p class="sub-link">Email Address</p>
-                            <div><input type="text" id="email" name="email" required /></div>
+                            <div><input type="text" id="email" name="email"   /></div>
                             <p class="sub-link">Password</p>
-                            <div><input type="password" id="password" name="password" required /></div>
+                            <div><input type="password" id="password" name="password"   /></div>
                         </fieldset></br>
                     </div>
 
@@ -85,7 +86,7 @@
                             <legend>
                                 <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Profile Photo</h2>
                             </legend>
-                            <input type="file" name="image" class="upload-btn" style="color:black;" required></input>
+                            <input type="file" name="image" class="upload-btn" style="color:black;"  ></input>
                         </fieldset>
                     </div>
 
@@ -97,11 +98,11 @@
                                 <h2 style="margin-top: 2rem; color: black; font-weight:900; font-size:24px;">Business Details</h2>
                             </legend>
                             <p class="sub-link">Company/Business Name</p>
-                            <div><input type="text" id="business_name" name="business_name" required /></div>
+                            <div><input type="text" id="business_name" name="business_name"   /></div>
                             <p class="sub-link">Phone Number</p>
-                            <div><input type="text" id="phone_number" name="phone_number" required /></div>
+                            <div><input type="text" id="phone_number" name="phone_number"   /></div>
                             <p class="sub-link">Address</p>
-                            <div><input type="text" id="address" name="address" required /></div>
+                            <div><input type="text" id="address" name="address"   /></div>
                         </fieldset></br>
                     </div>
 
@@ -111,18 +112,29 @@
                             <legend>
                                 <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Any Valid ID</h2>
                             </legend>
-                            <input type="file" name="image" class="upload-btn" style="color:black;" required></input>
+                            <input type="file" name="image" class="upload-btn" style="color:black;"  ></input>
                         </fieldset>
                     </div>
 
                     <!--Submit Button-->
                     <br>
                     <div>
-                        <button type="submit" name="Submit"class="btn-box">SUBMIT</button>
+                        <button type="submit" name="Submit" class="btn-box" onclick="validateForm()">SUBMIT</button>
                     </div>
             </form>
         </div>
-
+        <?php
+  if (isset($_GET['authenticate'])) { //check if authenticate key exists in URL
+    if ($_GET['authenticate'] == "false") {
+      echo '
+        <br>
+        <div class="alert alert-danger" role="alert">
+          Invalid inputs.
+        </div>
+      ';
+    }
+  }
+  ?>
         </section>
     </main>
 
