@@ -16,7 +16,7 @@
   width: 190px !important;
   height: auto !important;
   border-radius: 10% !important;
-  margin: auto auto auto 1rem !important;
+  /* margin: auto auto auto 1rem !important; */
   display: block !important;
   filter: drop-shadow(1px 1px 5px #5a5a5a) !important;
 }

@@ -23,9 +23,9 @@ if (isset($_SESSION['isLogin'])) {
     <link rel="stylesheet" href="../css/main.css">
     <!-- MIGHT DELETE THIS PLS -->
     <!-- <link rel="stylesheet" href="../css/seller_list.css"> -->
+    <link rel="stylesheet" href="../css/pcatalog.css">
     <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="../css/plist.css">
-    <link rel="stylesheet" href="../css/pcatalog.css">
     <!-- Google Font: Poppins-->
     <!-- Weights: 400 REGULAR, 600 SEMIBOLD, 700 BOLD -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
