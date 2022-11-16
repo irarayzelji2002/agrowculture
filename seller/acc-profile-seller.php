@@ -61,7 +61,12 @@ if (isset($_SESSION['isLogin'])) {
         <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
                 <fieldset class="">
+            
+            <?php
+            $upload_dir = '../user_identification/';
+            ?>
 
+            <img src="<?php echo $upload_dir. $_SESSION["profile"] ?>" alt="" class="profile-icon placeholder-bg">
                 <!--Upload Documents-->
 
                 <div class="form-group">

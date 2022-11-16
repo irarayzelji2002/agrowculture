@@ -58,8 +58,13 @@ if (isset($_SESSION['isLogin'])) {
 
         <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
-            <img src="../img/s1.jpg" alt="" class="profile-icon placeholder-bg">
+            
+            <?php
+            $upload_dir = '../user_identification/';
+            ?>
 
+            <img src="<?php echo $upload_dir. $_SESSION["profile"] ?>" alt="" class="profile-icon placeholder-bg">
+            
             <label for="changeProfile">Change Profile Picture:</label>
             <div class="wrapper"><input type="file" name="image" class="upload-btn"></input></div>
 

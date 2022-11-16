@@ -47,7 +47,12 @@ if (isset($_SESSION['isLogin'])) {
     <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
-        <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
+            <?php
+            $upload_dir = '../user_identification/';
+            ?>
+
+        <img src="<?php echo $upload_dir. $_SESSION["profile"] ?>" alt="" id="buyerIcon" class="profile-icon" style="transform: translate(0%, 25%);">
+
         <div class="solid-bg">
             <div class="flex row">
             <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $_SESSION["sFirstName"] ?> <?php echo $_SESSION["sLastName"] ?></h1>

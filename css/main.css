@@ -196,12 +196,13 @@ button {
 /* Image Tags CSS */
 .profile-icon {
   width: 150px;
-  height: auto;
+  height: 150px;
   border-radius: 100%;
   margin: auto;
   display: block;
   transform: translate(0%, 0%);
   filter: drop-shadow(1px 1px 5px #5a5a5a);
+  object-fit: cover;
 }
 
 /* Form CSS */
