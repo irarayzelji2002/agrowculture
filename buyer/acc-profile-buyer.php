@@ -97,8 +97,7 @@ if (isset($_SESSION['isLogin'])) {
                 <button type=submit class="btn-circle btn-center" name="update"
                 onClick="window.location.reload();">Save Profile</button>
                 <button class="btn-circle btn-center">
-                <a href="../logout.php" style="color: white;text-decoration:none">Logout
-                </a>
+                <a href="../logout.php" style="color: white;text-decoration:none">Logout</a>
             </button>
                 </div>
             </form>

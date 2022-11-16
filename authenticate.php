@@ -40,6 +40,7 @@ if ($count > 0) {
   $_SESSION["business_name"] = $row["business_name"];
   $_SESSION["address"] = $row["address"];
   $_SESSION["profile"] = $row["profile"];
+  $_SESSION["docfile"] = $row["v2_image"];
 
   if ($_SESSION["usertype"] == "Seller") {
     header('Location: seller/seller-page.php');

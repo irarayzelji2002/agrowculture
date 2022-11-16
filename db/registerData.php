@@ -14,17 +14,27 @@
   $imgName = $_FILES['image']['name'];
   $imgTmp = $_FILES['image']['tmp_name'];
   $imgSize = $_FILES['image'] ['size'];
+
+  $imgNamev2 = $_FILES['imagevalid']['name'];
+  $imgTmpv2 = $_FILES['imagevalid']['tmp_name'];
+  $imgSizev2 = $_FILES['imagevalid'] ['size'];
+
   $phoneVal = strlen($phone_number);
   $passVal = strlen($password);
 
   $imgExt = strtolower(pathinfo($imgName, PATHINFO_EXTENSION));
+  $imgExtv2 = strtolower(pathinfo($imgNamev2, PATHINFO_EXTENSION));
+
   $allowExt  = array('jpeg', 'jpg', 'png', 'gif');
+
   $userPic = time().'_'.rand(1000,9999).'.'.$imgExt;
+  $userPicv2 = time().'_'.rand(1000,9999).'.'.$imgExtv2;
   
 if(in_array($imgExt, $allowExt)) {
     if($imgSize < 5000000)
     {
       move_uploaded_file($imgTmp ,$upload_dir.$userPic);
+      move_uploaded_file($imgTmpv2 ,$upload_dir.$userPicv2);
     }
     else
     {
@@ -95,7 +105,7 @@ else {
                 '".$address."',
                 '".$userPic."',
                 '".$userPic."',
-                '".$userPic."'
+                '".$userPicv2."'
 
               )";
 

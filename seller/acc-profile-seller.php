@@ -60,7 +60,7 @@ if (isset($_SESSION['isLogin'])) {
 
         <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
-                <fieldset class="">
+                <fieldset>
             
             <?php
             $upload_dir = '../user_identification/';
@@ -97,7 +97,7 @@ if (isset($_SESSION['isLogin'])) {
                     <div class="wrapper"><input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>"></div>
 
                     <div class="flex row">
-                        <button class="btn-circle btn-center">Save Profile</button>
+                        <button type="submit" class="btn-circle btn-center" name="update" onClick="window.location.reload();">Save Profile</button>
                          <button class="btn-circle btn-center">
                          <a href="../logout.php" style="color: white; text-decoration:none">Logout
                         </a>
