@@ -66,23 +66,23 @@ if (isset($_SESSION['isLogin'])) {
    <!-- EXPERIMENT -->
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
-        <?php
+
+    <?php
             $upload_dir = '../user_identification/';
         ?>
-
-            <img src="<?php echo $upload_dir. $_SESSION["profile"] ?>" alt="" class="profile-icon placeholder-bg">
-            
-        <div class="solid-bg">
-
-            <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $row['seller_name'] ?></h1>
-            <!-- <p id="productNum" class="center">Products: </p> -->
-            <div class="flex row">
-          <?php
+        <?php
             $sql =  $sql = "select * from users where user_id=" . $varUserid;
                  $result = mysqli_query($conn, $sql);
                  if (mysqli_num_rows($result) > 0) {
                      $row = mysqli_fetch_assoc($result);
                    }?>
+            <img src="<?php echo $upload_dir. $row["profile"] ?>" alt="" class="profile-icon placeholder-bg">
+            
+        <div class="solid-bg">
+        <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $row['first_name'] . " " . $row['last_name'] ?></h1>
+        
+            <!-- <p id="productNum" class="center">Products: </p> -->
+            <div class="flex row">
                 <p id="sellerPhone">Number:
                  <?php echo $row["phone_number"];?> </p>
                 <p id="sellerAddr">Address: <?php 

@@ -66,10 +66,21 @@ if (isset($_SESSION['isLogin'])) {
   
     <!-- MAIN CONTENT -->
     <main class="full-container" style="margin-top:5%;">
-        <img src="../img/s1.jpg" alt="" id="sellerIcon" class="profile-icon">
-        <div class="solid-bg">
 
-            <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $row['seller_name'] ?></h1>
+    <?php
+            $upload_dir = '../user_identification/';
+        ?>
+        <?php
+            $sql =  $sql = "select * from users where user_id=" . $varUserid;
+                 $result = mysqli_query($conn, $sql);
+                 if (mysqli_num_rows($result) > 0) {
+                     $row = mysqli_fetch_assoc($result);
+                   }?>
+            <img src="<?php echo $upload_dir. $row["profile"] ?>" alt="" class="profile-icon placeholder-bg">
+            
+        <div class="solid-bg">
+        <h1 id="sellerName" class="center" style="font-weight:700;"><?php echo $row['first_name'] . " " . $row['last_name'] ?></h1>
+
             <!-- <p id="productNum" class="center">Products: </p> -->
             <div class="flex row">
           <?php
