@@ -325,9 +325,8 @@ h5 {
 }
 
 :root .fa-trash{
-  width: 300px !important;
-  height: 150px;
   padding-left: 10px;
+  height: 150px;
   transform: translate(0,0)!important;
   color: #D2001A!important;
 }
