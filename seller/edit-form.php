@@ -75,10 +75,10 @@ require_once '../config.php';
                                 <div class="wrapper"><input type="text" id="product_id" name="product_id" aria-describedby="productHelp" value="<?php echo $IDprod = $_GET["product_id"] ?>" readonly></div>
                                 
                                 <label for="productname">Product Name</label>
-                                <div class="wrapper"><input type="text" id="productName" name="productName" aria-describedby="productHelp" placeholder="<?php echo $product['product_name'] ?>"></div>
+                                <div class="wrapper"><input type="text" id="productName" name="productName" aria-describedby="productHelp" placeholder="<?php echo $product['product_name'] ?>" required></div>
     
                                 <label for="productprice">Product Price</label>
-                                <div class="wrapper"><input type="text" id="productPrice" name="productPrice" placeholder="<?php echo $product['product_price'] ?>"></div>
+                                <div class="wrapper"><input type="text" id="productPrice" name="productPrice" placeholder="<?php echo $product['product_price'] ?>" required></div>
     
                                 <label for="">Category</label>
     
@@ -98,11 +98,11 @@ require_once '../config.php';
                                 </label>
     
                                 <label for="productdescription">Product Description</label>
-                                <div class="wrapper"><input class="prod-desc" type="text" id="productDescription" name="productDescription" placeholder="<?php echo $product['product_desc'] ?>"></div>
+                                <div class="wrapper"><input class="prod-desc" type="text" id="productDescription" name="productDescription" placeholder="<?php echo $product['product_desc'] ?>" required></div>
     
                                 <div class="form-group">
                                     <label for="image">Choose Image for Thumbnail</label>
-                                    <div class="wrapper"><input type="file" class="upload-btn" name="product_image" value="" style="width: 376px;" required></div>
+                                    <div class="wrapper"><input type="file" class="upload-btn" name="product_image" style="width: 376px;" required></div>
                                 </div>
                                 
                             </fieldset>
