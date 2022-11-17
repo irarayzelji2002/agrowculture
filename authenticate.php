@@ -36,6 +36,7 @@ if ($count > 0) {
   $_SESSION["sLastName"] = $row["last_name"];
   $_SESSION["usertype"] = $row["user_type"];
   $_SESSION["phone_number"] = $row["phone_number"];
+  $_SESSION["password"] = $row["password"];
   $_SESSION["email"] = $row["email"];
   $_SESSION["business_name"] = $row["business_name"];
   $_SESSION["address"] = $row["address"];
