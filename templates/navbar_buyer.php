@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white" style="z-index:9; position:fixed; top:0px;">
+<nav class="navbar navbar-expand-lg navbar-light bg-white" style="z-index:9; position:fixed; top:0px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
     <!-- logo head -->
     <a class="navbar-brand">
     <img src="../img/aGROWculture-Logo-Colored.png" style="margin-left:1rem; width: 2rem; height: 3rem; vertical-align: middle;" alt="Logo">
@@ -15,23 +15,23 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="nav-link btn bold-text" role="button" style="color: black;font-weight:600; padding-left:0.5rem; margin:0;">
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <a class="bold-text" style="color: black;font-weight:600; pointer-events: none; text-center">
         aGROWculture</a>
 
         <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item mr-4">
-        <li class="nav-item mr-1">
-            <a class="nav-link btn bold-text" href="product-catalog.php" role="button" style="color: black;font-weight:600;">
+        <li class="nav-item mr-4" style="margin:0;">
+        <li class="nav-item mr-1" style="margin:0;">
+            <a class="nav-link btn bold-text" href="product-catalog.php" role="button" style="color: black;font-weight:600; outline: none !important; box-shadow: none; margin-top:0.3rem;">
             HOME</a>
         </li>
 
-        <a class="nav-link dropdown-toggle btn bold-text" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem;">
+        <a class="nav-link dropdown-toggle btn bold-text" data-toggle="dropdown" href="#" role="button" style="color:black; font-size:1.5rem; width:100%; margin-left:0.7rem; outline: none !important; box-shadow: none; ">
             <img style="width:30px !important;height: 30px !important;margin-right:5px" src="../img/user.png" alt="ICON"></a>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-            <li  class="dropdown-item"><a href="buyer-page.php" style="text-decoration:none;color:black;"><center>PROFILE</a></li>
-            <li  class="dropdown-item"><a href="../logout.php"  style="text-decoration:none;color:black;"><center>LOGOUT</a></li>
+            <ul class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="dLabel" style="border:0; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);">
+                <li  class="dropdown-item-text "><a href="buyer-page.php" style="text-decoration:none; color:black; background-color: none !important; outline: none !important; box-shadow: none; font-weight:400;">PROFILE</a></li>
+                <li  class="dropdown-item-text"><a href="../logout.php"  style="text-decoration:none; color:black; background-color: none !important; outline: none !important; box-shadow: none; font-weight:400;">LOGOUT</a></li>
             </ul>
         </li>
 

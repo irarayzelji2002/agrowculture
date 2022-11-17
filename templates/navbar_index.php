@@ -17,18 +17,18 @@
      <span class="navbar-toggler-icon"></span>
    </button>
    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="">
-     <a class="nav-link btn bold-text" href="index.php" role="button" style="color: black;font-weight:600;">
+     <a class="nav-link btn bold-text" href="index.php" role="button" style="color: black;font-weight:600; outline: none !important; box-shadow: none;">
        aGROWculture</a>
      <ul class="navbar-nav ml-auto">
 
        <li class="nav-item mr-4">
        <li class="nav-item mr-4">
-         <a class="nav-link btn bold-text" href="login.php" role="button" style="color: black;font-weight:600;">
+         <a class="nav-link btn bold-text" href="login.php" role="button" style="color: black;font-weight:600; outline: none !important; box-shadow: none; ">
            LOGIN</a>
        </li>
 
        <li class="nav-item mr-2">
-         <a class="nav-link btn bold-text" href="reg-form.php" role="button" style="color: black;font-weight:600;">
+         <a class="nav-link btn bold-text" href="reg-form.php" role="button" style="color: black;font-weight:600; outline: none !important; box-shadow: none;">
            SIGN UP</a>
        </li>
 

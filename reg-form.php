@@ -27,14 +27,15 @@
     <?php require_once 'templates/navbar_index.php' ?>
     <script type="text/javascript" src="db/validate.js"></script>
     <div class="bg-image"></div>
-    <main class="absolute-container test1" style="margin-top: 10%;">
-        <div class="form-container test1 solid-bg">
+    <main class="absolute-container" style="margin-top: 10%;">
+        <div style="height:3rem;"></div>
+        <div class="form-container solid-bg">
             <form class="form-flex column" id="regForm" action="db/registerData.php" method="post" enctype="multipart/form-data">
                 <div>
                     <div>
                         <h1 style="color: black; font-weight:900; font-size:24px;">Join our community.</h1>
                         <!--Role-->
-                        <h3 class="sub-link">I am a...</h3>
+                        <h3 class="sub-link" style="font-weight:900; font-size:19px; margin-top:1rem;">I am a...</h3>
                     </div>
 
                     <div class="form-flex">
@@ -53,30 +54,34 @@
 
 
 
-                <section class="fix-width">
+                <section>
                     <div>
                         <!--Account Details-->
                         <fieldset id="acctDetails">
                             <legend>
                                 <h2 style="margin-top: 2rem; color: black; font-weight:900; font-size:24px;">Account Details</h2>
                             </legend>
-
                             <div class="form-flex">
-                                <div>
+                                <div style="width:100%">
                                     <p class="sub-link">First Name</p>
-                                    <div><input type="text" id="first_name" name="first_name"   /></div>
+                                    <div style="display:flex;"><input type="text" id="first_name" name="first_name" style="flex:1;"/></div>
                                 </div>
 
-                                <div>
+                                <div style="width:100%">
                                     <p class="sub-link">Last Name</p>
-                                    <div><input type="text" id="last_name" name="last_name"   /></div>
+                                    <div style="display:flex;"><input type="text" id="last_name" name="last_name" style="flex:1;"/></div>
+                                </div>
+
+                                <div style="width:100%">
+                                    <p class="sub-link">Email Address</p>
+                                    <div style="display:flex;"><input type="text" id="email" name="email" style="flex:1;"/></div>
+                                </div>
+
+                                <div style="width:100%">
+                                    <p class="sub-link">Password</p>
+                                    <div style="display:flex;"><input type="password" id="password" name="password" style="flex:1;"/></div>
                                 </div>
                             </div>
-
-                            <p class="sub-link">Email Address</p>
-                            <div><input type="text" id="email" name="email"   /></div>
-                            <p class="sub-link">Password</p>
-                            <div><input type="password" id="password" name="password"   /></div>
                         </fieldset></br>
                     </div>
 
@@ -98,11 +103,11 @@
                                 <h2 style="margin-top: 2rem; color: black; font-weight:900; font-size:24px;">Business Details</h2>
                             </legend>
                             <p class="sub-link">Company/Business Name</p>
-                            <div><input type="text" id="business_name" name="business_name"   /></div>
+                            <div style="display:flex;"><input type="text" id="business_name" name="business_name" style="flex:1;"/></div>
                             <p class="sub-link">Phone Number</p>
-                            <div><input type="text" id="phone_number" name="phone_number"   /></div>
+                            <div style="display:flex;"><input type="text" id="phone_number" name="phone_number" style="flex:1;"/></div>
                             <p class="sub-link">Address</p>
-                            <div><input type="text" id="address" name="address"   /></div>
+                            <div style="display:flex;"><input type="text" id="address" name="address" style="flex:1;"/></div>
                         </fieldset></br>
                     </div>
 
@@ -112,7 +117,7 @@
                             <legend>
                                 <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Any Valid ID</h2>
                             </legend>
-                            <input type="file" name="imagevalid" class="upload-btn" style="color:black;"  ></input>
+                            <input type="file" name="image" class="upload-btn" style="color:black;"  ></input>
                         </fieldset>
                     </div>
 
