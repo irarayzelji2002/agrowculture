@@ -119,7 +119,7 @@ if (isset($_SESSION['isLogin'])) {
                                 <h5 id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></h5>
 
                                 <h5 id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></h5>
-                                <h5 id="productprice1" class="product-text">Price: Php. <?php echo   $row['product_price'] ?></h5>
+                                <h5 id="productprice1" class="product-text">Price: ₱<?php echo   $row['product_price'] ?></h5>
                             </div>
                 <?php
                         }
