@@ -1,5 +1,5 @@
 <?php
-// require_once '../templates/navbar_seller.php'
+// require_once '../templates/navbar_buyer.php'
 session_start();
 
 if (isset($_SESSION['isLogin'])) {
@@ -54,7 +54,7 @@ if (isset($_SESSION['isLogin'])) {
 </head>
 
 <body>
-    <?php require_once '../templates/navbar_seller.php' ?>
+    <?php require_once '../templates/navbar_buyer.php' ?>
     <div style="height:5rem;"></div>
     <!-- MAIN CONTENT -->
     <main class="full-container">
@@ -62,7 +62,7 @@ if (isset($_SESSION['isLogin'])) {
         <hr>
 
         <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
-            <form action="../db/cp-backend.php" method="post" enctype="multipart/form-data">
+            <form action="../db/cp-backend-buyer.php" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <?php
                     if (isset($_GET['fillout'])) { //check if authenticate key exists in URL

@@ -30,10 +30,12 @@
   <form action="authenticate.php" method="post" style="margin:5%" class="align-content-center">
 
     <div class="card d-flex align-content-center align-items-center mx-auto customCard">
+ 
       <div class="card-body mb-4 customBodyCardSize">
         <h3 class=" d-flex align-content-center align-items-center mt-4 w-50 mx-auto bold-text">Join our Community</h3>
         <small class=" d-flex align-content-center align-items-center mt-1 w-50 mx-auto">Welcome back!</small>
         <div class="form-group ">
+    
           <label for="exampleInputEmail1" class="text-dark mb-3 d-flex align-content-center align-items-center mt-4 w-50 mx-auto
       semibold-text">Email address</label>
           <input type="email" class="form-control w-50 d-flex align-content-center align-items-center mt-1 mx-auto bg-textbox" id="exampleInputEmail1 " aria-describedby="emailHelp" name="email">
@@ -47,21 +49,22 @@
           <button type="submit" class="btn btn-warning d-flex justify-content-center align-items-center flex-fill logIn">
             LOG IN</button>
         </div>
-  </form>
-  </div>
-  </div>
-  <?php
+        <?php
   if (isset($_GET['authenticate'])) { //check if authenticate key exists in URL
-    if ($_GET['authenticate'] == "false") {
-      echo '
+    if ($_GET['authenticate'] == "false") {?>
+     
         <br>
         <div class="alert alert-danger" role="alert">
-          Invalid email / password.
+          Invalid email / password. 
         </div>
-      ';
+ <?php     
     }
   }
   ?>
+  </form>
+  </div>
+  </div>
+
 </body>
 
 </html>

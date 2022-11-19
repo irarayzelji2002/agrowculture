@@ -56,7 +56,6 @@ else {
   $_SESSION["sFirstName"] = "";
   $_SESSION["sLastName"] = "";
   $_SESSION["sGender"] = "";
-
   //invalid credentials
   $_SESSION['isLogin'] = false;
   header('Location: login?authenticate=false');

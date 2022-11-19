@@ -12,29 +12,29 @@ if (isset($_POST['updatepassword'])) {
     if (empty ($_POST['cur_password'])){
         echo "Fill out all fields.";
 
-        header('Location: ../seller/change-password.php?fillout=false');
+        header('Location: ../buyer/change-password.php?fillout=false');
 
         }
         else if ($curpassword != $password) {
         echo "There was a problem. Wrong Password.";
 
-        header('Location: ../seller/change-password.php?wrongpassword=true');
+        header('Location: ../buyer/change-password.php?wrongpassword=true');
 
         } else if ($password1 != $password2) {
         echo "Passwords don't match.";
 
-        header('Location: ../seller/change-password.php?match=false');
+        header('Location: ../buyer/change-password.php?match=false');
 
         } else {
         $sql = "UPDATE users SET `password` = '$password1'  WHERE user_ID='$currentID'";
         $query = mysqli_query($conn, $sql);
         if($query){
       
-            header('Location: ../seller/seller-page.php');
+            header('Location: ../buyer/buyer-page.php');
 
           }else{
 
-           header('Location: ../seller/seller-page.php');
+           header('Location: ../buyer/buyer-page.php');
            
            echo $errorMsg = 'Error '.mysqli_error($conn);
           }
