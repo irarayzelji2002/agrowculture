@@ -17,13 +17,31 @@
     <!-- FAVICON -->
     <link rel="icon" href="img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
     
-    <title>aGROWculture</title>
+    <!-- FLICKITY -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
+    <title>aGROWculture</title>
+    <style>
+    .carousel img {
+    display: block;
+    height: 1080px;
+    width: 100%;
+    }
+
+    .carousel-cell {
+        width: 100%; /* full width */
+        height: 500px; /* height of carousel */
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+    </style>
 </head>
 <body>
     <?php require_once 'templates/navbar_index.php' ?>
+
     <!-- MAIN CONTENT -->
     <main class="full-container flex row">
+
         <div class="flex-child">
             <h1 style="font-size:48px; font-weight:900;">Live Fresh, Grow Fresh</h1>
             <p>
@@ -48,18 +66,15 @@
         </div>
     </main>
 
-
-    <section class="half-container">
-        <div><h1 class="center" style="font-size:48px; font-weight:900;">Featured Products</h1></div>
-        <div class="flex row">
-            <div><img src="img/FeaturedProducts1.jpg" alt="" class="featured" style="object-fit:cover;"></div>
-            <div><img src="img/FeaturedProducts2.jpg" alt="" class="featured" style="object-fit:cover;"></div>
-            <div><img src="img/FeaturedProducts3.jpg" alt="" class="featured" style="object-fit:cover;"></div>
-            <div><img src="img/FeaturedProducts4.jpg" alt="" class="featured" style="object-fit:cover;"></div>
+    <section class="full-container">
+        <div class="carousel" data-flickity='{ "cellAlign": "left", "autoPlay": true, "wrapAround": true,  "contain": true }'>
+            <div class="carousel-cell"><img src="img/FeaturedProducts1.jpg" alt="" style="object-fit:contain"></div>
+            <div class="carousel-cell"><img src="img/FeaturedProducts2.jpg" alt="" style="object-fit:contain"></div>
+            <div class="carousel-cell"><img src="img/FeaturedProducts3.jpg" alt=""  style="object-fit:contain"></div>
+            <div class="carousel-cell"><img src="img/FeaturedProducts4.jpg" alt=""  style="object-fit:contain"></div>
         </div>
-        <div><a href="buyer/product-catalog.php" style="color: white;"><p class="center sub-link">See all products</p></a></div>
     </section>
-
+    
     <section class="half-container">
         <div class="center">
             <h1 style="font-size:48px; font-weight:900;">Grow with Us!</h1>
@@ -98,9 +113,7 @@
         </div>
     </section>
 
-    <footer>
-        
-    </footer>
-    
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
