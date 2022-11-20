@@ -88,7 +88,7 @@
 
         <div class="flex row" style="padding-bottom:5rem;">
             <div class="roles">
-                <h1 style="font-size:48px; font-weight:900;">as a Buyer</h1>
+                <h1 style="font-size:48px; font-weight:900;margin-top:5%">As a Buyer</h1>
                 <ul style="line-height:2rem; padding-bottom:1rem;">
                     <li>Act as retailers</li>
                     <li>Act as distributor</li>
@@ -100,7 +100,7 @@
             </div>
 
             <div class="roles">
-                <h1 style="font-size:48px; font-weight:900;">as a Seller</h1>
+                <h1 style="font-size:48px; font-weight:900;margin-top:5%">As a Seller</h1>
                 <ul style="line-height:2rem; padding-bottom:1rem;">
                     <li>Act as suppliers</li>
                     <li>Sell and provide products for retailers</li>

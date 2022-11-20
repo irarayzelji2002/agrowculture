@@ -54,7 +54,8 @@ if (isset($_SESSION['isLogin'])) {
             $sql = "select * from product where product_desc like  '%" . $finding_user . "%' or product_name like  '%" . $finding_user . "%'
     or seller_name like  '%" . $finding_user . "%'  and user_id=" . $varUserid;
           } else {
-            $sql = "select * from product where user_id=" . $varUserid;
+            $sql = "SELECT* FROM product p JOIN users us ON us.user_id=p.user_id WHERE us.user_id=" . $varUserid;
+        
           }
 
           $result = mysqli_query($conn, $sql);
@@ -71,7 +72,7 @@ if (isset($_SESSION['isLogin'])) {
             $upload_dir = '../user_identification/';
         ?>
         <?php
-            $sql =  $sql = "select * from users where user_id=" . $varUserid;
+        $sql = "select * from users where user_id=" . $varUserid;
                  $result = mysqli_query($conn, $sql);
                  if (mysqli_num_rows($result) > 0) {
                      $row = mysqli_fetch_assoc($result);
@@ -84,7 +85,7 @@ if (isset($_SESSION['isLogin'])) {
             <!-- <p id="productNum" class="center">Products: </p> -->
             <div class="flex row">
           <?php
-            $sql =  $sql = "select * from users where user_id=" . $varUserid;
+         $sql = "select * from users where user_id=" . $varUserid;
                  $result = mysqli_query($conn, $sql);
                  if (mysqli_num_rows($result) > 0) {
                      $row = mysqli_fetch_assoc($result);
@@ -107,7 +108,7 @@ if (isset($_SESSION['isLogin'])) {
 
                     <?php
                     $upload_dir = '../upload/';
-                    $sql =  $sql = "select * from product where user_id=" . $varUserid;
+                    $sql = "SELECT* FROM product p JOIN users us ON us.user_id=p.user_id WHERE us.user_id=". $varUserid;
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
 
@@ -116,7 +117,7 @@ if (isset($_SESSION['isLogin'])) {
 
                             <div class="product">
                                 <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
-                                <h5 id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></h5>
+                                <h5 id="productname1" class="product-text sub-link"> Seller: <?php echo $row['first_name'] . " " . $row['last_name'] ?></h5>
 
                                 <h5 id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></h5>
                                 <h5 id="productprice1" class="product-text">Price: ₱<?php echo   $row['product_price'] ?></h5>

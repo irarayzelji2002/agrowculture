@@ -16,10 +16,11 @@
         let business = document.getElementById("business_name").value;
         let phone = document.getElementById("phone_number").value;
 
-        if(isNaN(phone) || phone.length == 11)
-        {
-            alert("Your Phone Number input is correct.");
-        }if (phone.length > 11 || phone.length <11){
+        // if(isNaN(phone) || phone.length == 11)
+        // {
+        //     alert("Your Phone Number input is correct.");
+        // }
+        if (phone.length > 11 || phone.length <11){
             alert("Invalid Phone Number Input Must be 11 digits");
         }
         

@@ -61,6 +61,17 @@
     }
   }
   ?>
+    <?php if (isset($_GET['success'])) { //check if authenticate key exists in URL
+    if ($_GET['success'] == "true") {
+      echo '
+        <br>
+        <div class="alert alert-success" role="alert">
+          Success creating an account, you may login
+        </div>
+      ';
+    }
+  }
+  ?>
   </form>
   </div>
   </div>

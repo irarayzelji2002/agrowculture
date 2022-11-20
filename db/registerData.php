@@ -57,7 +57,7 @@ else {
     $errorMsg ='Please input your email';
     header('Location: ../reg-form.php?authenticate=false');
   }
-  else if(empty($password) || $passVal<=8){
+  else if(empty($password) || $passVal<8){
     $errorMsg ='Please input your password';
     header('Location: ../reg-form.php?authenticate=false');
   }
@@ -111,7 +111,7 @@ else {
 
           //Execute SQL
   if (mysqli_query($conn, $sql)) {
-    header('Location: ../login.php');
+    header('Location: ../login.php?success=true');
   } else {
      mysqli_error($conn);
      header('Location: ../reg-form.php?authenticate=false');

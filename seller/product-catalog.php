@@ -56,11 +56,11 @@ if (isset($_SESSION['isLogin'])) {
     if (isset($_REQUEST['query'])) {
         $sSearch = $_REQUEST['query'];
     }
-    $sql = "select * from product";
+    $sql = "SELECT* FROM product p JOIN users us ON us.user_id=p.user_id";
     if ($sSearch <> "") { ?>
         <!-- SEARCH PAGE -->
         <?php
-        $sql = "SELECT * FROM `product` WHERE `product_name` LIKE  '%" . $sSearch . "%' or `category` LIKE  '%" . $sSearch . "%'or `seller_name` LIKE  '%" . $sSearch . "%'";
+        $sql = "SELECT* FROM product p JOIN users us ON us.user_id=p.user_id WHERE `product_name` LIKE  '%" . $sSearch . "%' or `category` LIKE  '%" . $sSearch . "%'or `seller_name` LIKE  '%" . $sSearch . "%'";
         ?>
 
         <!-- MAIN CONTENT -->
@@ -83,7 +83,7 @@ if (isset($_SESSION['isLogin'])) {
 
                             <div class="product">
                                 <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
-                                <h5> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></a></h5>
+                                <h5> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> <b> Seller: <?php echo $row['first_name'] . " ".$row['last_name']  ?></b></a></h5>
 
                                 <p id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></p>
                                 <p id="productprice1" class="product-text">Price: ₱<?php echo   $row['product_price'] ?></p>
@@ -115,7 +115,11 @@ if (isset($_SESSION['isLogin'])) {
 
                                 <div class="product">
                                     <img id="productIcon1" class="product-icon" src=<?php echo $upload_dir . $row['product_image'] ?> alt="...">
-                                    <h5 style="font-size:10px; font-weight:900;"> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: <?php echo   $row['seller_name'] ?></a></h5>
+                                    <h5 style="font-size:10px; font-weight:900;"> <a href="profile-seller?id=<?php echo $row['user_ID'] ?>" id="productname1" class="product-text sub-link"> Seller: 
+                                    <?php 
+                              
+                                  echo $row['first_name'] . " ".$row['last_name'] 
+                                    ?></a></h5>
                                     <p id="productname1" class="product-text sub-link"> Name: <?php echo   $row['product_name'] ?></p>
                                     <p id="productprice1" class="product-text">Price: ₱<?php echo   $row['product_price'] ?></p>
                                 </div>
