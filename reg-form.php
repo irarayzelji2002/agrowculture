@@ -89,7 +89,8 @@
                         <!--Upload Documents-->
                         <fieldset id="uploadDocuments">
                             <legend>
-                                <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Profile Photo</h2>
+                                <!-- <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Profile Photo</h2> -->
+                                <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Any Valid ID</h2>
                             </legend>
                             <input type="file" name="image" class="upload-btn" style="color:black;"  ></input>
                         </fieldset>
@@ -115,7 +116,8 @@
                         <!--Upload Documents-->
                         <fieldset id="uploadDocuments">
                             <legend>
-                                <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Any Valid ID</h2>
+                                <!-- <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Any Valid ID</h2> -->
+                                <h2 class="sub-link" style="color: black; font-weight:900; font-size:24px;">Upload Profile Photo</h2>
                             </legend>
                             <input type="file" name="image" class="upload-btn" style="color:black;"  ></input>
                         </fieldset>
