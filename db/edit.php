@@ -12,6 +12,7 @@ if (isset($_POST['edit'])) {
     $productDescription = $_POST['productDescription'];
     $user_ID= $_SESSION['user_ID'];
     $seller_name= $_SESSION["sFirstName"]." ".$_SESSION["sLastName"];
+    
     $imgName = $_FILES['product_image']['name'];
     $imgTmp = $_FILES['product_image']['tmp_name'];
     $imgSize = $_FILES['product_image']['size'];

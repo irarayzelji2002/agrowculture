@@ -5,7 +5,7 @@
         // Checks if input is not a number. If true, alert executes.
         if(isNaN(password) || password.length <= 1 || password.length > maxLength || password.length < 8)
         {
-            alert("Invalid Password Input Must be 8");
+            alert("Invalid Password, Input Must be more than 8");
         }
         
 

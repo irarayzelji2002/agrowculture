@@ -11,9 +11,10 @@
     $lName = $_POST['sLastName'];
     $currentID = $_SESSION["user_ID"];
     $phoneVal = strlen($phone_number);
-         $imgName = $_FILES['image']['name'];
-         $imgTmp = $_FILES['image']['tmp_name'];
-         $imgSize = $_FILES['image'] ['size'];
+    // Profile picture
+        //  $imgName = $_FILES['image']['name'];
+        //  $imgTmp = $_FILES['image']['tmp_name'];
+        //  $imgSize = $_FILES['image'] ['size'];
 
         if(empty($email)){
           $errorMsg ='Please input your email';
@@ -53,23 +54,23 @@
           header('Location:../buyer/buyer-page.php?authenticate=false');
         }
         else{
-
-         $imgExt = strtolower(pathinfo($imgName, PATHINFO_EXTENSION));
+// Profile picture
+        //  $imgExt = strtolower(pathinfo($imgName, PATHINFO_EXTENSION));
     
-         $allowExt  = array('jpeg', 'jpg', 'png', 'gif');
+        //  $allowExt  = array('jpeg', 'jpg', 'png', 'gif');
    
-         $userPic = time().'_'.rand(1000,9999).'.'.$imgExt;
+        //  $userPic = time().'_'.rand(1000,9999).'.'.$imgExt;
  
-         if(in_array($imgExt, $allowExt)){
+        //  if(in_array($imgExt, $allowExt)){
      
-           if($imgSize < 5000000){
-             move_uploaded_file($imgTmp ,$upload_dir.$userPic);
-           }else{
-             $errorMsg = 'Image too large';
-           }
-         }else{
-           $errorMsg = 'Please select a valid image';
-         }
+        //    if($imgSize < 5000000){
+        //      move_uploaded_file($imgTmp ,$upload_dir.$userPic);
+        //    }else{
+        //      $errorMsg = 'Image too large';
+        //    }
+        //  }else{
+        //    $errorMsg = 'Please select a valid image';
+        //  }
         
          $sql = "UPDATE users
          SET
@@ -78,8 +79,8 @@
              `email` = '$email',
              `business_name` = '$business_name',
              `phone_number` = '$phone_number',
-             `address` = '$address',
-             `profile`= '$userPic'
+             `address` = '$address'
+           
      
          WHERE user_ID = $currentID
              ";
@@ -93,7 +94,7 @@
         $_SESSION["business_name"] = $business_name;
         $_SESSION["phone_number"] = $phone_number;
         $_SESSION["address"] = $address;
-        $_SESSION["profile"] = $userPic;
+        // $_SESSION["profile"] = $userPic;
         if ($_SESSION["usertype"] == "Seller") {
           header('Location: ../seller/seller-page.php');
         }

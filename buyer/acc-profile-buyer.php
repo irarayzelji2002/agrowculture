@@ -12,6 +12,7 @@ if (isset($_SESSION['isLogin'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,22 +29,25 @@ if (isset($_SESSION['isLogin'])) {
 
     <!-- FAVICON -->
     <link rel="icon" href="../img/aGROWculture-Favicon.png" type="image/gif" sizes="16x16">
-    
+
     <title>aGROWculture: My Profile</title>
     <style>
-    input[type="file"]::file-selector-button {
-        color: white;
-    }
-    input[type="text"] {
-        flex:1;
-        min-width:0;
-    }
-    .wrapper {
-        display: flex;
-    }
-    label {
-        margin-top:1rem;
-    }
+        input[type="file"]::file-selector-button {
+            color: white;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        label {
+            margin-top: 1rem;
+        }
     </style>
 </head>
 
@@ -52,21 +56,19 @@ if (isset($_SESSION['isLogin'])) {
     <?php require_once '../templates/navbar_buyer.php' ?>
     <div style="height:8rem;"></div>
     <!-- MAIN CONTENT -->
-    <main class="full-container" style="margin: 0rem auto 2rem auto!important;" >
+    <main class="full-container" style="margin: 0rem auto 2rem auto!important;">
         <h1 class="sub-link center" style="font-size:48px; font-weight:900;">My Profile</h1>
         <hr>
 
         <div class="half-container" style="width: 30rem; margin-bottom:5rem;">
             <form action="../db/update.php" method="post" enctype="multipart/form-data">
-            
-            <?php
-            $upload_dir = '../user_identification/';
-            ?>
 
-            <img src="<?php echo $upload_dir. $_SESSION["profile"] ?>" alt="" class="profile-icon placeholder-bg">
-            
-            <label for="changeProfile">Change Profile Picture:</label>
-            <div class="wrapper"><input type="file" name="image" class="upload-btn"></input></div>
+                <label for="text">Change Profile:</label>
+                <div class="wrapper">
+                    <button class="btn-circle btn-center">
+                        <a href="change-profile.php" style="color: white; text-decoration:none">CHANGE PROFILE
+                        </a>
+                </div>
 
                 <fieldset class="">
                     <input type="hidden" name="id" value="<?php
@@ -74,12 +76,12 @@ if (isset($_SESSION['isLogin'])) {
                                                             echo $currentID; ?>">
                     <label for="emailAddress">Email Address:</label>
                     <div class="wrapper"><input type="email" id="email" name="email" value="<?php echo $_SESSION["email"] ?>" style="width: 514px;"></div>
-                    
+
                     <label for="password">Change password:</label>
                     <div class="wrapper">
-                    <button class="btn-circle btn-center">
-                         <a href="change-password.php" style="color: white; text-decoration:none">CHANGE PASSWORD
-                        </a>
+                        <button class="btn-circle btn-center">
+                            <a href="change-password.php" style="color: white; text-decoration:none">CHANGE PASSWORD
+                            </a>
                     </div>
 
                     <label for="fullName">First Name:</label>
@@ -97,15 +99,14 @@ if (isset($_SESSION['isLogin'])) {
 
                     <label for="address">Address:</label>
                     <div class="wrapper"><input type="text" id="address" name="address" value="<?php echo $_SESSION["address"] ?>"></div>
-                
-                   
+
+
                 </fieldset>
                 <div class="flex row">
-                <button type=submit class="btn-circle btn-center" name="update"
-                onClick="window.location.reload();">Save Profile</button>
-                <button class="btn-circle btn-center">
-                <a href="../logout.php" style="color: white;text-decoration:none">Logout</a>
-            </button>
+                    <button type=submit class="btn-circle btn-center" name="update" onClick="window.location.reload();">Save Profile</button>
+                    <button class="btn-circle btn-center">
+                        <a href="../logout.php" style="color: white;text-decoration:none">Logout</a>
+                    </button>
                 </div>
             </form>
         </div>
