@@ -89,7 +89,14 @@ if (isset($_SESSION['isLogin'])) {
                         </label>
 
                         <label for="productdescription">Product Description</label>
-                        <div class="wrapper"><input class="prod-desc" type="text" id="productDescription" name="productDescription"></div>
+                        <div class="wrapper">
+                        <textarea 
+                        style="line-height: 30px;background-color: #f2f2f2!important;box-shadow: inset 0px 1px 3px 0px rgb(0 0 0 / 8%);border-radius: 5px;padding: 5px 2rem;width: 100%;border: none;resize: none;" 
+                        cols="15" 
+                        rows="5" 
+                        id="productDescription" 
+                        name="productDescription"></textarea>
+                        </div>
                         
                         <div class="form-group">
                             <label for="image">Choose Image for Thumbnail</label>
