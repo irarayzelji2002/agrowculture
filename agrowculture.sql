@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2022 at 08:35 AM
+-- Generation Time: Nov 25, 2022 at 08:19 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -43,7 +43,11 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `user_ID`, `seller_name`, `category`, `product_name`, `product_price`, `product_image`, `product_desc`) VALUES
-(15, 91, 'Rance Zoleta', 'Fruits', 'Avocado', '125', '1668702058_3376.png', 'Fresh Avocado');
+(18, 98, 'Joe Mata', 'Fruits', 'Avocado', '120', '1669357292_8977.png', 'Fresh Pick Avocado (ONHAND)'),
+(19, 98, 'Joe Mata', 'DairyorEggs', 'Fresh Milk', '100', '1669357345_8464.png', 'Fresh Cow Milk (ONHAND)'),
+(20, 99, 'Louisse Pasban', 'Fruits', 'Banana', '75', '1669357422_3977.png', 'Fresh Bananas from Laguna'),
+(21, 99, 'Louisse Pasban', 'DairyorEggs', 'Pineapple', '100', '1669357470_5765.png', 'Pineapple (NEW STOCK)'),
+(22, 99, 'Louisse Pasban', 'DairyorEggs', 'Tomato', '35', '1669357508_6649.png', 'Fresh pick tomato');
 
 -- --------------------------------------------------------
 
@@ -71,8 +75,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_ID`, `first_name`, `last_name`, `email`, `password`, `business_name`, `user_type`, `phone_number`, `address`, `v_image`, `profile`, `v2_image`) VALUES
-(90, 'Janaya', 'Cruz', 'jcruz@gmail.com', '6ebe76c9fb411be97b3b0d48b791a7c9', 'Jcookie', 'Buyer', '09393554310', 'Km. 40 A Santa Maria Bulacan', '1668701789_2371.jpg', '1668702082_8686.png', '1668701789_7548.'),
-(91, 'Rance', 'Zoleta', 'rance123@gmail.com', '5e8667a439c68f5145dd2fcbecf02209', 'Fresh Pick', 'Seller', '09876543890', '1233 Quiricada Street Sta. Cruz, Manila', '1668701876_7687.jpg', '1668843029_9047.png', '1668701876_6558.png');
+(97, 'Ellaine', 'Santorce', 'esantorce@gmail.com', '0192023a7bbd73250516f069df18b500', 'E-Fresh', 'Buyer', '09457066598', 'Plaza Libertad, Iloilo City', '1669356876_2834.png', '1669358495_9283.png', '1669356876_8562.'),
+(98, 'Joe', 'Mata', 'joemata@gmail.com', '202cb962ac59075b964b07152d234b70', 'Farmed Goods', 'Seller', '09393554310', 'Cabalaoangan Norte, Rosales, Pampanga', '1669357118_5328.png', '1669358037_3068.png', '1669357118_5788.'),
+(99, 'Louisse', 'Pasban', 'louisse@gmail.com', '25d55ad283aa400af464c76d713c07ad', 'Glow Farms', 'Seller', '09123499791', 'Batasan Hills, Quezon City', '1669357233_9732.png', '1669357233_9732.png', '1669357233_5848.');
 
 --
 -- Indexes for dumped tables
@@ -98,13 +103,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `product_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `user_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
